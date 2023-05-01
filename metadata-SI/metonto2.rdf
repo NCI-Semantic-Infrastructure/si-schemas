@@ -6,9 +6,37 @@
 @prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix monto: <http://ncicb.nci.nih.gov/reponto.owl#> .
-@base <http://ncicb.nci.nih.gov/reponto.owl> .
+@base <http://ncicb.nci.nih.gov/CANSI.owl> .
 
-<http://ncicb.nci.nih.gov/reponto.owl> rdf:type owl:Ontology .
+<http://ncicb.nci.nih.gov/CANSI.owl> rdf:type owl:Ontology ;
+                                      owl:imports <http://purl.obolibrary.org/obo/ro/releases/2023-02-22/ro.owl> ;
+                                      rdfs:comment "Current draft on He Lab, by Anthony Huffman" ,
+                                                   """nci metathesaurus
+    mged ontology
+    ndfrt
+    ctcae v5
+    loinc
+    snomed
+    radlex
+    medra
+    gene ontology""" ;
+                                      owl:versionInfo "Version 1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#source
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#source> rdf:type owl:AnnotationProperty ;
+                                                                       rdfs:label "mappings:source"^^xsd:string ;
+                                                                       rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#One_to_one_mapping> .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#target
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#target> rdf:type owl:AnnotationProperty ;
+                                                                       rdfs:label "mappings:target"^^xsd:string ;
+                                                                       rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#One_to_one_mapping> .
+
 
 #################################################################
 #    Object Properties
@@ -22,6 +50,444 @@ monto:has_identifier rdf:type owl:ObjectProperty .
 monto:is_repository_type rdf:type owl:ObjectProperty .
 
 
+###  http://omv.ontoware.org/2005/05/ontology#contributesToOntology
+<http://omv.ontoware.org/2005/05/ontology#contributesToOntology> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#createsOntology
+<http://omv.ontoware.org/2005/05/ontology#createsOntology> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#definesOntologyType
+<http://omv.ontoware.org/2005/05/ontology#definesOntologyType> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#developedBy
+<http://omv.ontoware.org/2005/05/ontology#developedBy> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringMethodology
+<http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringMethodology> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringTool
+<http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringTool> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#developesOntologyLanguage
+<http://omv.ontoware.org/2005/05/ontology#developesOntologyLanguage> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#developesOntologySyntax
+<http://omv.ontoware.org/2005/05/ontology#developesOntologySyntax> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasAffiliatedParty
+<http://omv.ontoware.org/2005/05/ontology#hasAffiliatedParty> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasContactPerson
+<http://omv.ontoware.org/2005/05/ontology#hasContactPerson> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#hasSyntax
+<http://omv.ontoware.org/2005/05/ontology#hasSyntax> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#isContactPerson
+<http://omv.ontoware.org/2005/05/ontology#isContactPerson> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#isLocatedAt
+<http://omv.ontoware.org/2005/05/ontology#isLocatedAt> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#specifiesKnowledgeRepresentationParadigm
+<http://omv.ontoware.org/2005/05/ontology#specifiesKnowledgeRepresentationParadigm> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#specifiesLicense
+<http://omv.ontoware.org/2005/05/ontology#specifiesLicense> rdf:type owl:ObjectProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#supportsRepresentationParadigm
+<http://omv.ontoware.org/2005/05/ontology#supportsRepresentationParadigm> rdf:type owl:ObjectProperty .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#annotates
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#annotates> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                     rdfs:range <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing> ;
+                                                                     rdfs:label "annotates"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#applyTo
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#applyTo> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                   rdfs:range <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component> ;
+                                                                   rdfs:label "applyTo"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedAnnotations
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedAnnotations> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing> ,
+                                                                                             <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                                 rdfs:range <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                                 rdfs:label "associatedAnnotations"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedProperty
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedProperty> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change> ,
+                                                                                          <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Added> ,
+                                                                                          <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Removed> ;
+                                                                              rdfs:range <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Property> ;
+                                                                              rdfs:label "associatedProperty"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component> ;
+                                                                   rdfs:range <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                   rdfs:label "changes"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#created
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#created> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                   rdfs:range <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp> ;
+                                                                   rdfs:label "created"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#inverse_of_annotates
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#inverse_of_annotates> rdf:type owl:ObjectProperty ;
+                                                                                rdfs:range <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                                rdfs:label "inverse_of_annotates"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#modified
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#modified> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                    rdfs:range <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp> ;
+                                                                    rdfs:label "modified"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#partOfCompositeChange
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#partOfCompositeChange> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                                 rdfs:range <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Composite_Change> ;
+                                                                                 rdfs:label "partOfCompositeChange"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#subChanges
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#subChanges> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Composite_Change> ;
+                                                                      rdfs:range <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                      rdfs:label "subChanges"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#timestamp
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#timestamp> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                     rdfs:range <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp> ;
+                                                                     rdfs:label "timestamp"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#authority
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#authority> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata> ;
+                                                                          rdfs:range <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority> ;
+                                                                          rdfs:label "mappings:authority"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#dependency
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#dependency> rdf:type owl:ObjectProperty ;
+                                                                           rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata> ;
+                                                                           rdfs:range <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#One_to_one_mapping> ;
+                                                                           rdfs:label "mappings:dependency"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#mapping_metadata
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#mapping_metadata> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#One_to_one_mapping> ;
+                                                                                 rdfs:range <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata> ;
+                                                                                 rdfs:label "mappings:mapping_metadata"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata> ;
+                                                                         rdfs:range <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Verification> ;
+                                                                         rdfs:label "mappings:verified"^^xsd:string .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://omv.ontoware.org/2005/05/ontology#acronym
+<http://omv.ontoware.org/2005/05/ontology#acronym> rdf:type owl:DatatypeProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#description
+<http://omv.ontoware.org/2005/05/ontology#description> rdf:type owl:DatatypeProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#documentation
+<http://omv.ontoware.org/2005/05/ontology#documentation> rdf:type owl:DatatypeProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#eMail
+<http://omv.ontoware.org/2005/05/ontology#eMail> rdf:type owl:DatatypeProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#faxNumber
+<http://omv.ontoware.org/2005/05/ontology#faxNumber> rdf:type owl:DatatypeProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#firstName
+<http://omv.ontoware.org/2005/05/ontology#firstName> rdf:type owl:DatatypeProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#lastName
+<http://omv.ontoware.org/2005/05/ontology#lastName> rdf:type owl:DatatypeProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#name
+<http://omv.ontoware.org/2005/05/ontology#name> rdf:type owl:DatatypeProperty .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#phoneNumber
+<http://omv.ontoware.org/2005/05/ontology#phoneNumber> rdf:type owl:DatatypeProperty .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#action
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#action> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                  rdfs:range rdfs:Literal ;
+                                                                  rdfs:label "action"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#author
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#author> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ,
+                                                                              <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                  rdfs:range rdfs:Literal ;
+                                                                  rdfs:label "author"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#body
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#body> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                rdfs:range rdfs:Literal ;
+                                                                rdfs:label "body"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes_Slot_0
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes_Slot_0> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Added> ;
+                                                                          rdfs:range rdfs:Literal ;
+                                                                          rdfs:label "changes_Slot_0"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes_Slot_1
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes_Slot_1> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Removed> ;
+                                                                          rdfs:range rdfs:Literal ;
+                                                                          rdfs:label "changes_Slot_1"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#comment
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#comment> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:range rdfs:Literal ;
+                                                                   rdfs:label "comment"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#context
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#context> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ,
+                                                                               <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                   rdfs:range rdfs:Literal ;
+                                                                   rdfs:label "context"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#creationName
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#creationName> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change> ;
+                                                                        rdfs:range rdfs:Literal ;
+                                                                        rdfs:label "creationName"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#currentName
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#currentName> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component> ;
+                                                                       rdfs:range rdfs:Literal ;
+                                                                       rdfs:label "currentName"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#date
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#date> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp> ;
+                                                                rdfs:range rdfs:Literal ;
+                                                                rdfs:label "date"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#deletionName
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#deletionName> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change> ;
+                                                                        rdfs:range rdfs:Literal ;
+                                                                        rdfs:label "deletionName"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#name
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#name> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:range rdfs:Literal ;
+                                                                rdfs:label "name"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#newName
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#newName> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Name_Changed> ;
+                                                                   rdfs:range rdfs:Literal ;
+                                                                   rdfs:label "newName"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#oldName
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#oldName> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Name_Changed> ;
+                                                                   rdfs:range rdfs:Literal ;
+                                                                   rdfs:label "oldName"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#related
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#related> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                   rdfs:range rdfs:Literal ;
+                                                                   rdfs:label "related"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#sequence
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#sequence> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp> ;
+                                                                    rdfs:range rdfs:Literal ;
+                                                                    rdfs:label "sequence"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#subject
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#subject> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Proposal> ;
+                                                                   rdfs:range rdfs:Literal ;
+                                                                   rdfs:label "subject"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#title
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#title> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:range rdfs:Literal ;
+                                                                 rdfs:label "title"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#voteValue
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#voteValue> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:domain <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Vote> ;
+                                                                     rdfs:range rdfs:Literal ;
+                                                                     rdfs:label "voteValue"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#algorithm_name
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#algorithm_name> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority_Algorithm> ;
+                                                                               rdfs:range rdfs:Literal ;
+                                                                               rdfs:label "mappings:algorithm_name"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#application_Context
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#application_Context> rdf:type owl:DatatypeProperty ;
+                                                                                    rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata> ;
+                                                                                    rdfs:range rdfs:Literal ;
+                                                                                    rdfs:label "mappings:application_Context"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#author
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#author> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority_Manual> ;
+                                                                       rdfs:range rdfs:Literal ;
+                                                                       rdfs:label "mappings:author"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#comment
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#comment> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata> ;
+                                                                        rdfs:range rdfs:Literal ;
+                                                                        rdfs:label "mappings:comment"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_name
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_name> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:range rdfs:Literal ;
+                                                                               rdfs:label "mappings:component_name"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_source
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_source> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:range rdfs:Literal ;
+                                                                                 rdfs:label "mappings:component_source"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_type
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_type> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:range rdfs:Literal ;
+                                                                               rdfs:label "mappings:component_type"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#confidence
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#confidence> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata> ;
+                                                                           rdfs:range rdfs:Literal ;
+                                                                           rdfs:label "mappings:confidence"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#date
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#date> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata> ;
+                                                                     rdfs:range rdfs:Literal ;
+                                                                     rdfs:label "mappings:date"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#externalReferences
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#externalReferences> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata> ;
+                                                                                   rdfs:range rdfs:Literal ;
+                                                                                   rdfs:label "mappings:externalReferences"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#relation
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#relation> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#One_to_one_mapping> ;
+                                                                         rdfs:range rdfs:Literal ;
+                                                                         rdfs:label "mappings:relation"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#submittedBy
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#submittedBy> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata> ;
+                                                                            rdfs:range rdfs:Literal ;
+                                                                            rdfs:label "mappings:submittedBy"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified_by
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified_by> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Verification> ;
+                                                                            rdfs:range rdfs:Literal ;
+                                                                            rdfs:label "mappings:verified_by"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified_on
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified_on> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Verification> ;
+                                                                            rdfs:range rdfs:Literal ;
+                                                                            rdfs:label "mappings:verified_on"^^xsd:string .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -33,22 +499,27 @@ monto:caDSR rdf:type owl:Class ;
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#definition
 monto:definition rdf:type owl:Class ;
-                 rdfs:subClassOf monto:si-resource-metadata .
+                 rdfs:subClassOf monto:si-resource-metadata ;
+                 <http://purl.obolibrary.org/obo/IAO_0000115> "The metadata that  explains the units or data points measured as part of a study." .
 
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#identifier
 monto:identifier rdf:type owl:Class ;
-                 rdfs:subClassOf monto:si-resource-metadata .
+                 rdfs:subClassOf monto:si-resource-metadata ;
+                 <http://purl.obolibrary.org/obo/IAO_0000115> "A set of symbols which is used to designate an individual information content entity." .
 
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#metadata
 monto:metadata rdf:type owl:Class ;
-               rdfs:subClassOf monto:si-resource-type .
+               rdfs:subClassOf monto:si-resource-type ;
+               <http://purl.obolibrary.org/obo/IAO_0000115> "A resource type that contains information that describes the information found within a resource." .
 
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#preferred_term
 monto:preferred_term rdf:type owl:Class ;
-                     rdfs:subClassOf monto:si-resource-metadata .
+                     rdfs:subClassOf monto:term ;
+                     rdfs:comment "A term that is the one that is used as the default term id" ;
+                     rdfs:label "preferred term" .
 
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#si-resource
@@ -60,17 +531,21 @@ monto:si-resource-metadata rdf:type owl:Class .
 
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#si-resource-type
-monto:si-resource-type rdf:type owl:Class .
+monto:si-resource-type rdf:type owl:Class ;
+                       <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that contains information on how to read another information content entity." .
 
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#term
 monto:term rdf:type owl:Class ;
-           rdfs:subClassOf monto:si-resource-metadata .
+           rdfs:subClassOf monto:si-resource-metadata ;
+           rdfs:comment "A common name or synonym that describes a dataset or data entry." ;
+           rdfs:label "term" .
 
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#terminology
 monto:terminology rdf:type owl:Class ;
-                  rdfs:subClassOf monto:si-resource-type .
+                  rdfs:subClassOf monto:si-resource-type ;
+                  <http://purl.obolibrary.org/obo/IAO_0000115> "A resource type that contains a set of definitions for a resource." .
 
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#version
@@ -85,12 +560,922 @@ monto:version rdf:type owl:Class ;
 
 ###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0
 ncit:NHC0 rdf:type owl:Class ;
-          rdfs:subClassOf monto:identifier .
+          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000004> .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#FormalityLevel
+<http://omv.ontoware.org/2005/05/ontology#FormalityLevel> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://omv.ontoware.org/2005/05/ontology#description> ;
+                                                                            owl:allValuesFrom xsd:string
+                                                                          ] ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://omv.ontoware.org/2005/05/ontology#name> ;
+                                                                            owl:allValuesFrom xsd:string
+                                                                          ] ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://omv.ontoware.org/2005/05/ontology#name> ;
+                                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                          ] ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://omv.ontoware.org/2005/05/ontology#description> ;
+                                                                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                          ] ;
+                                                          <http://purl.org/dc/elements/1.1/description> "The level of formality of an ontology"^^xsd:string ;
+                                                          rdfs:label "FormalityLevel"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm
+<http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm> rdf:type owl:Class .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#LicenseModel
+<http://omv.ontoware.org/2005/05/ontology#LicenseModel> rdf:type owl:Class .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#Location
+<http://omv.ontoware.org/2005/05/ontology#Location> rdf:type owl:Class .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#Ontology
+<http://omv.ontoware.org/2005/05/ontology#Ontology> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> ;
+                                                    rdfs:label "Ontology" .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology
+<http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> ;
+                                                                          rdfs:label "OntologyEngineeringMethodology" .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool
+<http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> ;
+                                                                   rdfs:label "OntologyEngineeringTool" .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyLanguage
+<http://omv.ontoware.org/2005/05/ontology#OntologyLanguage> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://omv.ontoware.org/2005/05/ontology#developedBy> ;
+                                                                              owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Party>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://omv.ontoware.org/2005/05/ontology#hasSyntax> ;
+                                                                              owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologySyntax>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://omv.ontoware.org/2005/05/ontology#supportsRepresentationParadigm> ;
+                                                                              owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://omv.ontoware.org/2005/05/ontology#acronym> ;
+                                                                              owl:allValuesFrom xsd:string
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://omv.ontoware.org/2005/05/ontology#description> ;
+                                                                              owl:allValuesFrom xsd:string
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://omv.ontoware.org/2005/05/ontology#documentation> ;
+                                                                              owl:allValuesFrom xsd:string
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://omv.ontoware.org/2005/05/ontology#name> ;
+                                                                              owl:allValuesFrom xsd:string
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://omv.ontoware.org/2005/05/ontology#name> ;
+                                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://omv.ontoware.org/2005/05/ontology#acronym> ;
+                                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://omv.ontoware.org/2005/05/ontology#description> ;
+                                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://omv.ontoware.org/2005/05/ontology#documentation> ;
+                                                                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                            ] ;
+                                                            <http://purl.org/dc/elements/1.1/description> "Information about the language in which the ontology is implemented"^^xsd:string ;
+                                                            rdfs:label "OntologyLanguage"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologySyntax
+<http://omv.ontoware.org/2005/05/ontology#OntologySyntax> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> ;
+                                                          rdfs:label "OntologySyntax" .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyTask
+<http://omv.ontoware.org/2005/05/ontology#OntologyTask> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#acronym> ;
+                                                                          owl:allValuesFrom xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#description> ;
+                                                                          owl:allValuesFrom xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#documentation> ;
+                                                                          owl:allValuesFrom xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#name> ;
+                                                                          owl:allValuesFrom xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#name> ;
+                                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#acronym> ;
+                                                                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#description> ;
+                                                                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#documentation> ;
+                                                                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                        ] ;
+                                                        <http://purl.org/dc/terms/description> "Information about the task the ontology was intended to be used for"^^xsd:string ;
+                                                        rdfs:label "OntologyTask"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#OntologyType
+<http://omv.ontoware.org/2005/05/ontology#OntologyType> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> ;
+                                                        rdfs:label "OntologyType" .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#Organisation
+<http://omv.ontoware.org/2005/05/ontology#Organisation> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Party> ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#hasContactPerson> ;
+                                                                          owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Person>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#acronym> ;
+                                                                          owl:allValuesFrom xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#name> ;
+                                                                          owl:allValuesFrom xsd:string
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#acronym> ;
+                                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://omv.ontoware.org/2005/05/ontology#name> ;
+                                                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                        ] ;
+                                                        rdfs:comment "An organisation of some kind. Represents social institutions such as universities, companies, societies etc."^^xsd:string ;
+                                                        rdfs:label "Organisation"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#Party
+<http://omv.ontoware.org/2005/05/ontology#Party> rdf:type owl:Class ;
+                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#contributesToOntology> ;
+                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Ontology>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#createsOntology> ;
+                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Ontology>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#definesOntologyType> ;
+                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyType>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringMethodology> ;
+                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringTool> ;
+                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#developesOntologyLanguage> ;
+                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#developesOntologySyntax> ;
+                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologySyntax>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#hasAffiliatedParty> ;
+                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Party>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#isLocatedAt> ;
+                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Location>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#specifiesKnowledgeRepresentationParadigm> ;
+                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#KnowledgeRepresentationParadigm>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#specifiesLicense> ;
+                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#LicenseModel>
+                                                                 ] ;
+                                                 rdfs:comment "A party is a person or an organisation"^^xsd:string ;
+                                                 rdfs:label "Party"^^xsd:string .
+
+
+###  http://omv.ontoware.org/2005/05/ontology#Person
+<http://omv.ontoware.org/2005/05/ontology#Person> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Party> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#isContactPerson> ;
+                                                                    owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Organisation>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#eMail> ;
+                                                                    owl:allValuesFrom xsd:string
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#faxNumber> ;
+                                                                    owl:allValuesFrom xsd:string
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#firstName> ;
+                                                                    owl:allValuesFrom xsd:string
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#lastName> ;
+                                                                    owl:allValuesFrom xsd:string
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#phoneNumber> ;
+                                                                    owl:allValuesFrom xsd:string
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#eMail> ;
+                                                                    owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#firstName> ;
+                                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#lastName> ;
+                                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                  ] ;
+                                                  rdfs:comment "A named individual. Represents an individual responsible for the creation, or contribution to an ontology"^^xsd:string ;
+                                                  rdfs:label "Person"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Advice
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Advice> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                  rdfs:comment "A class of Annotations representing advice for the reader"^^xsd:string ;
+                                                                  rdfs:label "Advice"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AgreeDisagreeVote
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AgreeDisagreeVote> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Vote> ;
+                                                                             rdfs:label "AgreeDisagreeVote"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AgreeDisagreeVoteProposal
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AgreeDisagreeVoteProposal> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#VotingProposal> ;
+                                                                                     rdfs:label "AgreeDisagreeVoteProposal"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf rdfs:Resource ;
+                                                                            rdfs:label "AnnotatableThing"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing> ;
+                                                                      rdfs:label "Annotation"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Added
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Added> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change> ;
+                                                                            rdfs:label "Annotation_Added"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                             rdfs:label "Annotation_Change"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Modified
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Modified> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change> ;
+                                                                               rdfs:label "Annotation_Modified"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Removed
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Removed> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change> ;
+                                                                              rdfs:label "Annotation_Removed"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing> ;
+                                                                  rdfs:label "Change"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                        rdfs:label "Class_Change"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Created
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Created> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ,
+                                                                                         <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change> ;
+                                                                         rdfs:comment "Created_Change"^^xsd:string ;
+                                                                         rdfs:label "Class_Created"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Deleted
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Deleted> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ,
+                                                                                         <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change> ;
+                                                                         rdfs:comment "Deleted_Change"^^xsd:string ;
+                                                                         rdfs:label "Class_Deleted"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Comment
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Comment> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                   rdfs:comment "A class of Annotations representing general comments"^^xsd:string ;
+                                                                   rdfs:label "Comment"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Composite_Change
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Composite_Change> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                            rdfs:label "Composite_Change"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                          rdfs:label "Created_Change"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                          rdfs:label "Deleted_Change"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DirectType_Added
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DirectType_Added> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change> ;
+                                                                            rdfs:label "DirectType_Added"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DirectType_Removed
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DirectType_Removed> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change> ;
+                                                                              rdfs:label "DirectType_Removed"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DisjointClass_Added
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DisjointClass_Added> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                               rdfs:label "DisjointClass_Added"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Documentation_Added
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Documentation_Added> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                               rdfs:label "Documentation_Added"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Documentation_Removed
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Documentation_Removed> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                                 rdfs:label "Documentation_Removed"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DomainProperty_Added
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DomainProperty_Added> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                                rdfs:label "DomainProperty_Added"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DomainProperty_Removed
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DomainProperty_Removed> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                                  rdfs:label "DomainProperty_Removed"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Example
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Example> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                   rdfs:comment "A class of Annotations representing examples"^^xsd:string ;
+                                                                   rdfs:label "Example"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Explanation
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Explanation> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                       rdfs:comment "A class of Annotations representing explanations of content"^^xsd:string ;
+                                                                       rdfs:label "Explanation"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#FiveStarsVote
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#FiveStarsVote> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Vote> ;
+                                                                         rdfs:label "FiveStarsVote"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#FiveStarsVoteProposal
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#FiveStarsVoteProposal> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#VotingProposal> ;
+                                                                                 rdfs:label "FiveStarsVoteProposal"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Added
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Added> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change> ;
+                                                                            rdfs:label "Individual_Added"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                             rdfs:label "Individual_Change"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Created
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Created> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change> ,
+                                                                                              <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change> ;
+                                                                              rdfs:comment "Created_Change"^^xsd:string ;
+                                                                              rdfs:label "Individual_Created"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Deleted
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Deleted> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change> ,
+                                                                                              <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change> ;
+                                                                              rdfs:comment "Deleted_Change"^^xsd:string ;
+                                                                              rdfs:label "Individual_Deleted"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Removed
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Removed> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change> ;
+                                                                              rdfs:label "Individual_Removed"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Maximum_Cardinality
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Maximum_Cardinality> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change> ;
+                                                                               rdfs:label "Maximum_Cardinality"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Maximum_Value
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Maximum_Value> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change> ;
+                                                                         rdfs:label "Maximum_Value"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Minimum_Cardinality
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Minimum_Cardinality> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change> ;
+                                                                               rdfs:label "Minimum_Cardinality"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Minimum_Value
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Minimum_Value> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change> ;
+                                                                         rdfs:label "Minimum_Value"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Name_Changed
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Name_Changed> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                        rdfs:label "Name_Changed"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Class
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Class> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component> ;
+                                                                          rdfs:label "Ontology_Class"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing> ;
+                                                                              rdfs:label "Ontology_Component"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Individual
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Individual> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component> ;
+                                                                               rdfs:label "Ontology_Individual"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Property
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Property> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component> ;
+                                                                             rdfs:label "Ontology_Property"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change> ;
+                                                                           rdfs:label "Property_Change"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Created
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Created> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change> ,
+                                                                                            <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change> ;
+                                                                            rdfs:comment "Created_Change"^^xsd:string ;
+                                                                            rdfs:label "Property_Created"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Deleted
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Deleted> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change> ,
+                                                                                            <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change> ;
+                                                                            rdfs:comment "Deleted_Change"^^xsd:string ;
+                                                                            rdfs:label "Property_Deleted"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Value
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Value> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change> ;
+                                                                          rdfs:label "Property_Value"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Proposal
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Proposal> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                    rdfs:label "Proposal"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Question
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Question> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                    rdfs:comment "A class of Annotations representing questions about the content"^^xsd:string ;
+                                                                    rdfs:label "Question"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#SeeAlso
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#SeeAlso> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                   rdfs:comment "A class of Annotations representing a reference to another resource"^^xsd:string ;
+                                                                   rdfs:label "SeeAlso"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#SimpleProposal
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#SimpleProposal> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Proposal> ;
+                                                                          rdfs:label "SimpleProposal"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subclass_Added
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subclass_Added> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                          rdfs:label "Subclass_Added"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subclass_Removed
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subclass_Removed> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                            rdfs:label "Subclass_Removed"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subproperty_Added
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subproperty_Added> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change> ;
+                                                                             rdfs:label "Subproperty_Added"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subproperty_Removed
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subproperty_Removed> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change> ;
+                                                                               rdfs:label "Subproperty_Removed"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superclass_Added
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superclass_Added> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                            rdfs:label "Superclass_Added"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superclass_Removed
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superclass_Removed> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                              rdfs:label "Superclass_Removed"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superproperty_Added
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superproperty_Added> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change> ;
+                                                                               rdfs:label "Superproperty_Added"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superproperty_Removed
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superproperty_Removed> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change> ;
+                                                                                 rdfs:label "Superproperty_Removed"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Added
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Added> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                              rdfs:label "TemplateSlot_Added"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Removed
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Removed> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change> ;
+                                                                                rdfs:label "TemplateSlot_Removed"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf rdfs:Resource ;
+                                                                     rdfs:label "Timestamp"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Vote
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Vote> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation> ;
+                                                                rdfs:label "Vote"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#VotingProposal
+<http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#VotingProposal> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Proposal> ;
+                                                                          rdfs:label "VotingProposal"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000007> ;
+                                                                          rdfs:label "mappings:Authority"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority_Algorithm
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority_Algorithm> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority> ;
+                                                                                    rdfs:label "mappings:Authority_Algorithm"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority_Manual
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority_Manual> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority> ;
+                                                                                 rdfs:label "mappings:Authority_Manual"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000007> ;
+                                                                                 rdfs:label "mappings:Mapping_Metadata"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#One_to_one_mapping
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#One_to_one_mapping> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000007> ;
+                                                                                   rdfs:label "mappings:One_to_one_mapping"^^xsd:string .
+
+
+###  http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Verification
+<http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Verification> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000007> ;
+                                                                             rdfs:label "mappings:Verification"^^xsd:string .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000001
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000001> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:si-resource ;
+                                                           rdfs:label "NCI"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:si-resource-metadata ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "The format that the resource is set up as. This format is done for both databases or studies." ;
+                                                           rdfs:label "Schema"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000003
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000003> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002> ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "A schema that defines what kind of experimental assays were assigned for work." ;
+                                                           rdfs:label "Assay Type"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000004
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000004> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:identifier ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "An identifier that is used to identify an information content entity as being a subset of a study or dataset." ;
+                                                           rdfs:label "prefix"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:identifier ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "A unique identifier for a study" ;
+                                                           rdfs:label "code"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> rdf:type owl:Class ;
+                                                           rdfs:label "si-ontology"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000007
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000007> rdf:type owl:Class ;
+                                                           rdfs:subClassOf rdfs:Resource ;
+                                                           rdfs:comment "Rough defintion, Anthony Huffman" ;
+                                                           rdfs:isDefinedBy "A resouce that is used for guidance on a procedure to convert some data entries from some source A are converted into data entries in some source B." ;
+                                                           rdfs:label "Mappings Resources"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000008
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000008> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:si-resource-metadata ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "The date that a study was first uploaded into a database." ;
+                                                           rdfs:label "load date"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000009
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000009> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000001> ;
+                                                           rdfs:label "nci metathesaurus"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000010
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000010> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:si-resource ;
+                                                           rdfs:label "mged ontology"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000011
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000011> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:si-resource ;
+                                                           rdfs:label "ndfrt"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000012
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000012> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:si-resource ;
+                                                           rdfs:label "ctcae v5"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000013
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000013> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:si-resource ;
+                                                           rdfs:label "loinc"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000014
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000014> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:si-resource ;
+                                                           rdfs:label "snomed"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000015
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000015> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:si-resource ;
+                                                           rdfs:label "radlex"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000016
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000016> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:si-resource ;
+                                                           rdfs:label "medra"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000017
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000017> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> ;
+                                                           rdfs:label "GO identifier"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000018
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000018> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> ;
+                                                           rdfs:label "SNOMED concept ID"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000019
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000019> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> ;
+                                                           rdfs:label "RadLex ID"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000020
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000020> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> ;
+                                                           rdfs:label "MEDRA code"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000021
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000021> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002> ;
+                                                           rdfs:label "MEDRA level"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000022
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000022> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002> ;
+                                                           rdfs:label "LOINC name schemas"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000023
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000023> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000022> ;
+                                                           rdfs:label "LOINC name"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000024
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000024> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000023> ;
+                                                           rdfs:label "LOINC name Data Type"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000025
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000025> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000023> ;
+                                                           rdfs:label "LOINC name Observation Code"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000026
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000026> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000023> ;
+                                                           rdfs:label "LOINC name Result Code"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000027
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000027> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000022> ,
+                                                                           <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000027> ;
+                                                           rdfs:label "FSN name"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000028
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000028> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000027> ;
+                                                           rdfs:label "FSN name data type"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000029
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000029> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000027> ;
+                                                           rdfs:label "FSN name observation code"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000030
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000030> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000022> ;
+                                                           rdfs:label "LOINC short name"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000031
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000031> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002> ;
+                                                           rdfs:label "SNOMED scchema"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000032
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000032> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002> ;
+                                                           rdfs:label "NCITMetathesaurus schema"@en .
 
 
 ###  http://www.geneontology.org/GO
 <http://www.geneontology.org/GO> rdf:type owl:Class ;
                                  rdfs:subClassOf monto:si-resource .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2002/07/owl#versionInfo
@@ -111,4 +1496,11 @@ owl:versionInfo rdf:type owl:Class ;
 ncit:NHC0 rdf:type owl:NamedIndividual .
 
 
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
+#################################################################
+#    Annotations
+#################################################################
+
+owl:versionInfo rdfs:label "versionInfo" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
