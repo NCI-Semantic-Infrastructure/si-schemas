@@ -20,7 +20,7 @@
     radlex
     medra
     gene ontology""" ;
-                                      owl:versionInfo "Version 1.0" .
+                                      owl:versionInfo "Version 1.0.0.4" .
 
 #################################################################
 #    Annotation properties
@@ -560,7 +560,7 @@ monto:version rdf:type owl:Class ;
 
 ###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0
 ncit:NHC0 rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000004> .
+          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> .
 
 
 ###  http://omv.ontoware.org/2005/05/ontology#FormalityLevel
@@ -1290,13 +1290,6 @@ ncit:NHC0 rdf:type owl:Class ;
                                                            rdfs:label "Assay Type"@en .
 
 
-###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000004
-<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000004> rdf:type owl:Class ;
-                                                           rdfs:subClassOf monto:identifier ;
-                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "An identifier that is used to identify an information content entity as being a subset of a study or dataset." ;
-                                                           rdfs:label "prefix"@en .
-
-
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> rdf:type owl:Class ;
                                                            rdfs:subClassOf monto:identifier ;
@@ -1460,13 +1453,35 @@ ncit:NHC0 rdf:type owl:Class ;
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000031
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000031> rdf:type owl:Class ;
                                                            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002> ;
-                                                           rdfs:label "SNOMED scchema"@en .
+                                                           rdfs:label "SNOMED schema"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000032
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000032> rdf:type owl:Class ;
                                                            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002> ;
                                                            rdfs:label "NCITMetathesaurus schema"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000033
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000033> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Party> ;
+                                                           rdfs:label "Conversion Authority"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000034
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000034> rdf:type owl:Class ;
+                                                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://omv.ontoware.org/2005/05/ontology#isContactPerson> ;
+                                                                                 owl:someValuesFrom <http://omv.ontoware.org/2005/05/ontology#Ontology>
+                                                                               ] ;
+                                                           rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Party> ;
+                                                           rdfs:label "Contact Person"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000035
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000035> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Party> ;
+                                                           rdfs:label "vocabulary authority"@en .
 
 
 ###  http://www.geneontology.org/GO
