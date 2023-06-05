@@ -68,9 +68,8 @@
     gene ontology
 bro""" ;
                                       rdfs:seeAlso <https://github.com/information-artifact-ontology/IAO> ;
-                                      owl:versionInfo "2022-11-07"^^xsd:string ,
-                                                      "2023-02-22" ,
-                                                      "Version 1.0.0.6" ;
+                                      owl:versionInfo "2023-05-06" ,
+                                                      "Version 1.0.0.7" ;
                                       <http://xmlns.com/foaf/0.1/homepage> " https://github.com/oborel/obo-relations/"^^xsd:anyURI .
 
 #################################################################
@@ -1234,6 +1233,17 @@ Where we have an annotation assertion
 
 ###  http://usefulinc.com/ns/doap#bug-database
 <http://usefulinc.com/ns/doap#bug-database> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000048
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000048> rdf:type owl:AnnotationProperty ;
+                                                           rdfs:label "has source authority"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000051
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000051> rdf:type owl:AnnotationProperty ;
+                                                           <http://purl.org/dc/elements/1.1/description> "A generalized annoration property that utilises the IRI of the source to note the version used." ;
+                                                           rdfs:label "has version data"@en .
 
 
 ###  http://www.geneontology.org/formats/oboInOwl#SubsetProperty
@@ -2759,8 +2769,6 @@ AND t has_input y""" ;
 ###  http://purl.obolibrary.org/obo/RO_0002026
 <http://purl.obolibrary.org/obo/RO_0002026> rdf:type owl:ObjectProperty ;
                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0002323> ;
-                                            rdfs:domain <http://xmlns.com/foaf/0.1/image> ;
-                                            rdfs:range <http://xmlns.com/foaf/0.1/image> ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> """A relationship that holds between two images, A and B, where:
 A depicts X;
 B depicts Y;
@@ -6571,8 +6579,6 @@ the a supports either the existence of b, or the truth value of b.""" ;
 
 ###  http://purl.obolibrary.org/obo/RO_0002514
 <http://purl.obolibrary.org/obo/RO_0002514> rdf:type owl:ObjectProperty ;
-                                            rdfs:domain <http://purl.obolibrary.org/obo/RO_0002532> ;
-                                            rdfs:range <http://purl.obolibrary.org/obo/RO_0002532> ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between two entities that have the property of being sequences or having sequences. " ;
                                             <http://purl.obolibrary.org/obo/IAO_0000117> <https://orcid.org/0000-0002-6601-2165> ;
                                             <http://purl.obolibrary.org/obo/IAO_0000119> "http://www.ncbi.nlm.nih.gov/pubmed/20226267"^^xsd:anyURI ;
@@ -10493,6 +10499,7 @@ For example, protein A (transcription factor) indirectly increases by expression
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000037
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000037> rdf:type owl:ObjectProperty ;
                                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "An object property that links an identifier within a class, individual, or property such that to another ontology or database" ;
                                                            rdfs:label "has namespace"@en .
 
 
@@ -10505,6 +10512,7 @@ For example, protein A (transcription factor) indirectly increases by expression
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000039
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000039> rdf:type owl:ObjectProperty ;
                                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                                           rdfs:comment "A property that is used to link class, individual, or property from one ontology to  the original ontology or knowledge graph" ;
                                                            rdfs:label "has graph names"@en .
 
 
@@ -10854,6 +10862,47 @@ For example, protein A (transcription factor) indirectly increases by expression
  ] .
 
 
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000046
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000046> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:range xsd:string ;
+                                                           rdfs:comment "A data property that desginates the origin of the name space for an class, individual or property." ;
+                                                           rdfs:label "has namespace"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000047
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000047> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000053> ;
+                                                           rdfs:domain [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( <http://omv.ontoware.org/2005/05/ontology#Ontology>
+                                                                                       <http://purl.obolibrary.org/obo/IAO_0000030>
+                                                                                     )
+                                                                       ] ;
+                                                           rdfs:range xsd:string ;
+                                                           rdfs:label "has conversion authority"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000052
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000052> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000053> ;
+                                                           rdfs:domain [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( <http://omv.ontoware.org/2005/05/ontology#Ontology>
+                                                                                       <http://purl.obolibrary.org/obo/IAO_0000030>
+                                                                                     )
+                                                                       ] ;
+                                                           rdfs:range xsd:string ;
+                                                           rdfs:label "has source authority"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000053
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000053> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain [ rdf:type owl:Class ;
+                                                                         owl:unionOf ( <http://omv.ontoware.org/2005/05/ontology#Ontology>
+                                                                                       <http://purl.obolibrary.org/obo/IAO_0000030>
+                                                                                     )
+                                                                       ] ;
+                                                           rdfs:label "has authority"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -10921,7 +10970,8 @@ monto:terminology rdf:type owl:Class ;
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#version
 monto:version rdf:type owl:Class ;
-              rdfs:subClassOf monto:si-resource-metadata .
+              rdfs:subClassOf monto:si-resource-metadata ;
+              <http://purl.obolibrary.org/obo/IAO_0000115> "An annotation property that describes an individual identifier for some information content entity." .
 
 
 ###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
@@ -10931,7 +10981,7 @@ monto:version rdf:type owl:Class ;
 
 ###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0
 ncit:NHC0 rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> .
+          rdfs:subClassOf monto:identifier .
 
 
 ###  http://omv.ontoware.org/2005/05/ontology#FormalityLevel
@@ -16707,35 +16757,6 @@ No imports"""@en ;
                                             rdfs:seeAlso "https://github.com/oborel/obo-relations/pull/173"^^xsd:anyURI .
 
 
-###  http://purl.obolibrary.org/obo/RO_0002532
-<http://purl.obolibrary.org/obo/RO_0002532> rdf:type owl:Class ;
-                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                              owl:onProperty <http://purl.obolibrary.org/obo/RO_0002524> ;
-                                                              owl:someValuesFrom <http://purl.obolibrary.org/obo/RO_0002533>
-                                                            ] ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Any entity that is ordered in discrete units along a linear axis." ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000117> <https://orcid.org/0000-0002-6601-2165> ;
-                                            rdfs:label "sequentially ordered entity" .
-
-
-###  http://purl.obolibrary.org/obo/RO_0002533
-<http://purl.obolibrary.org/obo/RO_0002533> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/RO_0002532> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Any individual unit of a collection of like units arranged in a linear order" ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000117> <https://orcid.org/0000-0002-6601-2165> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000232> "An individual unit can be a molecular entity such as a base pair, or an abstract entity, such as the abstraction of a base pair." ;
-                                            rdfs:label "sequence atomic unit" .
-
-
-###  http://purl.obolibrary.org/obo/RO_0002534
-<http://purl.obolibrary.org/obo/RO_0002534> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/RO_0002532> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Any entity that can be divided into parts such that each part is an atomical unit of a sequence" ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000117> <https://orcid.org/0000-0002-6601-2165> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000232> "Sequence bearers can be molecular entities, such as a portion of a DNA molecule, or they can be abstract entities, such as an entity representing all human sonic hedgehog regions of the genome with a particular DNA sequence." ;
-                                            rdfs:label "sequence bearer" .
-
-
 ###  http://purl.obolibrary.org/obo/RO_0002577
 <http://purl.obolibrary.org/obo/RO_0002577> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
@@ -16786,7 +16807,7 @@ No imports"""@en ;
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002> rdf:type owl:Class ;
                                                            rdfs:subClassOf monto:si-resource-metadata ;
                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "The format that the resource is set up as. This format is done for both databases or studies." ;
-                                                           rdfs:label "Schema"@en .
+                                                           rdfs:label "schema"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000003
@@ -16794,13 +16815,6 @@ No imports"""@en ;
                                                            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002> ;
                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "A schema that defines what kind of experimental assays were assigned for work." ;
                                                            rdfs:label "Assay Type"@en .
-
-
-###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005
-<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> rdf:type owl:Class ;
-                                                           rdfs:subClassOf monto:si-resource-metadata ;
-                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "A unique identifier for a study" ;
-                                                           rdfs:label "code"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006
@@ -16873,25 +16887,25 @@ No imports"""@en ;
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000017
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000017> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> ;
+                                                           rdfs:subClassOf monto:identifier ;
                                                            rdfs:label "GO identifier"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000018
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000018> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> ;
+                                                           rdfs:subClassOf monto:identifier ;
                                                            rdfs:label "SNOMED concept ID"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000019
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000019> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> ;
+                                                           rdfs:subClassOf monto:identifier ;
                                                            rdfs:label "RadLex ID"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000020
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000020> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000005> ;
+                                                           rdfs:subClassOf monto:identifier ;
                                                            rdfs:label "MEDRA code"@en .
 
 
@@ -16970,17 +16984,17 @@ No imports"""@en ;
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000033
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000033> rdf:type owl:Class ;
+                                                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000041> ;
+                                                                                 owl:someValuesFrom <http://omv.ontoware.org/2005/05/ontology#Ontology>
+                                                                               ] ;
                                                            rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Party> ;
                                                            rdfs:label "Conversion Authority"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000034
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000034> rdf:type owl:Class ;
-                                                           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                 owl:onProperty <http://omv.ontoware.org/2005/05/ontology#isContactPerson> ;
-                                                                                 owl:someValuesFrom <http://omv.ontoware.org/2005/05/ontology#Ontology>
-                                                                               ] ;
-                                                           rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Party> ;
+                                                           rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Person> ;
                                                            rdfs:label "Contact Person"@en .
 
 
@@ -17006,6 +17020,14 @@ No imports"""@en ;
                                                            rdfs:label "CANSI"@en .
 
 
+###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000054
+<http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000054> rdf:type owl:Class ;
+                                                           rdfs:subClassOf monto:si-resource-metadata ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "An annotation property that describes an individual identifier for some information content entity." ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000119> "http://ncicb.nci.nih.gov/reponto.owl#version" ;
+                                                           rdfs:label "version"@en .
+
+
 ###  http://www.geneontology.org/GO
 <http://www.geneontology.org/GO> rdf:type owl:Class ;
                                  rdfs:subClassOf monto:si-resource .
@@ -17021,11 +17043,7 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  http://www.w3.org/2002/07/owl#versionInfo
 owl:versionInfo rdf:type owl:Class ;
-                rdfs:subClassOf monto:version .
-
-
-###  http://xmlns.com/foaf/0.1/image
-<http://xmlns.com/foaf/0.1/image> rdf:type owl:Class .
+                rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000054> .
 
 
 #################################################################
@@ -17290,7 +17308,8 @@ binary, and takes no temporal argument.
 #    Annotations
 #################################################################
 
-owl:versionInfo rdfs:label "versionInfo" .
+owl:versionInfo rdfs:label "versionInfo" ;
+                 <http://purl.obolibrary.org/obo/IAO_0000115> "An annotation property that describes an individual identifier for some information content entity." .
 
 
 #################################################################
@@ -17390,6 +17409,33 @@ owl:versionInfo rdfs:label "versionInfo" .
 <urn:swrl:var#x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 <urn:swrl:var#u> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdfs:label "if effector directly negatively regulates X,  its parent MF directly negatively regulates X" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0002025> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#mf> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#eff>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0002630> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#mf> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#mf2>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0002630> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#eff> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#mf2>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
 
 [ rdfs:label "'causally downstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties)." ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
@@ -17946,33 +17992,6 @@ owl:versionInfo rdfs:label "versionInfo" .
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0002629> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#eff> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#mf2>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ rdfs:label "if effector directly negatively regulates X,  its parent MF directly negatively regulates X" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0002025> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#mf> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#eff>
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0002630> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#mf> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#mf2>
-                                                                ] ;
-                                                      rdf:rest rdf:nil
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://purl.obolibrary.org/obo/RO_0002630> ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl#eff> ;
                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl#mf2>
                                                      ] ;
