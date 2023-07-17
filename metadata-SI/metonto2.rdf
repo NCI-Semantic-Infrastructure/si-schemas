@@ -3260,7 +3260,7 @@ N1 SubclassOf (
                                             owl:propertyChainAxiom ( <http://purl.obolibrary.org/obo/BFO_0000050>
                                                                      <http://purl.obolibrary.org/obo/BFO_0000050>
                                                                    ) ,
-                                                                   _:genid84 ,
+                                                                   _:genid83 ,
                                                                    ( <http://purl.obolibrary.org/obo/BFO_0000051>
                                                                      <http://purl.obolibrary.org/obo/RO_0002131>
                                                                    ) ,
@@ -3276,7 +3276,7 @@ N1 SubclassOf (
                                                                                                     <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
                                             rdfs:label "overlaps"@en .
 
-_:genid84 rdf:type rdf:List ;
+_:genid83 rdf:type rdf:List ;
            rdf:first <http://purl.obolibrary.org/obo/BFO_0000051> ;
            rdf:rest ( <http://purl.obolibrary.org/obo/BFO_0000050>
                     ) .
@@ -3284,7 +3284,7 @@ _:genid84 rdf:type rdf:List ;
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/RO_0002131> ;
    owl:annotatedProperty owl:propertyChainAxiom ;
-   owl:annotatedTarget _:genid84 ;
+   owl:annotatedTarget _:genid83 ;
    <http://purl.obolibrary.org/obo/RO_0002582> "true"^^xsd:boolean
  ] .
 
@@ -3539,12 +3539,12 @@ Expands_to: T has_fasciculating_neuron_projection that synapse_in some R."""@en 
 <http://purl.obolibrary.org/obo/RO_0002177> rdf:type owl:ObjectProperty ;
                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0002323> ,
                                                                <http://purl.obolibrary.org/obo/RO_0002567> ;
-                                            owl:propertyChainAxiom _:genid119 ;
+                                            owl:propertyChainAxiom _:genid118 ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> "a is attached to part of b if a is attached to b, or a is attached to some p, where p is part of b." ;
                                             <http://purl.obolibrary.org/obo/IAO_0000589> "attached to part of (anatomical structure to anatomical structure)" ;
                                             rdfs:label "attached to part of"@en .
 
-_:genid119 rdf:type rdf:List ;
+_:genid118 rdf:type rdf:List ;
             rdf:first <http://purl.obolibrary.org/obo/RO_0002371> ;
             rdf:rest ( <http://purl.obolibrary.org/obo/BFO_0000050>
                      ) .
@@ -3552,7 +3552,7 @@ _:genid119 rdf:type rdf:List ;
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/RO_0002177> ;
    owl:annotatedProperty owl:propertyChainAxiom ;
-   owl:annotatedTarget _:genid119 ;
+   owl:annotatedTarget _:genid118 ;
    <http://purl.obolibrary.org/obo/RO_0002582> "true"^^xsd:boolean
  ] .
 
@@ -3858,14 +3858,14 @@ _:genid119 rdf:type rdf:List ;
 <http://purl.obolibrary.org/obo/RO_0002216> rdf:type owl:ObjectProperty ;
                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0002328> ,
                                                                <http://purl.obolibrary.org/obo/RO_0002500> ;
-                                            owl:propertyChainAxiom _:genid152 ;
+                                            owl:propertyChainAxiom _:genid151 ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> "c stands in this relationship to p if and only if there exists some p' such that c is capable_of p', and p' is part_of p." ;
                                             <http://purl.obolibrary.org/obo/IAO_0000117> <https://orcid.org/0000-0002-6601-2165> ;
                                             <http://purl.obolibrary.org/obo/IAO_0000118> "has function in" ;
                                             rdfs:label "capable of part of"@en ;
                                             rdfs:seeAlso <http://purl.obolibrary.org/obo/ro/docs/reflexivity/> .
 
-_:genid152 rdf:type rdf:List ;
+_:genid151 rdf:type rdf:List ;
             rdf:first <http://purl.obolibrary.org/obo/RO_0002215> ;
             rdf:rest ( <http://purl.obolibrary.org/obo/BFO_0000050>
                      ) .
@@ -3873,7 +3873,7 @@ _:genid152 rdf:type rdf:List ;
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/RO_0002216> ;
    owl:annotatedProperty owl:propertyChainAxiom ;
-   owl:annotatedTarget _:genid152 ;
+   owl:annotatedTarget _:genid151 ;
    <http://purl.obolibrary.org/obo/RO_0002582> "true"^^xsd:boolean
  ] .
 
@@ -4616,7 +4616,7 @@ where
 ###  http://purl.obolibrary.org/obo/RO_0002314
 <http://purl.obolibrary.org/obo/RO_0002314> rdf:type owl:ObjectProperty ;
                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0002502> ;
-                                            owl:propertyChainAxiom _:genid178 ,
+                                            owl:propertyChainAxiom _:genid177 ,
                                                                    ( <http://purl.obolibrary.org/obo/RO_0002314>
                                                                      <http://purl.obolibrary.org/obo/BFO_0000050>
                                                                    ) ;
@@ -4629,7 +4629,7 @@ where
                                             rdfs:label "characteristic of part of"@en ;
                                             rdfs:seeAlso <http://purl.obolibrary.org/obo/ro/docs/reflexivity/> .
 
-_:genid178 rdf:type rdf:List ;
+_:genid177 rdf:type rdf:List ;
             rdf:first <http://purl.obolibrary.org/obo/RO_0000052> ;
             rdf:rest ( <http://purl.obolibrary.org/obo/BFO_0000050>
                      ) .
@@ -4637,7 +4637,7 @@ _:genid178 rdf:type rdf:List ;
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/RO_0002314> ;
    owl:annotatedProperty owl:propertyChainAxiom ;
-   owl:annotatedTarget _:genid178 ;
+   owl:annotatedTarget _:genid177 ;
    <http://purl.obolibrary.org/obo/RO_0002582> "true"^^xsd:boolean
  ] .
 
@@ -4773,13 +4773,13 @@ However, this is not possible in OWL. We instead make this relation a sub-relati
 ###  http://purl.obolibrary.org/obo/RO_0002329
 <http://purl.obolibrary.org/obo/RO_0002329> rdf:type owl:ObjectProperty ;
                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0002328> ;
-                                            owl:propertyChainAxiom _:genid187 ;
+                                            owl:propertyChainAxiom _:genid186 ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> "this relation holds between c and p when c is part of some c', and c' is capable of p." ;
                                             <http://purl.obolibrary.org/obo/IAO_0000117> <https://orcid.org/0000-0002-6601-2165> ;
                                             <http://purl.obolibrary.org/obo/IAO_0000118> "false"^^xsd:boolean ;
                                             rdfs:label "part of structure that is capable of"@en .
 
-_:genid187 rdf:type rdf:List ;
+_:genid186 rdf:type rdf:List ;
             rdf:first <http://purl.obolibrary.org/obo/BFO_0000050> ;
             rdf:rest ( <http://purl.obolibrary.org/obo/RO_0002215>
                      ) .
@@ -4787,7 +4787,7 @@ _:genid187 rdf:type rdf:List ;
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/RO_0002329> ;
    owl:annotatedProperty owl:propertyChainAxiom ;
-   owl:annotatedTarget _:genid187 ;
+   owl:annotatedTarget _:genid186 ;
    <http://purl.obolibrary.org/obo/RO_0002581> "true"^^xsd:boolean
  ] .
 
@@ -5631,7 +5631,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 <http://purl.obolibrary.org/obo/RO_0002432> rdf:type owl:ObjectProperty ;
                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0002131> ,
                                                                <http://purl.obolibrary.org/obo/RO_0002328> ;
-                                            owl:propertyChainAxiom _:genid241 ;
+                                            owl:propertyChainAxiom _:genid240 ;
                                             <http://purl.obolibrary.org/obo/IAO_0000112> "A protein that enables activity in a cytosol." ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> "c executes activity in d if and only if c enables p and p occurs_in d.  Assuming no action at a distance by gene products, if a gene product enables (is capable of) a process that occurs in some structure, it must have at least some part in that structure." ;
                                             <http://purl.obolibrary.org/obo/IAO_0000117> <https://orcid.org/0000-0002-6601-2165> ;
@@ -5640,7 +5640,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
                                             rdfs:comment "" ;
                                             rdfs:label "is active in" .
 
-_:genid241 rdf:type rdf:List ;
+_:genid240 rdf:type rdf:List ;
             rdf:first <http://purl.obolibrary.org/obo/RO_0002327> ;
             rdf:rest ( <http://purl.obolibrary.org/obo/BFO_0000066>
                      ) .
@@ -5648,7 +5648,7 @@ _:genid241 rdf:type rdf:List ;
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/RO_0002432> ;
    owl:annotatedProperty owl:propertyChainAxiom ;
-   owl:annotatedTarget _:genid241 ;
+   owl:annotatedTarget _:genid240 ;
    <http://purl.obolibrary.org/obo/RO_0002581> "true"^^xsd:boolean
  ] .
 
@@ -6175,13 +6175,13 @@ the a supports either the existence of b, or the truth value of b.""" ;
 <http://purl.obolibrary.org/obo/RO_0002479> rdf:type owl:ObjectProperty ;
                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000004> ;
-                                            owl:propertyChainAxiom _:genid277 ;
+                                            owl:propertyChainAxiom _:genid276 ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> "p has part that occurs in c if and only if there exists some p1, such that p has_part p1, and p1 occurs in c." ;
                                             <http://purl.obolibrary.org/obo/IAO_0000117> <https://orcid.org/0000-0002-6601-2165> ;
                                             <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
                                             rdfs:label "has part that occurs in" .
 
-_:genid277 rdf:type rdf:List ;
+_:genid276 rdf:type rdf:List ;
             rdf:first <http://purl.obolibrary.org/obo/BFO_0000051> ;
             rdf:rest ( <http://purl.obolibrary.org/obo/BFO_0000066>
                      ) .
@@ -6189,7 +6189,7 @@ _:genid277 rdf:type rdf:List ;
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/RO_0002479> ;
    owl:annotatedProperty owl:propertyChainAxiom ;
-   owl:annotatedTarget _:genid277 ;
+   owl:annotatedTarget _:genid276 ;
    <http://purl.obolibrary.org/obo/RO_0002581> "true"^^xsd:boolean
  ] .
 
@@ -6490,13 +6490,13 @@ _:genid277 rdf:type rdf:List ;
                                                                <http://purl.obolibrary.org/obo/RO_0002506> ;
                                             rdfs:domain <http://purl.obolibrary.org/obo/RO_0002577> ;
                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                            owl:propertyChainAxiom _:genid319 ;
+                                            owl:propertyChainAxiom _:genid318 ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> "s 'determined by part of' w if and only if there exists some f such that (1) s 'determined by' f and (2) f part_of w, or f=w." ;
                                             <http://purl.obolibrary.org/obo/IAO_0000117> <https://orcid.org/0000-0002-6601-2165> ;
                                             <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> ;
                                             rdfs:label "determined by part of" .
 
-_:genid319 rdf:type rdf:List ;
+_:genid318 rdf:type rdf:List ;
             rdf:first <http://purl.obolibrary.org/obo/RO_0002507> ;
             rdf:rest ( <http://purl.obolibrary.org/obo/BFO_0000050>
                      ) .
@@ -6504,7 +6504,7 @@ _:genid319 rdf:type rdf:List ;
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/RO_0002509> ;
    owl:annotatedProperty owl:propertyChainAxiom ;
-   owl:annotatedTarget _:genid319 ;
+   owl:annotatedTarget _:genid318 ;
    <http://purl.obolibrary.org/obo/RO_0002582> "true"^^xsd:boolean
  ] .
 
@@ -10863,6 +10863,7 @@ For example, protein A (transcription factor) indirectly increases by expression
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000046
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000046> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf <http://www.purl.obolibrary.org/obo/OBINCBI_0000062> ;
                                                            rdfs:range xsd:string ;
                                                            rdfs:comment "A data property that desginates the origin of the name space for an class, individual or property." ;
                                                            rdfs:label "has namespace"@en .
@@ -10902,6 +10903,30 @@ For example, protein A (transcription factor) indirectly increases by expression
                                                            rdfs:label "has authority"@en .
 
 
+###  http://www.purl.obolibrary.org/obo/OBINCBI_0000062
+<http://www.purl.obolibrary.org/obo/OBINCBI_0000062> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:label "has metadata"@en .
+
+
+###  http://www.purl.obolibrary.org/obo/OBINCBI_0000063
+<http://www.purl.obolibrary.org/obo/OBINCBI_0000063> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf <http://www.purl.obolibrary.org/obo/OBINCBI_0000062> ;
+                                                     rdfs:label "has version info"@en .
+
+
+###  http://www.purl.obolibrary.org/obo/OBINCBI_0000064
+<http://www.purl.obolibrary.org/obo/OBINCBI_0000064> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf <http://www.purl.obolibrary.org/obo/OBINCBI_0000062> ;
+                                                     rdfs:label "has version date"@en .
+
+
+###  http://www.purl.obolibrary.org/obo/OBINCBI_0000065
+<http://www.purl.obolibrary.org/obo/OBINCBI_0000065> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000046> ;
+                                                     <http://purl.obolibrary.org/obo/IAO_0000115> "A data property that identifies the date of version release: this format can be stored as a string or set of integers." ;
+                                                     rdfs:label "has prefix"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -10913,7 +10938,10 @@ For example, protein A (transcription factor) indirectly increases by expression
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#caDSR
 monto:caDSR rdf:type owl:Class ;
-            rdfs:subClassOf monto:si-resource .
+            rdfs:subClassOf monto:si-resource ;
+            <http://purl.obolibrary.org/obo/IAO_0000115> "Cander Data Standards Registry and Repository (caDSR) is a metadata repository based on the ISO/IEC 11179 Metadata Registry standard." ;
+            <http://purl.obolibrary.org/obo/IAO_0000118> "Cancer Data Standards Registry and Repository" ;
+            <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" .
 
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#definition
@@ -11004,7 +11032,7 @@ ncit:NHC0 rdf:type owl:Class ;
                                                                             owl:onProperty <http://omv.ontoware.org/2005/05/ontology#description> ;
                                                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                                           ] ;
-                                                          <http://purl.org/dc/elements/1.1/description> "The level of formality of an ontology" ;
+                                                          <http://purl.org/dc/elements/1.1/description> "The level of formality of an ontology utilizes." ;
                                                           rdfs:label "FormalityLevel" .
 
 
@@ -11078,6 +11106,7 @@ ncit:NHC0 rdf:type owl:Class ;
 ###  http://omv.ontoware.org/2005/05/ontology#OntologySyntax
 <http://omv.ontoware.org/2005/05/ontology#OntologySyntax> rdf:type owl:Class ;
                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> ;
+                                                          <http://www.geneontology.org/formats/oboInOwl#created_by> "The format an ontology utilizes in its construction." ;
                                                           rdfs:label "OntologySyntax" .
 
 
@@ -11454,24 +11483,28 @@ ncit:NHC0 rdf:type owl:Class ;
 ###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Class
 <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Class> rdf:type owl:Class ;
                                                                           rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component> ;
+                                                                          <http://www.geneontology.org/formats/oboInOwl#created_by> "An ontology component that represents a set of things that share a common feature" ;
                                                                           rdfs:label "Ontology_Class" .
 
 
 ###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component
 <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component> rdf:type owl:Class ;
                                                                               rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> ;
+                                                                              <http://www.geneontology.org/formats/oboInOwl#created_by> "The components of an ontology." ;
                                                                               rdfs:label "Ontology_Component" .
 
 
 ###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Individual
 <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Individual> rdf:type owl:Class ;
                                                                                rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component> ;
+                                                                               <http://www.geneontology.org/formats/oboInOwl#created_by> "An ontology component that represents a singular instance of a thing." ;
                                                                                rdfs:label "Ontology_Individual" .
 
 
 ###  http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Property
 <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Property> rdf:type owl:Class ;
                                                                              rdfs:subClassOf <http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component> ;
+                                                                             <http://www.geneontology.org/formats/oboInOwl#created_by> "An ontology property that represents a relationship between two sets of entities." ;
                                                                              rdfs:label "Ontology_Property" .
 
 
@@ -16728,7 +16761,8 @@ No imports"""@en ;
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000001
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000001> rdf:type owl:Class ;
                                                            rdfs:subClassOf monto:si-resource ;
-                                                           rdfs:label "NCI"@en .
+                                                           <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
+                                                           rdfs:label "NCI resources"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002
@@ -16769,49 +16803,65 @@ No imports"""@en ;
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000009
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000009> rdf:type owl:Class ;
                                                            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000001> ;
-                                                           rdfs:label "nci metathesaurus"@en .
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "NCI Metathesaurus (NCIm) is a wide-ranging biomedical terminology database that covers most terminologies used by NCI for clinical care, translational and basic research, and public information and administrative activities." ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000118> "NCIm" ;
+                                                           <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
+                                                           rdfs:label "NCI metathesaurus"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000010
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000010> rdf:type owl:Class ;
                                                            rdfs:subClassOf monto:si-resource ;
-                                                           rdfs:label "mged ontology"@en .
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "MGED Ontology is an older ontology that is used for representation of Microarray Gene Expression Data (MGED)." ;
+                                                           <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
+                                                           rdfs:label "MGED ontology"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000011
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000011> rdf:type owl:Class ;
                                                            rdfs:subClassOf monto:si-resource ;
-                                                           rdfs:label "ndfrt"@en .
+                                                           <http://purl.obolibrary.org/obo/IAO_0000118> "National Drug File – Reference Terminology" ;
+                                                           <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
+                                                           rdfs:label "ND-RFT"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000012
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000012> rdf:type owl:Class ;
                                                            rdfs:subClassOf monto:si-resource ;
-                                                           rdfs:label "ctcae v5"@en .
+                                                           <http://purl.obolibrary.org/obo/IAO_0000118> "Common Terminology Criteria for Adverse Events Dictionary" ;
+                                                           rdfs:label "CTCAE"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000013
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000013> rdf:type owl:Class ;
                                                            rdfs:subClassOf monto:si-resource ;
-                                                           rdfs:label "loinc"@en .
+                                                           <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
+                                                           rdfs:label "LOINC"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000014
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000014> rdf:type owl:Class ;
                                                            rdfs:subClassOf monto:si-resource ;
-                                                           rdfs:label "snomed"@en .
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "SNOMED Clinical Terms is a systematically organized computer-processable collection of medical terms providing codes, terms, synonyms and definitions used in clinical documentation and reporting. SNOMED functions an ontology." ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000118> "SNOMED CT, SNOMED Clinical Terms" ;
+                                                           <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
+                                                           rdfs:label "SNOMED"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000015
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000015> rdf:type owl:Class ;
                                                            rdfs:subClassOf monto:si-resource ;
-                                                           rdfs:label "radlex"@en .
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "RadLex radiology lexicon represents a schema of radiology terms. It is utilized by LOINC." ;
+                                                           <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
+                                                           rdfs:label "RadLex"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000016
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000016> rdf:type owl:Class ;
                                                            rdfs:subClassOf monto:si-resource ;
-                                                           rdfs:label "medra"@en .
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "Medical Dictionary for Regulatory Activities (MedDRA) is a schema that standardized medical terminology for medicinal chemical entities." ;
+                                                           <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
+                                                           rdfs:label "MedDRA"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000017
@@ -16934,6 +16984,7 @@ No imports"""@en ;
                                                                                  owl:someValuesFrom <http://omv.ontoware.org/2005/05/ontology#Ontology>
                                                                                ] ;
                                                            rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Party> ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "A party that has authority over an ontology source. They are individuals capable of making alterations to any changes." ;
                                                            rdfs:label "Ontology Source Authority"@en .
 
 
@@ -16945,7 +16996,9 @@ No imports"""@en ;
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000044
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000044> rdf:type owl:Class ;
-                                                           rdfs:subClassOf monto:si-resource ;
+                                                           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000001> ;
+                                                           <http://purl.obolibrary.org/obo/IAO_0000115> "A metadata ontology that represents metadata for various NIH projects." ;
+                                                           <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
                                                            rdfs:label "CANSI"@en .
 
 
@@ -16958,7 +17011,10 @@ No imports"""@en ;
 
 ###  http://www.geneontology.org/GO
 <http://www.geneontology.org/GO> rdf:type owl:Class ;
-                                 rdfs:subClassOf monto:si-resource .
+                                 rdfs:subClassOf monto:si-resource ;
+                                 <http://purl.obolibrary.org/obo/IAO_0000115> "Gene Ontology (GO) is an ontology that represents functionality of genes, namely the role of specific genes when involved in cellular components, biological processes, or molecular functions." ;
+                                 <http://purl.obolibrary.org/obo/IAO_0000118> "Gene Ontology" ;
+                                 <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" .
 
 
 ###  http://www.geneontology.org/formats/oboInOwl#ObsoleteClass
@@ -16970,6 +17026,15 @@ No imports"""@en ;
                                                      rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000002> ;
                                                      <http://purl.obolibrary.org/obo/IAO_0000115> "The schema utilized by OBO ontologies. These are part of an ISO standard for knowledge representation." ;
                                                      rdfs:label "OBO schema"@en .
+
+
+###  http://www.purl.obolibrary.org/obo/OBINCBI_0000057
+<http://www.purl.obolibrary.org/obo/OBINCBI_0000057> rdf:type owl:Class ;
+                                                     rdfs:subClassOf monto:si-resource ;
+                                                     <http://purl.obolibrary.org/obo/IAO_0000115> "Biomedical Resource Ontology (BRO) is an ontology used to enable semantic annotation and discovery of biomedical resources." ;
+                                                     <http://purl.obolibrary.org/obo/IAO_0000118> "Biomedical Resource Ontology" ;
+                                                     <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
+                                                     rdfs:label "BRO"@en .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Resource
@@ -17234,6 +17299,27 @@ binary, and takes no temporal argument.
                                                                       owl:someValuesFrom <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000044>
                                                                     ] ;
                                                            rdfs:label "Anthony Huffman"@en .
+
+
+###  http://www.purl.obolibrary.org/obo/OBINCBI_0000058
+<http://www.purl.obolibrary.org/obo/OBINCBI_0000058> rdf:type owl:NamedIndividual ;
+                                                     rdfs:label "CTCAE v5"@en .
+
+
+###  http://www.purl.obolibrary.org/obo/OBINCBI_0000059
+<http://www.purl.obolibrary.org/obo/OBINCBI_0000059> rdf:type owl:NamedIndividual ;
+                                                     rdfs:label "NCI EVS"@en .
+
+
+###  http://www.purl.obolibrary.org/obo/OBINCBI_0000060
+<http://www.purl.obolibrary.org/obo/OBINCBI_0000060> rdf:type owl:NamedIndividual ;
+                                                     <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000052> "Gene Ontology" ;
+                                                     rdfs:label "GO Consortium"@en .
+
+
+###  http://www.purl.obolibrary.org/obo/OBINCBI_0000061
+<http://www.purl.obolibrary.org/obo/OBINCBI_0000061> rdf:type owl:NamedIndividual ;
+                                                     rdfs:label "NCI caDSR"@en .
 
 
 [ rdfs:seeAlso <https://github.com/oborel/obo-relations/issues/259>
