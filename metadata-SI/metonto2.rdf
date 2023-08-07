@@ -2132,11 +2132,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
  ] .
 
 
-###  http://purl.obolibrary.org/obo/RO_0015010
-<http://purl.obolibrary.org/obo/RO_0015010> rdf:type owl:ObjectProperty ;
-                                            rdfs:label "has relative magnitude" .
-
-
 ###  http://purl.obolibrary.org/obo/RO_0015011
 <http://purl.obolibrary.org/obo/RO_0015011> rdf:type owl:ObjectProperty ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> "s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2." ;
@@ -3807,7 +3802,7 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
                                                            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000001> ;
                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "A metadata ontology that represents metadata for various NIH projects." ;
                                                            <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
-                                                           rdfs:label "CANSI"@en .
+                                                           rdfs:label "SSIMO"@en .
 
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000054
@@ -4016,6 +4011,23 @@ ncit:NHC0 rdf:type owl:NamedIndividual .
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Alan Ruttenberg"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "group:OBI"@en ;
                                              rdfs:label "requires discussion"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBINCBI_0000010
+<http://purl.obolibrary.org/obo/OBINCBI_0000010> rdf:type owl:NamedIndividual ,
+                                                          <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000009> ;
+                                                 rdfs:label "NCI Thesaurus OWL"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBINCBI_0000011
+<http://purl.obolibrary.org/obo/OBINCBI_0000011> rdf:type owl:NamedIndividual ,
+                                                          <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000009> ;
+                                                 rdfs:label "NCI Thesaurus RDF"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBINCBI_0000012
+<http://purl.obolibrary.org/obo/OBINCBI_0000012> rdf:type owl:NamedIndividual ;
+                                                 rdfs:label "LDP Ontology"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OMO_0001000
