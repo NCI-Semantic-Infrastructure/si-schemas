@@ -1360,22 +1360,6 @@ monto:is_repository_type rdf:type owl:ObjectProperty .
 <http://omv.ontoware.org/2005/05/ontology#developedBy> rdf:type owl:ObjectProperty .
 
 
-###  http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringMethodology
-<http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringMethodology> rdf:type owl:ObjectProperty .
-
-
-###  http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringTool
-<http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringTool> rdf:type owl:ObjectProperty .
-
-
-###  http://omv.ontoware.org/2005/05/ontology#developesOntologyLanguage
-<http://omv.ontoware.org/2005/05/ontology#developesOntologyLanguage> rdf:type owl:ObjectProperty .
-
-
-###  http://omv.ontoware.org/2005/05/ontology#developesOntologySyntax
-<http://omv.ontoware.org/2005/05/ontology#developesOntologySyntax> rdf:type owl:ObjectProperty .
-
-
 ###  http://omv.ontoware.org/2005/05/ontology#hasAffiliatedParty
 <http://omv.ontoware.org/2005/05/ontology#hasAffiliatedParty> rdf:type owl:ObjectProperty .
 
@@ -2650,6 +2634,10 @@ monto:preferred_term rdf:type owl:Class ;
 
 ###  http://ncicb.nci.nih.gov/reponto.owl#si-resource
 monto:si-resource rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                    owl:someValuesFrom <http://purl.obolibrary.org/obo/OBINCBI_0000018>
+                                  ] ;
                   <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that is used as a resource for an ontology. The usage refers to other ontologies and data sources." .
 
 
@@ -2674,12 +2662,6 @@ monto:term rdf:type owl:Class ;
 monto:terminology rdf:type owl:Class ;
                   rdfs:subClassOf monto:si-resource-type ;
                   <http://purl.obolibrary.org/obo/IAO_0000115> "A resource type that contains a set of definitions for a resource." .
-
-
-###  http://ncicb.nci.nih.gov/reponto.owl#version
-monto:version rdf:type owl:Class ;
-              rdfs:subClassOf monto:si-resource-metadata ;
-              <http://purl.obolibrary.org/obo/IAO_0000115> "An annotation property that describes an individual identifier for some information content entity." .
 
 
 ###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
@@ -2864,34 +2846,6 @@ ncit:NHC0 rdf:type owl:Class ;
 ###  http://omv.ontoware.org/2005/05/ontology#Party
 <http://omv.ontoware.org/2005/05/ontology#Party> rdf:type owl:Class ;
                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#contributesToOntology> ;
-                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Ontology>
-                                                                 ] ,
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#createsOntology> ;
-                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Ontology>
-                                                                 ] ,
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#definesOntologyType> ;
-                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyType>
-                                                                 ] ,
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringMethodology> ;
-                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology>
-                                                                 ] ,
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#developesOntologyEngineeringTool> ;
-                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool>
-                                                                 ] ,
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#developesOntologyLanguage> ;
-                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyLanguage>
-                                                                 ] ,
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <http://omv.ontoware.org/2005/05/ontology#developesOntologySyntax> ;
-                                                                   owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologySyntax>
-                                                                 ] ,
-                                                                 [ rdf:type owl:Restriction ;
                                                                    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#hasAffiliatedParty> ;
                                                                    owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Party>
                                                                  ] ;
@@ -2902,10 +2856,6 @@ ncit:NHC0 rdf:type owl:Class ;
 ###  http://omv.ontoware.org/2005/05/ontology#Person
 <http://omv.ontoware.org/2005/05/ontology#Person> rdf:type owl:Class ;
                                                   rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Party> ,
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <http://omv.ontoware.org/2005/05/ontology#isContactPerson> ;
-                                                                    owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Organisation>
-                                                                  ] ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty <http://omv.ontoware.org/2005/05/ontology#eMail> ;
                                                                     owl:allValuesFrom xsd:string
@@ -3561,6 +3511,41 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
                                              owl:deprecated "true"^^xsd:boolean .
 
 
+###  http://purl.obolibrary.org/obo/OBINCBI_0000013
+<http://purl.obolibrary.org/obo/OBINCBI_0000013> rdf:type owl:Class ;
+                                                 rdfs:subClassOf monto:si-resource ;
+                                                 <http://purl.org/dc/elements/1.1/description> "The cancer Biomedical Informatic Grid (caBIG) was a governement program. This is used as a synonym for the  an open source dataspace the caGRID network." ;
+                                                 <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
+                                                 rdfs:label "caBIG"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBINCBI_0000014
+<http://purl.obolibrary.org/obo/OBINCBI_0000014> rdf:type owl:Class ;
+                                                 rdfs:subClassOf monto:si-resource ;
+                                                 rdfs:label "MADS/RDF"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBINCBI_0000015
+<http://purl.obolibrary.org/obo/OBINCBI_0000015> rdf:type owl:Class ;
+                                                 rdfs:subClassOf monto:si-resource ;
+                                                 <http://purl.org/dc/elements/1.1/description> "A document type that contains metadata models." ;
+                                                 rdfs:label "ISO 11179"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBINCBI_0000018
+<http://purl.obolibrary.org/obo/OBINCBI_0000018> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000006> ;
+                                                 <http://purl.org/dc/elements/1.1/description> "The subject  of knowledge that is covered by an information content entity." ;
+                                                 rdfs:label "Ontology Domain"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBINCBI_0000020
+<http://purl.obolibrary.org/obo/OBINCBI_0000020> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000001> ;
+                                                 <http://purl.org/dc/elements/1.1/description> "The NCIt OBO Edition project aims to increase integration of the NCIt with OBO Library ontologies. NCIt is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities." ;
+                                                 rdfs:label "NCI Thesaurus OBO Edition"@en .
+
+
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000001
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000001> rdf:type owl:Class ;
                                                            rdfs:subClassOf monto:si-resource ;
@@ -3776,7 +3761,11 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
 
 ###  http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000034
 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000034> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Person> ;
+                                                           rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Person> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://omv.ontoware.org/2005/05/ontology#isContactPerson> ;
+                                                                             owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Organisation>
+                                                                           ] ;
                                                            rdfs:label "Contact Person"@en .
 
 
@@ -3786,7 +3775,15 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
                                                                                  owl:onProperty <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000042> ;
                                                                                  owl:someValuesFrom <http://omv.ontoware.org/2005/05/ontology#Ontology>
                                                                                ] ;
-                                                           rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Party> ;
+                                                           rdfs:subClassOf <http://omv.ontoware.org/2005/05/ontology#Party> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://omv.ontoware.org/2005/05/ontology#contributesToOntology> ;
+                                                                             owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#Ontology>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://omv.ontoware.org/2005/05/ontology#definesOntologyType> ;
+                                                                             owl:allValuesFrom <http://omv.ontoware.org/2005/05/ontology#OntologyType>
+                                                                           ] ;
                                                            <http://purl.obolibrary.org/obo/IAO_0000115> "A party that has authority over an ontology source. They are individuals capable of making alterations to any changes." ;
                                                            rdfs:label "Ontology Source Authority"@en .
 
@@ -3846,7 +3843,7 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  http://www.w3.org/2002/07/owl#versionInfo
 owl:versionInfo rdf:type owl:Class ;
-                rdfs:subClassOf monto:version .
+                rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000054> .
 
 
 #################################################################
@@ -4016,18 +4013,34 @@ ncit:NHC0 rdf:type owl:NamedIndividual .
 ###  http://purl.obolibrary.org/obo/OBINCBI_0000010
 <http://purl.obolibrary.org/obo/OBINCBI_0000010> rdf:type owl:NamedIndividual ,
                                                           <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000009> ;
+                                                 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000046> "xsd:string" ;
+                                                 <http://www.purl.obolibrary.org/obo/OBINCBI_0000063> "xsd:string" ;
+                                                 <http://www.purl.obolibrary.org/obo/OBINCBI_0000064> "xsd:string" ;
+                                                 <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
                                                  rdfs:label "NCI Thesaurus OWL"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBINCBI_0000011
 <http://purl.obolibrary.org/obo/OBINCBI_0000011> rdf:type owl:NamedIndividual ,
                                                           <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000009> ;
+                                                 <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000046> "'has version date' some xsd:string" ;
+                                                 <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
                                                  rdfs:label "NCI Thesaurus RDF"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBINCBI_0000012
 <http://purl.obolibrary.org/obo/OBINCBI_0000012> rdf:type owl:NamedIndividual ;
                                                  rdfs:label "LDP Ontology"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBINCBI_0000016
+<http://purl.obolibrary.org/obo/OBINCBI_0000016> rdf:type owl:NamedIndividual ;
+                                                 rdfs:label "prefix dc"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBINCBI_0000017
+<http://purl.obolibrary.org/obo/OBINCBI_0000017> rdf:type owl:NamedIndividual ;
+                                                 rdfs:label "prefix owl"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OMO_0001000
@@ -4105,7 +4118,10 @@ binary, and takes no temporal argument.
 
 
 ###  http://www.purl.obolibrary.org/obo/OBINCBI_0000058
-<http://www.purl.obolibrary.org/obo/OBINCBI_0000058> rdf:type owl:NamedIndividual ;
+<http://www.purl.obolibrary.org/obo/OBINCBI_0000058> rdf:type owl:NamedIndividual ,
+                                                              <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000012> ;
+                                                     <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000046> "http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae5.owl#" ;
+                                                     <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
                                                      rdfs:label "CTCAE v5"@en .
 
 
@@ -4117,12 +4133,17 @@ binary, and takes no temporal argument.
 ###  http://www.purl.obolibrary.org/obo/OBINCBI_0000060
 <http://www.purl.obolibrary.org/obo/OBINCBI_0000060> rdf:type owl:NamedIndividual ,
                                                               <http://omv.ontoware.org/2005/05/ontology#Organisation> ;
+                                                     <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000046> "'has version date' some xsd:string" ,
+                                                                                                                "http://purl.org/obo/owl/GO#" ;
                                                      <http://www.co-ode.org/ontologies/ont.owl#OBINCBI_0000052> "Gene Ontology" ;
+                                                     <http://www.purl.obolibrary.org/obo/OBINCBI_0000063> "'has version date' some xsd:string" ;
                                                      rdfs:label "GO Consortium"@en .
 
 
 ###  http://www.purl.obolibrary.org/obo/OBINCBI_0000061
-<http://www.purl.obolibrary.org/obo/OBINCBI_0000061> rdf:type owl:NamedIndividual ;
+<http://www.purl.obolibrary.org/obo/OBINCBI_0000061> rdf:type owl:NamedIndividual ,
+                                                              monto:caDSR ;
+                                                     <http://www.geneontology.org/formats/oboInOwl#created_by> "Anthony Huffman" ;
                                                      rdfs:label "NCI caDSR"@en .
 
 
@@ -4133,7 +4154,7 @@ binary, and takes no temporal argument.
 #    Annotations
 #################################################################
 
-owl:versionInfo <http://purl.obolibrary.org/obo/IAO_0000115> "An annotation property that describes an individual identifier for some information content entity." ;
+owl:versionInfo <http://purl.obolibrary.org/obo/IAO_0000115> "An annotation property that describes an individual identifier for some information content entity which specifies version number." ;
                  rdfs:label "versionInfo" .
 
 
