@@ -3,7 +3,6 @@
      xml:base="http://ncicb.nci.nih.gov/reponto.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -16,6 +15,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:monto="http://ncicb.nci.nih.gov/reponto.owl#"
+     xmlns:ncicb="http://ncicb.nci.nih.gov/"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
@@ -28,8 +28,8 @@
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <rdfs:comment>Current draft on He Lab, by Anthony Huffman</rdfs:comment>
-        <rdfs:comment>IDs allocated to related efforts: PNO: IAO_0020000-IAO_0020999, D_ACTS: IAO_0021000-IAO_0021999</rdfs:comment>
         <rdfs:comment>IDs allocated to subdomains of IAO. pno.owl: IAO_0020000-IAO_0020999, d-acts.owl: IAO_0021000-IAO_0021999</rdfs:comment>
+        <rdfs:comment>IDs allocated to related efforts: PNO: IAO_0020000-IAO_0020999, D_ACTS: IAO_0021000-IAO_0021999</rdfs:comment>
         <rdfs:comment>nci metathesaurus
     mged ontology
     ndfrt
@@ -56,6 +56,23 @@ bro</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000048 -->
+
+    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000048">
+        <rdfs:label xml:lang="en">has source authority</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000051 -->
+
+    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000051">
+        <dc:description>A generalized annoration property that utilises the IRI of the source to note the version used.</dc:description>
+        <rdfs:label xml:lang="en">has version data</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -1584,23 +1601,6 @@ Where we have an annotation assertion
     
 
 
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000048 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000048">
-        <rdfs:label xml:lang="en">has source authority</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000051 -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000051">
-        <dc:description>A generalized annoration property that utilises the IRI of the source to note the version used.</dc:description>
-        <rdfs:label xml:lang="en">has version data</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty">
@@ -1789,6 +1789,62 @@ Where we have an annotation assertion
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000037 -->
+
+    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000037">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <obo:IAO_0000115>An object property that links an identifier within a class, individual, or property such that to another ontology or database</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">has namespace</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000038 -->
+
+    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000038">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">has version</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000039 -->
+
+    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000039">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment>A property that is used to link class, individual, or property from one ontology to  the original ontology or knowledge graph</rdfs:comment>
+        <rdfs:label xml:lang="en">has graph names</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000040 -->
+
+    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000040">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">has authority</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000041 -->
+
+    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000041">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000040"/>
+        <rdfs:label xml:lang="en">has conversion authority</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000042 -->
+
+    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000042">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000040"/>
+        <rdfs:label xml:lang="en">has source authority</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -2862,62 +2918,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     
 
 
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000037 -->
-
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000037">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <obo:IAO_0000115>An object property that links an identifier within a class, individual, or property such that to another ontology or database</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">has namespace</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000038 -->
-
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000038">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:label xml:lang="en">has version</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000039 -->
-
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000039">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:comment>A property that is used to link class, individual, or property from one ontology to  the original ontology or knowledge graph</rdfs:comment>
-        <rdfs:label xml:lang="en">has graph names</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000040 -->
-
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000040">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:label xml:lang="en">has authority</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000041 -->
-
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000041">
-        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000040"/>
-        <rdfs:label xml:lang="en">has conversion authority</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000042 -->
-
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000042">
-        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000040"/>
-        <rdfs:label xml:lang="en">has source authority</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty -->
 
     <owl:ObjectProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteProperty"/>
@@ -2932,6 +2932,17 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000046 -->
+
+    <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000046">
+        <rdfs:subPropertyOf rdf:resource="http://www.purl.obolibrary.org/obo/OBINCBI_0000062"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>A data property that desginates the origin of the name space for an class, individual or property.</rdfs:comment>
+        <rdfs:label xml:lang="en">has namespace</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -3385,48 +3396,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     
 
 
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000046 -->
-
-    <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000046">
-        <rdfs:subPropertyOf rdf:resource="http://www.purl.obolibrary.org/obo/OBINCBI_0000062"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>A data property that desginates the origin of the name space for an class, individual or property.</rdfs:comment>
-        <rdfs:label xml:lang="en">has namespace</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000047 -->
-
-    <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000047">
-        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000053"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <dc:description>A data property that links a party to an information content entity. A data property that links a party to an information content entity where the information content entity is converted from one datatype to another.</dc:description>
-        <rdfs:label xml:lang="en">has conversion authority</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000052 -->
-
-    <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000052">
-        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000053"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <obo:IAO_0000115>A data property that links a resource or ontology to a party where the information content entity is a source for some data.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">has source authority</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000053 -->
-
-    <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000053">
-        <dc:description>A data property that links a resource or ontology  to a party. A data property that links a party to an information content entity where the resource or ontology is converted from one datatype to another.</dc:description>
-        <rdfs:label xml:lang="en">has authority</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.purl.obolibrary.org/obo/OBINCBI_0000062 -->
 
     <owl:DatatypeProperty rdf:about="http://www.purl.obolibrary.org/obo/OBINCBI_0000062">
@@ -3497,6 +3466,442 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     
 
 
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000001 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000001">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">NCI resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000002 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000002">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
+        <obo:IAO_0000115>The format that the resource is set up as. This format is done for both databases or studies.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">schema</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000003 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000003">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
+        <obo:IAO_0000115>A schema that defines what kind of experimental assays were assigned for work.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Assay Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000006 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000006">
+        <obo:IAO_0000115>An information content entity that describes the components of an ontology.</obo:IAO_0000115>
+        <obo:IAO_0000118>Semantic Infrastructure - Ontology</obo:IAO_0000118>
+        <obo:IAO_0000118>si-ontology terms</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">si-ontology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000007 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000007">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>Rough defintion, Anthony Huffman</rdfs:comment>
+        <rdfs:isDefinedBy>A resouce that is used for guidance on a procedure to convert some data entries from some source A are converted into data entries in some source B.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Mappings Resources</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000008 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000008">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
+        <obo:IAO_0000115>The date that a study was first uploaded into a database.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">load date</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000009 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000009">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000001"/>
+        <obo:IAO_0000115>NCI Metathesaurus (NCIm) is a wide-ranging biomedical terminology database that covers most terminologies used by NCI for clinical care, translational and basic research, and public information and administrative activities.</obo:IAO_0000115>
+        <obo:IAO_0000118>NCIm</obo:IAO_0000118>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">NCI metathesaurus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000013 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000013">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <dc:description>The cancer Biomedical Informatic Grid (caBIG) was a governement program. This is used as a synonym for the  an open source dataspace the caGRID network.</dc:description>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">caBIG</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000014 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000014">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <obo:IAO_0000115>SNOMED Clinical Terms is a systematically organized computer-processable collection of medical terms providing codes, terms, synonyms and definitions used in clinical documentation and reporting. SNOMED functions an ontology.</obo:IAO_0000115>
+        <obo:IAO_0000118>SNOMED CT, SNOMED Clinical Terms</obo:IAO_0000118>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">MADS/RDF</rdfs:label>
+        <rdfs:label xml:lang="en">SNOMED</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000015 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000015">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <obo:IAO_0000115>RadLex radiology lexicon represents a schema of radiology terms. It is utilized by LOINC.</obo:IAO_0000115>
+        <dc:description>A document type that contains metadata models.</dc:description>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">ISO 11179</rdfs:label>
+        <rdfs:label xml:lang="en">RadLex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000018 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000018">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+        <dc:description>The subject  of knowledge that is covered by an information content entity.</dc:description>
+        <rdfs:label xml:lang="en">Ontology Domain</rdfs:label>
+        <rdfs:label xml:lang="en">SNOMED concept ID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000019 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000019">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+        <rdfs:label xml:lang="en">RadLex ID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000020 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000020">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+        <dc:description>The NCIt OBO Edition project aims to increase integration of the NCIt with OBO Library ontologies. NCIt is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities.</dc:description>
+        <rdfs:label xml:lang="en">MeDRA code</rdfs:label>
+        <rdfs:label xml:lang="en">NCI Thesaurus OBO Edition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000021 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000021">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
+        <rdfs:label xml:lang="en">MeDRA level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000022 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000022">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
+        <rdfs:label xml:lang="en">LOINC name schemas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000023 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000023">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000022"/>
+        <rdfs:label xml:lang="en">LOINC name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000024 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000024">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000023"/>
+        <rdfs:label xml:lang="en">LOINC name Data Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000025 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000025">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000023"/>
+        <rdfs:label xml:lang="en">LOINC name Observation Code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000026 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000026">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000023"/>
+        <rdfs:label xml:lang="en">LOINC name Result Code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000027 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000027">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000022"/>
+        <rdfs:label xml:lang="en">FSN name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000028 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000028">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000027"/>
+        <rdfs:label xml:lang="en">FSN name data type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000029 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000029">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000027"/>
+        <rdfs:label xml:lang="en">FSN name observation code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000030 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000030">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000022"/>
+        <rdfs:label xml:lang="en">LOINC short name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000031 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000031">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
+        <rdfs:label xml:lang="en">SNOMED schema</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000032 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000032">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
+        <rdfs:label xml:lang="en">NCITMetathesaurus schema</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000033 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000033">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000041"/>
+                <owl:someValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#Party"/>
+        <rdfs:label xml:lang="en">Conversion Authority</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000034 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#isContactPerson"/>
+                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Contact Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000035 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000035">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000042"/>
+                <owl:someValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#Party"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#contributesToOntology"/>
+                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#definesOntologyType"/>
+                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A party that has authority over an ontology source. They are individuals capable of making alterations to any changes.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Ontology Source Authority</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000036 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000036">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
+        <rdfs:label xml:lang="en">Assay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000044 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000044">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000001"/>
+        <obo:IAO_0000115>A metadata ontology that represents metadata for various NIH projects.</obo:IAO_0000115>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">SSIMO</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000054 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000054">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
+        <obo:IAO_0000115>An annotation property that describes an individual identifier for some information content entity.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">version</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000056 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000056">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
+        <obo:IAO_0000115>The schema utilized by OBO ontologies. These are part of an ISO standard for knowledge representation.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">OBO schema</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000057 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000057">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <obo:IAO_0000115>Biomedical Resource Ontology (BRO) is an ontology used to enable semantic annotation and discovery of biomedical resources.</obo:IAO_0000115>
+        <obo:IAO_0000118>Biomedical Resource Ontology</obo:IAO_0000118>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">BRO</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000094 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000094">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+        <rdfs:label xml:lang="en">GO identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000095 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000095">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <obo:IAO_0000115>Cander Data Standards Registry and Repository (caDSR) is a metadata repository based on the ISO/IEC 11179 Metadata Registry standard.</obo:IAO_0000115>
+        <obo:IAO_0000118>Cancer Data Standards Registry and Repository</obo:IAO_0000118>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label>caDSR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000096 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000096">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <obo:IAO_0000118>Common Terminology Criteria for Adverse Events Dictionary</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">CTCAE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000097 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000097">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">LOINC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000098 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000098">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <obo:IAO_0000115>Medical Dictionary for Regulatory Activities (MedDRA) is a schema that standardized medical terminology for medicinal chemical entities.</obo:IAO_0000115>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">MedDRA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000099 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000099">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <obo:IAO_0000115>MGED Ontology is an older ontology that is used for representation of Microarray Gene Expression Data (MGED).</obo:IAO_0000115>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">MGED ontology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000100 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000100">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <obo:IAO_0000118>National Drug File – Reference Terminology</obo:IAO_0000118>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">ND-RFT</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/reponto.owl#definition -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#definition">
@@ -3552,7 +3957,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata">
-        <obo:IAO_0000115>An information content entity that constain a resource to describe resource-metadata.</obo:IAO_0000115>
+        <obo:IAO_0000115>An information content entity that contains a resource to describe resource-metadata.</obo:IAO_0000115>
         <obo:IAO_0000118>Semantic Infrastructure - Resource-Metadata</obo:IAO_0000118>
     </owl:Class>
     
@@ -3641,7 +4046,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000006"/>
         <obo:IAO_0000115>A hierarchical knowledge graph that stores knowledge in the form of triplets.</obo:IAO_0000115>
-        <rdfs:label>Ontology</rdfs:label>
+        <rdfs:label>Ontology Hierarchy</rdfs:label>
     </owl:Class>
     
 
@@ -4718,387 +5123,6 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
     
 
 
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000001 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000001">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">NCI resource</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000003 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000003">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
-        <obo:IAO_0000115>A schema that defines what kind of experimental assays were assigned for work.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Assay Type</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000009 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000009">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000001"/>
-        <obo:IAO_0000115>NCI Metathesaurus (NCIm) is a wide-ranging biomedical terminology database that covers most terminologies used by NCI for clinical care, translational and basic research, and public information and administrative activities.</obo:IAO_0000115>
-        <obo:IAO_0000118>NCIm</obo:IAO_0000118>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">NCI metathesaurus</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000011 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000011">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000013 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000013">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
-        <dc:description>The cancer Biomedical Informatic Grid (caBIG) was a governement program. This is used as a synonym for the  an open source dataspace the caGRID network.</dc:description>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">caBIG</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000014 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000014">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
-        <obo:IAO_0000115>SNOMED Clinical Terms is a systematically organized computer-processable collection of medical terms providing codes, terms, synonyms and definitions used in clinical documentation and reporting. SNOMED functions an ontology.</obo:IAO_0000115>
-        <obo:IAO_0000118>SNOMED CT, SNOMED Clinical Terms</obo:IAO_0000118>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">MADS/RDF</rdfs:label>
-        <rdfs:label xml:lang="en">SNOMED</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000015 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000015">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
-        <obo:IAO_0000115>RadLex radiology lexicon represents a schema of radiology terms. It is utilized by LOINC.</obo:IAO_0000115>
-        <dc:description>A document type that contains metadata models.</dc:description>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">ISO 11179</rdfs:label>
-        <rdfs:label xml:lang="en">RadLex</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000018 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000018">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000006"/>
-        <dc:description>The subject  of knowledge that is covered by an information content entity.</dc:description>
-        <rdfs:label xml:lang="en">Ontology Domain</rdfs:label>
-        <rdfs:label xml:lang="en">SNOMED concept ID</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000019 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000019">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
-        <rdfs:label xml:lang="en">RadLex ID</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000020 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000020">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000001"/>
-        <dc:description>The NCIt OBO Edition project aims to increase integration of the NCIt with OBO Library ontologies. NCIt is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities.</dc:description>
-        <rdfs:label xml:lang="en">MeDRA code</rdfs:label>
-        <rdfs:label xml:lang="en">NCI Thesaurus OBO Edition</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000021 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000021">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
-        <rdfs:label xml:lang="en">MeDRA level</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000022 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000022">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
-        <rdfs:label xml:lang="en">LOINC name schemas</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000023 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000023">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000022"/>
-        <rdfs:label xml:lang="en">LOINC name</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000024 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000024">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000023"/>
-        <rdfs:label xml:lang="en">LOINC name Data Type</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000025 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000025">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000023"/>
-        <rdfs:label xml:lang="en">LOINC name Observation Code</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000026 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000026">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000023"/>
-        <rdfs:label xml:lang="en">LOINC name Result Code</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000027 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000027">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000022"/>
-        <rdfs:label xml:lang="en">FSN name</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000028 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000028">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000027"/>
-        <rdfs:label xml:lang="en">FSN name data type</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000029 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000029">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000027"/>
-        <rdfs:label xml:lang="en">FSN name observation code</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000030 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000030">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000022"/>
-        <rdfs:label xml:lang="en">LOINC short name</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000031 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000031">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
-        <rdfs:label xml:lang="en">SNOMED schema</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000032 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000032">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
-        <rdfs:label xml:lang="en">NCITMetathesaurus schema</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000033 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000033">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000041"/>
-                <owl:someValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#Party"/>
-        <rdfs:label xml:lang="en">Conversion Authority</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000034 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000034">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Person"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#isContactPerson"/>
-                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Contact Person</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000035 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000035">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000042"/>
-                <owl:someValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#Party"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#contributesToOntology"/>
-                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#definesOntologyType"/>
-                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>A party that has authority over an ontology source. They are individuals capable of making alterations to any changes.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Ontology Source Authority</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000036 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000036">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
-        <rdfs:label xml:lang="en">Assay</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000044 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000044">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000001"/>
-        <obo:IAO_0000115>A metadata ontology that represents metadata for various NIH projects.</obo:IAO_0000115>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">SSIMO</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000056 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000056">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
-        <obo:IAO_0000115>The schema utilized by OBO ontologies. These are part of an ISO standard for knowledge representation.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">OBO schema</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000057 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000057">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
-        <obo:IAO_0000115>Biomedical Resource Ontology (BRO) is an ontology used to enable semantic annotation and discovery of biomedical resources.</obo:IAO_0000115>
-        <obo:IAO_0000118>Biomedical Resource Ontology</obo:IAO_0000118>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">BRO</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000094 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000094">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
-        <rdfs:label xml:lang="en">GO identifier</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000095 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000095">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
-        <obo:IAO_0000115>Cander Data Standards Registry and Repository (caDSR) is a metadata repository based on the ISO/IEC 11179 Metadata Registry standard.</obo:IAO_0000115>
-        <obo:IAO_0000118>Cancer Data Standards Registry and Repository</obo:IAO_0000118>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label>caDSR</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000096 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000096">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
-        <obo:IAO_0000118>Common Terminology Criteria for Adverse Events Dictionary</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">CTCAE</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000097 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000097">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">LOINC</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000098 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000098">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
-        <obo:IAO_0000115>Medical Dictionary for Regulatory Activities (MedDRA) is a schema that standardized medical terminology for medicinal chemical entities.</obo:IAO_0000115>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">MedDRA</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000099 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000099">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
-        <obo:IAO_0000115>MGED Ontology is an older ontology that is used for representation of Microarray Gene Expression Data (MGED).</obo:IAO_0000115>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">MGED ontology</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/Person -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/Person">
@@ -5157,57 +5181,6 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
     
 
 
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000002 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000002">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
-        <obo:IAO_0000115>The format that the resource is set up as. This format is done for both databases or studies.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">schema</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000006 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000006">
-        <obo:IAO_0000115>An information content entity that describes the components of an ontology.</obo:IAO_0000115>
-        <obo:IAO_0000118>Semantic Infrastructure - Ontology</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">si-ontology</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000007 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000007">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-        <rdfs:comment>Rough defintion, Anthony Huffman</rdfs:comment>
-        <rdfs:isDefinedBy>A resouce that is used for guidance on a procedure to convert some data entries from some source A are converted into data entries in some source B.</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Mappings Resources</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000008 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000008">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
-        <obo:IAO_0000115>The date that a study was first uploaded into a database.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">load date</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000054 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000054">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
-        <obo:IAO_0000115>An annotation property that describes an individual identifier for some information content entity.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">version</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.geneontology.org/GO -->
 
     <owl:Class rdf:about="http://www.geneontology.org/GO">
@@ -5247,6 +5220,67 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000010 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000010">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000009"/>
+        <obo1:OBINCBI_0000063>xsd:string</obo1:OBINCBI_0000063>
+        <obo1:OBINCBI_0000064>xsd:string</obo1:OBINCBI_0000064>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">NCI Thesaurus OWL</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000011 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000011">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000009"/>
+        <rdfs:label>NCI Thesaurus RDF</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000012 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000012">
+        <rdfs:label xml:lang="en">LDP Ontology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000016 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000016">
+        <rdfs:label xml:lang="en">prefix dc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000017 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000017">
+        <rdfs:label xml:lang="en">prefix owl</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000043 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000043">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/Person"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000042"/>
+                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000044"/>
+            </owl:Restriction>
+        </rdf:type>
+        <obo:IAO_0000118>ORCID: 0000-0002-5735-7540 change to IAO_0000708</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">Anthony Huffman</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -5472,52 +5506,6 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
     
 
 
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000010 -->
-
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000010">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000009"/>
-        <ont:OBINCBI_0000046>xsd:string</ont:OBINCBI_0000046>
-        <obo1:OBINCBI_0000063>xsd:string</obo1:OBINCBI_0000063>
-        <obo1:OBINCBI_0000064>xsd:string</obo1:OBINCBI_0000064>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">NCI Thesaurus OWL</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000011 -->
-
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000011">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000009"/>
-        <ont:OBINCBI_0000046>&apos;has version date&apos; some xsd:string</ont:OBINCBI_0000046>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000012 -->
-
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000012">
-        <rdfs:label xml:lang="en">LDP Ontology</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000016 -->
-
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000016">
-        <rdfs:label xml:lang="en">prefix dc</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000017 -->
-
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000017">
-        <rdfs:label xml:lang="en">prefix owl</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OMO_0001000 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OMO_0001000">
@@ -5591,28 +5579,12 @@ binary, and takes no temporal argument.
     
 
 
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000043 -->
-
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000043">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/Person"/>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000042"/>
-                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000044"/>
-            </owl:Restriction>
-        </rdf:type>
-        <obo:IAO_0000118>ORCID: 0000-0002-5735-7540 change to IAO_0000708</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">Anthony Huffman</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.purl.obolibrary.org/obo/OBINCBI_0000058 -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.obolibrary.org/obo/OBINCBI_0000058">
         <rdf:type rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000096"/>
-        <obo1:OBINCBI_0000063>xsd:string</obo1:OBINCBI_0000063>
-        <obo1:OBINCBI_0000064>xsd:string</obo1:OBINCBI_0000064>
+        <obo1:OBINCBI_0000063>version 5</obo1:OBINCBI_0000063>
+        <obo1:OBINCBI_0000064 rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-13</obo1:OBINCBI_0000064>
         <obo1:OBINCBI_0000065>http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae5.owl#</obo1:OBINCBI_0000065>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
         <rdfs:label xml:lang="en">CTCAE v5</rdfs:label>
@@ -5632,9 +5604,6 @@ binary, and takes no temporal argument.
 
     <owl:NamedIndividual rdf:about="http://www.purl.obolibrary.org/obo/OBINCBI_0000060">
         <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
-        <ont:OBINCBI_0000046>&apos;has version date&apos; some xsd:string</ont:OBINCBI_0000046>
-        <ont:OBINCBI_0000046>http://purl.org/obo/owl/GO#</ont:OBINCBI_0000046>
-        <ont:OBINCBI_0000052>Gene Ontology</ont:OBINCBI_0000052>
         <obo1:OBINCBI_0000063>&apos;has version date&apos; some xsd:string</obo1:OBINCBI_0000063>
         <rdfs:label xml:lang="en">GO Consortium</rdfs:label>
     </owl:NamedIndividual>
@@ -5667,12 +5636,6 @@ binary, and takes no temporal argument.
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031">
         <rdfs:label>genericly dependent continuant</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000011">
-        <obo:IAO_0000118>National Drug File – Reference Terminology</obo:IAO_0000118>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">NCI Thesaurus RDF</rdfs:label>
-        <rdfs:label xml:lang="en">ND-RFT</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
         <obo:IAO_0000115>An annotation property that describes an individual identifier for some information content entity which specifies version number.</obo:IAO_0000115>
