@@ -1865,12 +1865,6 @@ Where we have an annotation assertion
     
 
 
-    <!-- http://ncicb.nci.nih.gov/SSIMO.owl/has_preferred_term -->
-
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/SSIMO.owl/has_preferred_term"/>
-    
-
-
     <!-- http://ncicb.nci.nih.gov/reponto.owl#has_identifier -->
 
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/reponto.owl#has_identifier"/>
@@ -3666,6 +3660,12 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000020">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000001"/>
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000012"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>The NCIt OBO Edition project aims to increase integration of the NCIt with OBO Library ontologies. NCIt is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities.</dc:description>
         <rdfs:label xml:lang="en">MeDRA code</rdfs:label>
         <rdfs:label xml:lang="en">NCI Thesaurus OBO Edition</rdfs:label>
@@ -3969,13 +3969,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/SSIMO.owl/NCI_Thesaurus">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000001"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/SSIMO.owl/has_preferred_term"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4020,12 +4013,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/reponto.owl#si-resource -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#si-resource">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/SSIMO.owl/has_preferred_term"/>
-                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#term"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -5221,6 +5208,63 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000010">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
         <rdfs:label xml:lang="en">SNOMED concept ID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBINCBI_0000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000015">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108"/>
+        <rdfs:label xml:lang="en">Full specified name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBINCBI_0000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000016">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108"/>
+        <obo:IAO_0000116>&apos;has namespace&apos; some ndrft</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">prefLabel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBINCBI_0000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000017">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000037"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://ncicb.nci.nih.gov/SSIMO.owl/NCI_Thesaurus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000116>Currently used as prototype term for class level entity; need to discuss for use as class level if used across multiple ontologies.</obo:IAO_0000116>
+        <obo:IAO_0000118>Display name</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">DN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBINCBI_0000018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000018">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108"/>
+        <obo:IAO_0000116>&apos;has namespace&apos; exactly 1 NCI_Thesaurus</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">MTH_PL</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBINCBI_0000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000019">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108"/>
+        <obo:IAO_0000116>&apos;has namespace&apos; exactly 1 NCI_Thesaurus</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">MTH_GP</rdfs:label>
     </owl:Class>
     
 
