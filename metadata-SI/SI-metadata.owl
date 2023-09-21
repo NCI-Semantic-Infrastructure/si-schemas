@@ -3659,7 +3659,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000020">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000001"/>
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000012"/>
@@ -5265,6 +5264,16 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108"/>
         <obo:IAO_0000116>&apos;has namespace&apos; exactly 1 NCI_Thesaurus</obo:IAO_0000116>
         <rdfs:label xml:lang="en">MTH_GP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBINCBI_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000020">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+        <dc:description>The NCIt OBO Edition project aims to increase integration of the NCIt with OBO Library ontologies. NCIt is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities.</dc:description>
+        <rdfs:label xml:lang="en">MeDRA code</rdfs:label>
     </owl:Class>
     
 
