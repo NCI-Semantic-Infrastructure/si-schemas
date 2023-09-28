@@ -1,0 +1,30 @@
+
+
+prefix ssimo: <http://ncicb.nci.nih.gov/reponto.owl#>
+prefix oboinowl: <http://www.geneontology.org/formats/oboInOwl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+select distinct ?concept_IRI ?label ?definition ?synonym 
+# from go_graph
+# from ssimo_graph
+where { 
+  values ?input_ID { "GO:0001783" "GO:0001783"^^xsd:string } 
+  ?concept_IRI ?identifier_prop ?input_ID ;
+      ?label_prop ?label ;
+#      ?synonym_prop ?synonym ;
+      ?definition_prop ?definition .
+  {
+    select ?label_prop ?definition_prop ?synonym_prop ?identifier_prop
+    where {
+      values ?vocab { <http://www.geneontology.org/GO> }
+      ?vocab ssimo:has_definition ?definition_prop ;
+          ssimo:has_preferred_term ?label_prop ;
+          ssimo:has_term ?synonym_prop ;
+          ssimo:has_definition ?definition_prop ;
+          ssimo:has_identifier ?identifier_prop .
+      }
+  }
+}
+
+
+
