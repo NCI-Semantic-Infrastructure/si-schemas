@@ -1809,12 +1809,20 @@ Where we have an annotation assertion
     
 
 
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000005 -->
+
+    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000005">
+        <rdfs:label xml:lang="en">prototype object property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000037 -->
 
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000037">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <obo:IAO_0000115>An object property that links an identifier within a class, individual, or property such that to another ontology or database</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">has namespace</rdfs:label>
+        <rdfs:label xml:lang="en">has ontology namespace</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1867,43 +1875,49 @@ Where we have an annotation assertion
 
     <!-- http://ncicb.nci.nih.gov/reponto.owl#has_identifier -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/reponto.owl#has_identifier"/>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#is_repository_type -->
-
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/reponto.owl#is_repository_type"/>
+    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/reponto.owl#has_identifier">
+        <rdfs:label>has identifier</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#contributesToOntology -->
 
-    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#contributesToOntology"/>
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#contributesToOntology">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#createsOntology -->
 
-    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#createsOntology"/>
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#createsOntology">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#definesOntologyType -->
 
-    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#definesOntologyType"/>
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#definesOntologyType">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#developedBy -->
 
-    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#developedBy"/>
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#developedBy">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#hasAffiliatedParty -->
 
-    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasAffiliatedParty"/>
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasAffiliatedParty">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
+    </owl:ObjectProperty>
     
 
 
@@ -1915,7 +1929,9 @@ Where we have an annotation assertion
 
     <!-- http://omv.ontoware.org/2005/05/ontology#hasSyntax -->
 
-    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasSyntax"/>
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasSyntax">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
+    </owl:ObjectProperty>
     
 
 
@@ -1927,13 +1943,17 @@ Where we have an annotation assertion
 
     <!-- http://omv.ontoware.org/2005/05/ontology#isLocatedAt -->
 
-    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#isLocatedAt"/>
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#isLocatedAt">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#specifiesKnowledgeRepresentationParadigm -->
 
-    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#specifiesKnowledgeRepresentationParadigm"/>
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#specifiesKnowledgeRepresentationParadigm">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
+    </owl:ObjectProperty>
     
 
 
@@ -1945,15 +1965,15 @@ Where we have an annotation assertion
 
     <!-- http://omv.ontoware.org/2005/05/ontology#supportsRepresentationParadigm -->
 
-    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#supportsRepresentationParadigm"/>
+    <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#supportsRepresentationParadigm">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#annotates -->
 
     <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#annotates">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
-        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing"/>
         <rdfs:label>annotates</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1962,7 +1982,7 @@ Where we have an annotation assertion
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#applyTo -->
 
     <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#applyTo">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
         <rdfs:label>applyTo</rdfs:label>
     </owl:ObjectProperty>
@@ -1972,9 +1992,6 @@ Where we have an annotation assertion
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedAnnotations -->
 
     <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedAnnotations">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing"/>
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
-        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
         <rdfs:label>associatedAnnotations</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1983,9 +2000,7 @@ Where we have an annotation assertion
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedProperty -->
 
     <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#associatedProperty">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change"/>
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Added"/>
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Removed"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Property"/>
         <rdfs:label>associatedProperty</rdfs:label>
     </owl:ObjectProperty>
@@ -1996,18 +2011,7 @@ Where we have an annotation assertion
 
     <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes">
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
-        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
         <rdfs:label>changes</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#created -->
-
-    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#created">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
-        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp"/>
-        <rdfs:label>created</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2015,19 +2019,9 @@ Where we have an annotation assertion
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#modified -->
 
     <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#modified">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp"/>
         <rdfs:label>modified</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#partOfCompositeChange -->
-
-    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#partOfCompositeChange">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
-        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Composite_Change"/>
-        <rdfs:label>partOfCompositeChange</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2035,8 +2029,7 @@ Where we have an annotation assertion
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#subChanges -->
 
     <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#subChanges">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Composite_Change"/>
-        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <rdfs:label>subChanges</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2045,49 +2038,8 @@ Where we have an annotation assertion
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#timestamp -->
 
     <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#timestamp">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
         <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp"/>
         <rdfs:label>timestamp</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#authority -->
-
-    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#authority">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata"/>
-        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority"/>
-        <rdfs:label>mappings:authority</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#dependency -->
-
-    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#dependency">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata"/>
-        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#One_to_one_mapping"/>
-        <rdfs:label>mappings:dependency</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#mapping_metadata -->
-
-    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#mapping_metadata">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#One_to_one_mapping"/>
-        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata"/>
-        <rdfs:label>mappings:mapping_metadata</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified -->
-
-    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata"/>
-        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Verification"/>
-        <rdfs:label>mappings:verified</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2213,6 +2165,7 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://purl.obolibrary.org/obo/IAO_0000143 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000143">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <obo:IAO_0000115 xml:lang="en">Inverse of the relation &apos;mentions&apos;</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
         <obo:IAO_0000233 rdf:resource="https://github.com/information-artifact-ontology/IAO/issues/250"/>
@@ -2513,6 +2466,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     <!-- http://purl.obolibrary.org/obo/RO_0001015 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001015">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <obo:IAO_0000111 xml:lang="en">is location of</obo:IAO_0000111>
@@ -2541,6 +2495,7 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     <!-- http://purl.obolibrary.org/obo/RO_0001025 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001025">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <obo:IAO_0000111 xml:lang="en">located in</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">my brain is located in my head</obo:IAO_0000112>
@@ -2570,36 +2525,10 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002005 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002005">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002134"/>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-7073-9172"/>
-        <cito:citesAsAuthority rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ncbi.nlm.nih.gov/pubmed/22402613</cito:citesAsAuthority>
-        <rdfs:label xml:lang="en">innervated_by</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002134 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002134">
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">Relation between a &apos;neuron projection bundle&apos; and a region in which one or more of its component neuron projections either synapses to targets or receives synaptic input.
-T innervates some R
-Expands_to: T has_fasciculating_neuron_projection that synapse_in some R.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-7073-9172"/>
-        <obo:IAO_0000424>&lt;http://purl.obolibrary.org/obo/RO_0002132&gt; some (&lt;http://purl.obolibrary.org/obo/GO_0043005&gt; that (&lt;http://purl.obolibrary.org/obo/RO_0002131&gt; some (&lt;http://purl.obolibrary.org/obo/GO_0045202&gt; that &lt;http://purl.obolibrary.org/obo/BFO_0000050&gt; some Y?)))</obo:IAO_0000424>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <cito:citesAsAuthority rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/22402613"/>
-        <rdfs:label xml:lang="en">innervates</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002214 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002214">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <obo:IAO_0000112>&apos;human p53 protein&apos; SubClassOf some (&apos;has prototype&apos; some (&apos;participates in&apos; some &apos;DNA repair&apos;))</obo:IAO_0000112>
         <obo:IAO_0000112>heart SubClassOf &apos;has prototype&apos; some (&apos;participates in&apos; some &apos;blood circulation&apos;)</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
@@ -2714,38 +2643,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002424 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002424">
-        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</obo:IAO_0000116>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <rdfs:comment>This is an exploratory relation</rdfs:comment>
-        <rdfs:label xml:lang="en">differs in</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://code.google.com/p/phenotype-ontologies/w/edit/PhenotypeModelCompetencyQuestions</rdfs:seeAlso>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002425 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002425">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002424"/>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <rdfs:label xml:lang="en">differs in attribute of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002426 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002426">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002424"/>
-        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
-        <rdfs:label xml:lang="en">differs in attribute</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002502 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002502">
@@ -2772,6 +2669,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://purl.obolibrary.org/obo/RO_0002573 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002573">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <obo:IAO_0000115>A relation that holds between an attribute or a qualifier and another attribute.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
         <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20064205"/>
@@ -2796,6 +2694,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://purl.obolibrary.org/obo/RO_0002615 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002615">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0003301"/>
         <obo:IAO_0000115>Inverse of is-model-of</obo:IAO_0000115>
         <rdfs:label>has model</rdfs:label>
@@ -2839,6 +2738,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://purl.obolibrary.org/obo/RO_0009003 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0009003">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <obo:IAO_0000112 xml:lang="en">sardines &apos;immersed in&apos; some &apos;oil and mustard&apos;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
@@ -2852,7 +2752,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://purl.obolibrary.org/obo/RO_0015001 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0015001">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <obo:IAO_0000112>transcriptomically defined cell type X equivalent to ‘cell’ and (has_exemplar_data value [transcriptomic profile data])</obo:IAO_0000112>
         <obo:IAO_0000115>A relation between a material entity and some data in which the data is taken as exemplifying the material entity.</obo:IAO_0000115>
         <obo:IAO_0000116>C has_exemplar_data y iff x is an instance of C and y is data about x that is taken as exemplifying of C.</obo:IAO_0000116>
@@ -2863,74 +2763,10 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0015006 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0015006">
-        <obo:IAO_0000115>q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</obo:IAO_0000115>
-        <rdfs:label>different in magnitude relative to</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0015006"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0015007 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0015007">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0015006"/>
-        <obo:IAO_0000115>q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) &gt; magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</obo:IAO_0000115>
-        <rdfs:comment>This relation is used to determine the &apos;directionality&apos; of relative qualities such as &apos;increased strength&apos;, relative to the parent type, &apos;strength&apos;.</rdfs:comment>
-        <rdfs:label>increased in magnitude relative to</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0015007"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) &gt; magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0015008 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0015008">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0015006"/>
-        <obo:IAO_0000115>q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) &lt; magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</obo:IAO_0000115>
-        <rdfs:comment>This relation is used to determine the &apos;directionality&apos; of relative qualities such as &apos;decreased strength&apos;, relative to the parent type, &apos;strength&apos;.</rdfs:comment>
-        <rdfs:label>decreased in magnitude relative to</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0015008"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) &lt; magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0015011 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0015011">
-        <obo:IAO_0000115>s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.</obo:IAO_0000115>
-        <rdfs:comment>Example: a spherical object has the quality of being spherical, and the spherical quality has_cross_section round.</rdfs:comment>
-        <rdfs:label>has cross section</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0015011"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0015012 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0015012">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <obo:IAO_0000115>q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.</obo:IAO_0000115>
         <rdfs:comment>There are frequently two ways to state the same thing: we can say &apos;spermatocyte lacks asters&apos; or &apos;asters absent from spermatocyte&apos;. In this case the quality is &apos;lacking all parts of type&apos; - it is a (relational) quality of the spermatocyte, and it is with respect to instances of &apos;aster&apos;. One of the popular requirements of PATO is that it continue to support &apos;absent&apos;, so we need to relate statements which use this quality to the &apos;lacking all parts of type&apos; quality.</rdfs:comment>
         <rdfs:label>reciprocal of</rdfs:label>
@@ -2947,6 +2783,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://purl.obolibrary.org/obo/RO_0017001 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0017001">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000005"/>
         <obo:IAO_0000112>A diagnostic testing device utilizes a specimen.</obo:IAO_0000112>
         <obo:IAO_0000115>X device utilizes material Y means X and Y are material entities, and X is capable of some process P that has input Y.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0001-9625-1899"/>
@@ -2957,22 +2794,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
         <oboInOwl:hasBroadSynonym>utilizes</oboInOwl:hasBroadSynonym>
         <rdfs:label xml:lang="en">device utilizes material</rdfs:label>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0018003 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0018003">
-        <obo:IAO_0000115>inverse of myristoylates</obo:IAO_0000115>
-        <terms:contributor rdf:resource="https://orcid.org/0000-0003-4423-4370"/>
-        <rdfs:label>myristoylated by</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/envo#has_increased_levels_of -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/envo#has_increased_levels_of"/>
     
 
 
@@ -2993,6 +2814,24 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     
 
 
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000036 -->
+
+    <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000036">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
+        <rdfs:label xml:lang="en">prototype data</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000045 -->
+
+    <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000045">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label xml:lang="en">prototype data term</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000046 -->
 
     <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000046">
@@ -3006,7 +2845,9 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <!-- http://omv.ontoware.org/2005/05/ontology#acronym -->
 
-    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#acronym"/>
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#acronym">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -3018,50 +2859,64 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <!-- http://omv.ontoware.org/2005/05/ontology#documentation -->
 
-    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#documentation"/>
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#documentation">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#eMail -->
 
-    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#eMail"/>
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#eMail">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#faxNumber -->
 
-    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#faxNumber"/>
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#faxNumber">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#firstName -->
 
-    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#firstName"/>
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#firstName">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#lastName -->
 
-    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#lastName"/>
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#lastName">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#name -->
 
-    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#name"/>
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#name">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://omv.ontoware.org/2005/05/ontology#phoneNumber -->
 
-    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#phoneNumber"/>
+    <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#phoneNumber">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#action -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#action">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>action</rdfs:label>
     </owl:DatatypeProperty>
@@ -3071,8 +2926,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#author -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#author">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>author</rdfs:label>
     </owl:DatatypeProperty>
@@ -3082,7 +2935,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#body -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#body">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>body</rdfs:label>
     </owl:DatatypeProperty>
@@ -3092,7 +2945,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes_Slot_0 -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes_Slot_0">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Added"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>changes_Slot_0</rdfs:label>
     </owl:DatatypeProperty>
@@ -3102,7 +2955,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes_Slot_1 -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#changes_Slot_1">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Removed"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>changes_Slot_1</rdfs:label>
     </owl:DatatypeProperty>
@@ -3112,6 +2965,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#comment -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#comment">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>comment</rdfs:label>
     </owl:DatatypeProperty>
@@ -3121,8 +2975,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#context -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#context">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>context</rdfs:label>
     </owl:DatatypeProperty>
@@ -3132,7 +2985,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#creationName -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#creationName">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>creationName</rdfs:label>
     </owl:DatatypeProperty>
@@ -3142,6 +2995,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#currentName -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#currentName">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>currentName</rdfs:label>
@@ -3162,7 +3016,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#deletionName -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#deletionName">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>deletionName</rdfs:label>
     </owl:DatatypeProperty>
@@ -3172,6 +3026,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#name -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#name">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>name</rdfs:label>
     </owl:DatatypeProperty>
@@ -3181,7 +3036,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#newName -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#newName">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Name_Changed"/>
+        <rdfs:subPropertyOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#name"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>newName</rdfs:label>
     </owl:DatatypeProperty>
@@ -3191,7 +3046,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#oldName -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#oldName">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Name_Changed"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>oldName</rdfs:label>
     </owl:DatatypeProperty>
@@ -3201,7 +3056,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#related -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#related">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>related</rdfs:label>
     </owl:DatatypeProperty>
@@ -3211,6 +3066,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#sequence -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#sequence">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>sequence</rdfs:label>
@@ -3221,6 +3077,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#subject -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#subject">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>subject</rdfs:label>
     </owl:DatatypeProperty>
@@ -3230,6 +3087,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#title -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#title">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>title</rdfs:label>
     </owl:DatatypeProperty>
@@ -3239,6 +3097,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#voteValue -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#voteValue">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>voteValue</rdfs:label>
     </owl:DatatypeProperty>
@@ -3248,6 +3107,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#algorithm_name -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#algorithm_name">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority_Algorithm"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:algorithm_name</rdfs:label>
@@ -3258,6 +3118,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#application_Context -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#application_Context">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:application_Context</rdfs:label>
@@ -3268,6 +3129,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#author -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#author">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Authority_Manual"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:author</rdfs:label>
@@ -3278,6 +3140,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#comment -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#comment">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:comment</rdfs:label>
@@ -3288,6 +3151,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_name -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_name">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:component_name</rdfs:label>
     </owl:DatatypeProperty>
@@ -3297,6 +3161,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_source -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_source">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:component_source</rdfs:label>
     </owl:DatatypeProperty>
@@ -3306,6 +3171,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_type -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#component_type">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:component_type</rdfs:label>
     </owl:DatatypeProperty>
@@ -3315,6 +3181,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#confidence -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#confidence">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:confidence</rdfs:label>
@@ -3325,6 +3192,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#date -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#date">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:date</rdfs:label>
@@ -3335,6 +3203,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#externalReferences -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#externalReferences">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:externalReferences</rdfs:label>
@@ -3345,6 +3214,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#relation -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#relation">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#One_to_one_mapping"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:relation</rdfs:label>
@@ -3355,6 +3225,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#submittedBy -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#submittedBy">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Mapping_Metadata"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:submittedBy</rdfs:label>
@@ -3365,6 +3236,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified_by -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified_by">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Verification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:verified_by</rdfs:label>
@@ -3375,6 +3247,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified_on -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#verified_on">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/mappings/mappings.rdfs#Verification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>mappings:verified_on</rdfs:label>
@@ -3385,6 +3258,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://purl.obolibrary.org/obo/IAO_0000004 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000004">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:label xml:lang="en">has measurement value</rdfs:label>
@@ -3395,6 +3269,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://purl.obolibrary.org/obo/IAO_0000404 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000404">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:label xml:lang="en">has x coordinate value</rdfs:label>
@@ -3405,6 +3280,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://purl.obolibrary.org/obo/IAO_0000405 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000405">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:label xml:lang="en">has z coordinate value</rdfs:label>
@@ -3415,6 +3291,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://purl.obolibrary.org/obo/IAO_0000406 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000406">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:label xml:lang="en">has y coordinate value</rdfs:label>
@@ -3425,6 +3302,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://purl.obolibrary.org/obo/RO_0002029 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002029">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
@@ -3457,7 +3335,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://www.purl.obolibrary.org/obo/OBINCBI_0000062 -->
 
     <owl:DatatypeProperty rdf:about="http://www.purl.obolibrary.org/obo/OBINCBI_0000062">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label xml:lang="en">has metadata</rdfs:label>
     </owl:DatatypeProperty>
@@ -3516,18 +3394,10 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     
 
 
-    <!-- http://mged.sourceforge.net/ontologies/MGEDOntology.owl#Experiment -->
-
-    <owl:Class rdf:about="http://mged.sourceforge.net/ontologies/MGEDOntology.owl#Experiment">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
-    </owl:Class>
-    
-
-
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000001 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000001">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
         <rdfs:label xml:lang="en">NCI resource</rdfs:label>
     </owl:Class>
@@ -3537,19 +3407,9 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000002 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000002">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000201"/>
         <obo:IAO_0000115>The format that the resource is set up as. This format is done for both databases or studies.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">schema</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000003 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000003">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
-        <obo:IAO_0000115>A schema that defines what kind of experimental assays were assigned for work.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">Assay Type</rdfs:label>
     </owl:Class>
     
 
@@ -3579,7 +3439,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000008 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000008">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000201"/>
         <obo:IAO_0000115>The date that a study was first uploaded into a database.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">version date</rdfs:label>
     </owl:Class>
@@ -3601,7 +3461,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000013 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000013">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <dc:description>The cancer Biomedical Informatic Grid (caBIG) was a governement program. This is used as a synonym for the  an open source dataspace the caGRID network.</dc:description>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
         <rdfs:label xml:lang="en">caBIG</rdfs:label>
@@ -3612,7 +3472,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000014 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000014">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <obo:IAO_0000115>SNOMED Clinical Terms is a systematically organized computer-processable collection of medical terms providing codes, terms, synonyms and definitions used in clinical documentation and reporting. SNOMED functions an ontology.</obo:IAO_0000115>
         <obo:IAO_0000118>SNOMED CT, SNOMED Clinical Terms</obo:IAO_0000118>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
@@ -3625,7 +3485,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000015 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000015">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <obo:IAO_0000115>RadLex radiology lexicon represents a schema of radiology terms. It is utilized by LOINC.</obo:IAO_0000115>
         <dc:description>A document type that contains metadata models.</dc:description>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
@@ -3838,15 +3698,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     
 
 
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000036 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000036">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000002"/>
-        <rdfs:label xml:lang="en">Assay</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000044 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000044">
@@ -3861,7 +3712,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000054 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000054">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000201"/>
         <obo:IAO_0000115>An annotation property that describes an individual identifier for some information content entity.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">version</rdfs:label>
     </owl:Class>
@@ -3881,7 +3732,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000057 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000057">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <obo:IAO_0000115>Biomedical Resource Ontology (BRO) is an ontology used to enable semantic annotation and discovery of biomedical resources.</obo:IAO_0000115>
         <obo:IAO_0000118>Biomedical Resource Ontology</obo:IAO_0000118>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
@@ -3902,7 +3753,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000095 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000095">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <obo:IAO_0000115>Cander Data Standards Registry and Repository (caDSR) is a metadata repository based on the ISO/IEC 11179 Metadata Registry standard.</obo:IAO_0000115>
         <obo:IAO_0000118>Cancer Data Standards Registry and Repository</obo:IAO_0000118>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
@@ -3914,7 +3765,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000096 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000096">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <obo:IAO_0000118>Common Terminology Criteria for Adverse Events Dictionary</obo:IAO_0000118>
         <rdfs:label xml:lang="en">CTCAE</rdfs:label>
     </owl:Class>
@@ -3924,7 +3775,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000097 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000097">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
         <rdfs:label xml:lang="en">LOINC</rdfs:label>
     </owl:Class>
@@ -3934,7 +3785,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000098 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000098">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <obo:IAO_0000115>Medical Dictionary for Regulatory Activities (MedDRA) is a schema that standardized medical terminology for medicinal chemical entities.</obo:IAO_0000115>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
         <rdfs:label xml:lang="en">MedDRA</rdfs:label>
@@ -3945,7 +3796,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000099 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000099">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <obo:IAO_0000115>MGED Ontology is an older ontology that is used for representation of Microarray Gene Expression Data (MGED).</obo:IAO_0000115>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
         <rdfs:label xml:lang="en">MGED ontology</rdfs:label>
@@ -3956,7 +3807,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000100 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000100">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <obo:IAO_0000118>National Drug File – Reference Terminology</obo:IAO_0000118>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
         <rdfs:label xml:lang="en">ND-RFT</rdfs:label>
@@ -3964,54 +3815,9 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     
 
 
-    <!-- http://ncicb.nci.nih.gov/SSIMO.owl/NCI_Thesaurus -->
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000200 -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/SSIMO.owl/NCI_Thesaurus">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000001"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#definition -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#definition">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
-        <obo:IAO_0000115>The metadata that  explains the units or data points measured as part of a study.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#identifier -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#identifier">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
-        <obo:IAO_0000115>A set of symbols which is used to designate an individual information content entity.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#metadata -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#metadata">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-type"/>
-        <obo:IAO_0000115>A resource type that contains information that describes the information found within a resource.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#preferred_term -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#preferred_term">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#term"/>
-        <rdfs:comment>A term that is the one that is used as the default term id</rdfs:comment>
-        <rdfs:label>preferred term</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#si-resource -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#si-resource">
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000200">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -4020,75 +3826,46 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
         </rdfs:subClassOf>
         <obo:IAO_0000115>An information content entity that is used as a resource for an ontology. The usage refers to other ontologies and data sources.</obo:IAO_0000115>
         <obo:IAO_0000118>Semantic Infrastructure - Resource</obo:IAO_0000118>
+        <obo:IAO_0000232>Old http://ncicb.nci.nih.gov/reponto.owl#si-resource</obo:IAO_0000232>
+        <rdfs:label>si-resource</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata -->
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000201 -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata">
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000201">
         <obo:IAO_0000115>An information content entity that contains a resource to describe resource-metadata.</obo:IAO_0000115>
         <obo:IAO_0000118>Semantic Infrastructure - Resource-Metadata</obo:IAO_0000118>
+        <obo:IAO_0000232>Old http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata</obo:IAO_0000232>
+        <rdfs:label>si-resource-metadata</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#si-resource-type -->
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000202 -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#si-resource-type">
-        <obo:IAO_0000115>An information content entity that contains information on how to read another information content entity.</obo:IAO_0000115>
-        <obo:IAO_0000118>Semantic Infrastructure - Resource Type</obo:IAO_0000118>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#term -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#term">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-metadata"/>
-        <rdfs:comment>A common name or synonym that describes a dataset or data entry.</rdfs:comment>
-        <rdfs:label>term</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#terminology -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#terminology">
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000202">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-type"/>
         <obo:IAO_0000115>A resource type that contains a set of definitions for a resource.</obo:IAO_0000115>
+        <rdfs:label>terminology</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl -->
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000203 -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000203">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-type"/>
+        <obo:IAO_0000115>A resource type that contains information that describes the information found within a resource.</obo:IAO_0000115>
+        <rdfs:label>metadata</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0 -->
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000230 -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#term"/>
-        <rdfs:label>Preferred Name</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://omv.ontoware.org/2005/05/ontology#FormalityLevel -->
-
-    <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#FormalityLevel">
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000230">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000006"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -4114,8 +3891,89 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000232>Old http://omv.ontoware.org/2005/05/ontology#FormalityLevel</obo:IAO_0000232>
         <dc:description>The level of formality of an ontology utilizes.</dc:description>
         <rdfs:label>FormalityLevel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/SSIMO.owl/NCI_Thesaurus -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/SSIMO.owl/NCI_Thesaurus">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/reponto.owl#definition -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#definition">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000201"/>
+        <obo:IAO_0000115>The metadata that  explains the units or data points measured as part of a study.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/reponto.owl#identifier -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#identifier">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000201"/>
+        <obo:IAO_0000115>A set of symbols which is used to designate an individual information content entity.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/reponto.owl#preferred_term -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#preferred_term">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#term"/>
+        <rdfs:comment>A term that is the one that is used as the default term id</rdfs:comment>
+        <rdfs:label>preferred term</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/reponto.owl#si-resource-type -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#si-resource-type">
+        <obo:IAO_0000115>An information content entity that contains information on how to read another information content entity.</obo:IAO_0000115>
+        <obo:IAO_0000118>Semantic Infrastructure - Resource Type</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/reponto.owl#term -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#term">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000201"/>
+        <rdfs:comment>A common name or synonym that describes a dataset or data entry.</rdfs:comment>
+        <rdfs:label>term</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#term"/>
+        <rdfs:label>Preferred Name</rdfs:label>
     </owl:Class>
     
 
@@ -4124,7 +3982,9 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#Ontology">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
         <obo:IAO_0000115>A hierarchical knowledge graph that stores knowledge in the form of triplets.</obo:IAO_0000115>
+        <obo:IAO_0000232>Old http://omv.ontoware.org/2005/05/ontology#Ontology</obo:IAO_0000232>
         <rdfs:label>Ontology Hierarchy</rdfs:label>
     </owl:Class>
     
@@ -4134,6 +3994,8 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
+        <obo:IAO_0000232>Old http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology</obo:IAO_0000232>
         <rdfs:label>OntologyEngineeringMethodology</rdfs:label>
     </owl:Class>
     
@@ -4143,7 +4005,9 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringTool">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
         <obo:IAO_0000115>A webtool that utilizes an ontology to solve an engineering problem.</obo:IAO_0000115>
+        <obo:IAO_0000232>Old http://omv.ontoware.org/2005/05/ontology#OntologyEngineeringMethodology</obo:IAO_0000232>
         <rdfs:label>OntologyEngineeringTool</rdfs:label>
     </owl:Class>
     
@@ -4213,6 +4077,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000232>Old http://omv.ontoware.org/2005/05/ontology#OntologyLanguage</obo:IAO_0000232>
         <dc:description>Information about the language in which the ontology is implemented</dc:description>
         <rdfs:label>OntologyLanguage</rdfs:label>
     </owl:Class>
@@ -4223,6 +4088,8 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologySyntax">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
+        <obo:IAO_0000232>Old http://omv.ontoware.org/2005/05/ontology#OntologySyntax</obo:IAO_0000232>
         <oboInOwl:created_by>The format an ontology utilizes in its construction.</oboInOwl:created_by>
         <rdfs:label>OntologySyntax</rdfs:label>
     </owl:Class>
@@ -4233,6 +4100,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyTask">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#acronym"/>
@@ -4281,6 +4149,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000232>Old http://omv.ontoware.org/2005/05/ontology#OntologyTask</obo:IAO_0000232>
         <terms:description>Information about the task the ontology was intended to be used for</terms:description>
         <rdfs:label>OntologyTask</rdfs:label>
     </owl:Class>
@@ -4291,6 +4160,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyType">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000006"/>
+        <obo:IAO_0000232>Old http://omv.ontoware.org/2005/05/ontology#OntologyType</obo:IAO_0000232>
         <rdfs:label>OntologyType</rdfs:label>
     </owl:Class>
     
@@ -4352,329 +4222,11 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     
 
 
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Advice -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Advice">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
-        <rdfs:comment>A class of Annotations representing advice for the reader</rdfs:comment>
-        <rdfs:label>Advice</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-        <rdfs:label>AnnotatableThing</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing"/>
-        <obo:IAO_0000115>An information content entity that contains human guided knowledge.</obo:IAO_0000115>
-        <rdfs:label>Annotation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Added -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Added">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change"/>
-        <rdfs:label>Annotation_Added</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>Annotation_Change</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Modified -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Modified">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change"/>
-        <rdfs:label>Annotation_Modified</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Removed -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Removed">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation_Change"/>
-        <rdfs:label>Annotation_Removed</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#AnnotatableThing"/>
-        <rdfs:label>Change</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
-        <rdfs:label>Class_Change</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Created -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Created">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change"/>
-        <rdfs:comment>Created_Change</rdfs:comment>
-        <rdfs:label>Class_Created</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Deleted -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Deleted">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change"/>
-        <rdfs:comment>Deleted_Change</rdfs:comment>
-        <rdfs:label>Class_Deleted</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Comment -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Comment">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
-        <rdfs:comment>A class of Annotations representing general comments</rdfs:comment>
-        <rdfs:label>Comment</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Composite_Change -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Composite_Change">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
-        <rdfs:label>Composite_Change</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
-        <rdfs:label>Created_Change</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
-        <rdfs:label>Deleted_Change</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DirectType_Added -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DirectType_Added">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
-        <rdfs:label>DirectType_Added</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DirectType_Removed -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DirectType_Removed">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
-        <rdfs:label>DirectType_Removed</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DisjointClass_Added -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DisjointClass_Added">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>DisjointClass_Added</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Documentation_Added -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Documentation_Added">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>Documentation_Added</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Documentation_Removed -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Documentation_Removed">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>Documentation_Removed</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DomainProperty_Added -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DomainProperty_Added">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>DomainProperty_Added</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DomainProperty_Removed -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#DomainProperty_Removed">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>DomainProperty_Removed</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Example -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Example">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
-        <rdfs:comment>A class of Annotations representing examples</rdfs:comment>
-        <rdfs:label>Example</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Explanation -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Explanation">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
-        <rdfs:comment>A class of Annotations representing explanations of content</rdfs:comment>
-        <rdfs:label>Explanation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Added -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Added">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
-        <rdfs:label>Individual_Added</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
-        <rdfs:label>Individual_Change</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Created -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Created">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change"/>
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
-        <rdfs:comment>Created_Change</rdfs:comment>
-        <rdfs:label>Individual_Created</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Deleted -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Deleted">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change"/>
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
-        <rdfs:comment>Deleted_Change</rdfs:comment>
-        <rdfs:label>Individual_Deleted</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Removed -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Removed">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
-        <rdfs:label>Individual_Removed</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Maximum_Cardinality -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Maximum_Cardinality">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
-        <rdfs:label>Maximum_Cardinality</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Maximum_Value -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Maximum_Value">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
-        <rdfs:label>Maximum_Value</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Minimum_Cardinality -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Minimum_Cardinality">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
-        <rdfs:label>Minimum_Cardinality</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Minimum_Value -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Minimum_Value">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
-        <rdfs:label>Minimum_Value</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Name_Changed -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Name_Changed">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
-        <rdfs:label>Name_Changed</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Class -->
 
     <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Class">
         <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
+        <obo:IAO_0000232>Old http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Class</obo:IAO_0000232>
         <oboInOwl:created_by>An ontology component that represents a set of things that share a common feature</oboInOwl:created_by>
         <rdfs:label>Ontology_Class</rdfs:label>
     </owl:Class>
@@ -4685,6 +4237,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000006"/>
+        <obo:IAO_0000232>Old http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component</obo:IAO_0000232>
         <oboInOwl:created_by>The components of an ontology.</oboInOwl:created_by>
         <rdfs:label>Ontology_Component</rdfs:label>
     </owl:Class>
@@ -4695,6 +4248,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Individual">
         <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
+        <obo:IAO_0000232>Old http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Individual</obo:IAO_0000232>
         <oboInOwl:created_by>An ontology component that represents a singular instance of a thing.</oboInOwl:created_by>
         <rdfs:label>Ontology_Individual</rdfs:label>
     </owl:Class>
@@ -4705,158 +4259,9 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Property">
         <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Component"/>
+        <obo:IAO_0000232>Old http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Ontology_Property</obo:IAO_0000232>
         <oboInOwl:created_by>An ontology property that represents a relationship between two sets of entities.</oboInOwl:created_by>
         <rdfs:label>Ontology_Property</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Change"/>
-        <rdfs:label>Property_Change</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Created -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Created">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Created_Change"/>
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
-        <rdfs:comment>Created_Change</rdfs:comment>
-        <rdfs:label>Property_Created</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Deleted -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Deleted">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Deleted_Change"/>
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
-        <rdfs:comment>Deleted_Change</rdfs:comment>
-        <rdfs:label>Property_Deleted</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Value -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Value">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Individual_Change"/>
-        <rdfs:label>Property_Value</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Question -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Question">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
-        <rdfs:comment>A class of Annotations representing questions about the content</rdfs:comment>
-        <rdfs:label>Question</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#SeeAlso -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#SeeAlso">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Annotation"/>
-        <rdfs:comment>A class of Annotations representing a reference to another resource</rdfs:comment>
-        <rdfs:label>SeeAlso</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subclass_Added -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subclass_Added">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>Subclass_Added</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subclass_Removed -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subclass_Removed">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>Subclass_Removed</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subproperty_Added -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subproperty_Added">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
-        <rdfs:label>Subproperty_Added</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subproperty_Removed -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Subproperty_Removed">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
-        <rdfs:label>Subproperty_Removed</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superclass_Added -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superclass_Added">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>Superclass_Added</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superclass_Removed -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superclass_Removed">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>Superclass_Removed</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superproperty_Added -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superproperty_Added">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
-        <rdfs:label>Superproperty_Added</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superproperty_Removed -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Superproperty_Removed">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Property_Change"/>
-        <rdfs:label>Superproperty_Removed</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Added -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Added">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>TemplateSlot_Added</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Removed -->
-
-    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#TemplateSlot_Removed">
-        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Class_Change"/>
-        <rdfs:label>TemplateSlot_Removed</rdfs:label>
     </owl:Class>
     
 
@@ -5202,6 +4607,41 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBINCBI_0000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000000">
+        <rdfs:label xml:lang="en">prototype class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBINCBI_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000001">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000018"/>
+        <rdfs:label xml:lang="en">biological domain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBINCBI_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000002">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000018"/>
+        <rdfs:label xml:lang="en">clinical domain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBINCBI_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000003">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000018"/>
+        <rdfs:label xml:lang="en">medical domain</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBINCBI_0000010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000010">
@@ -5339,7 +4779,7 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
     <!-- http://www.geneontology.org/GO -->
 
     <owl:Class rdf:about="http://www.geneontology.org/GO">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
         <obo:IAO_0000115>Gene Ontology (GO) is an ontology that represents functionality of genes, namely the role of specific genes when involved in cellular components, biological processes, or molecular functions.</obo:IAO_0000115>
         <obo:IAO_0000118>Gene Ontology</obo:IAO_0000118>
         <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
@@ -5349,13 +4789,18 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
 
     <!-- http://www.geneontology.org/formats/oboInOwl#ObsoleteClass -->
 
-    <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
+    <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
+    </owl:Class>
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
 
-    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
+        <obo:IAO_0000232>Old http://www.w3.org/2000/01/rdf-schema#Resource</obo:IAO_0000232>
+    </owl:Class>
     
 
 
