@@ -24,6 +24,8 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://ncicb.nci.nih.gov/SSIMO.owl">
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/omo/releases/2023-07-28/omo.owl"/>
+        <ncicb:OBINCBI_0000303>2023-08-10</ncicb:OBINCBI_0000303>
+        <ncicb:OBINCBI_0000303>Version 1.0.2.1</ncicb:OBINCBI_0000303>
         <protege:defaultLanguage>en</protege:defaultLanguage>
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
@@ -41,8 +43,6 @@
     gene ontology
 bro</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://github.com/information-artifact-ontology/IAO"/>
-        <owl:versionInfo>2023-08-10</owl:versionInfo>
-        <owl:versionInfo>Version 1.0.2.1</owl:versionInfo>
         <foaf:homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"> https://github.com/oborel/obo-relations/</foaf:homepage>
     </owl:Ontology>
     
@@ -73,6 +73,12 @@ bro</rdfs:comment>
         <dc:description>A generalized annoration property that utilises the IRI of the source to note the version used.</dc:description>
         <rdfs:label xml:lang="en">has version data</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000303 -->
+
+    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000303"/>
     
 
 
@@ -1873,7 +1879,7 @@ Where we have an annotation assertion
     
 
 
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#has_identifier -->
+    <!-- http://ncicb.nci.nih.gov/http://ncicb.nci.nih.gov/OBINCBI_0000210 -->
 
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/reponto.owl#has_identifier">
         <rdfs:label>has identifier</rdfs:label>
@@ -3046,6 +3052,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#date -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#date">
+        <rdfs:subPropertyOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000045"/>
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/ChAO/changes.rdfs#Timestamp"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>date</rdfs:label>
@@ -3548,7 +3555,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000019 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000019">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000231"/>
         <rdfs:label xml:lang="en">RadLex ID</rdfs:label>
     </owl:Class>
     
@@ -3688,23 +3695,8 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
                 <owl:someValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#Party"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000205"/>
         <rdfs:label xml:lang="en">Conversion Authority</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000034 -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000034">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Person"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#isContactPerson"/>
-                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Contact Person</rdfs:label>
     </owl:Class>
     
 
@@ -3718,7 +3710,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
                 <owl:someValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Ontology"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#Party"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000205"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#contributesToOntology"/>
@@ -3783,7 +3775,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000094 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000094">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000231"/>
         <rdfs:label xml:lang="en">GO identifier</rdfs:label>
     </owl:Class>
     
@@ -3885,7 +3877,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000202 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000202">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-type"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000211"/>
         <obo:IAO_0000115>A resource type that contains a set of definitions for a resource.</obo:IAO_0000115>
         <rdfs:label>terminology</rdfs:label>
     </owl:Class>
@@ -3895,9 +3887,105 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000203 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000203">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#si-resource-type"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000211"/>
         <obo:IAO_0000115>A resource type that contains information that describes the information found within a resource.</obo:IAO_0000115>
         <rdfs:label>metadata</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000205 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000205">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasAffiliatedParty"/>
+                <owl:allValuesFrom rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000205"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000232>http://omv.ontoware.org/2005/05/ontology#Party</obo:IAO_0000232>
+        <rdfs:comment>A party is a person or an organisation.</rdfs:comment>
+        <rdfs:label>Party</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000206 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000206">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#isContactPerson"/>
+                <owl:allValuesFrom rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000207"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Contact Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000207 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000207">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000205"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasContactPerson"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#acronym"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#acronym"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000118>Organization</obo:IAO_0000118>
+        <obo:IAO_0000232>http://omv.ontoware.org/2005/05/ontology#Organisation</obo:IAO_0000232>
+        <rdfs:comment>An organisation of some kind. Represents social institutions such as universities, companies, societies etc.</rdfs:comment>
+        <rdfs:label>Organisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000208 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000208">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
+        <obo:IAO_0000115>Gene Ontology (GO) is an ontology that represents functionality of genes, namely the role of specific genes when involved in cellular components, biological processes, or molecular functions.</obo:IAO_0000115>
+        <obo:IAO_0000232>Old http://www.geneontology.org/GO</obo:IAO_0000232>
+        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
+        <rdfs:label>Gene Ontology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000211 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000211">
+        <obo:IAO_0000115>An information content entity that contains information on how to read another information content entity.</obo:IAO_0000115>
+        <obo:IAO_0000118>Semantic Infrastructure - Resource Type</obo:IAO_0000118>
+        <obo:IAO_0000232>Old http://ncicb.nci.nih.gov/reponto.owl#si-resource-type</obo:IAO_0000232>
+        <rdfs:label>si-resources</rdfs:label>
     </owl:Class>
     
 
@@ -3905,7 +3993,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000230 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000230">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000201"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#description"/>
@@ -3930,9 +4018,31 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115>The metadata that  explains the units or data points measured as part of a study.</obo:IAO_0000115>
         <obo:IAO_0000232>Old http://omv.ontoware.org/2005/05/ontology#FormalityLevel</obo:IAO_0000232>
+        <obo:IAO_0000232>http://ncicb.nci.nih.gov/OBINCBI_0000210</obo:IAO_0000232>
         <dc:description>The level of formality of an ontology utilizes.</dc:description>
         <rdfs:label>FormalityLevel</rdfs:label>
+        <rdfs:label>definition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000231 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000231">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000201"/>
+        <obo:IAO_0000115>A set of symbols which is used to designate an individual information content entity.</obo:IAO_0000115>
+        <obo:IAO_0000232>Old http://ncicb.nci.nih.gov/reponto.owl#identifier</obo:IAO_0000232>
+        <rdfs:label>identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000303 -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000303">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000054"/>
     </owl:Class>
     
 
@@ -3941,24 +4051,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/SSIMO.owl/NCI_Thesaurus">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#definition -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#definition">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000201"/>
-        <obo:IAO_0000115>The metadata that  explains the units or data points measured as part of a study.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#identifier -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#identifier">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000201"/>
-        <obo:IAO_0000115>A set of symbols which is used to designate an individual information content entity.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3973,21 +4065,12 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     
 
 
-    <!-- http://ncicb.nci.nih.gov/reponto.owl#si-resource-type -->
-
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#si-resource-type">
-        <obo:IAO_0000115>An information content entity that contains information on how to read another information content entity.</obo:IAO_0000115>
-        <obo:IAO_0000118>Semantic Infrastructure - Resource Type</obo:IAO_0000118>
-    </owl:Class>
-    
-
-
     <!-- http://ncicb.nci.nih.gov/reponto.owl#term -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/reponto.owl#term">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000201"/>
         <rdfs:comment>A common name or synonym that describes a dataset or data entry.</rdfs:comment>
-        <rdfs:label>Name</rdfs:label>
+        <rdfs:label>name</rdfs:label>
     </owl:Class>
     
 
@@ -3995,7 +4078,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
     </owl:Class>
     
 
@@ -4003,7 +4086,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0 -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000231"/>
     </owl:Class>
     
 
@@ -4013,7 +4096,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#term"/>
         <obo:IAO_0000115>A term that is the one that is used as the default term id</obo:IAO_0000115>
-        <rdfs:label>Preferred Name</rdfs:label>
+        <rdfs:label>preferred name</rdfs:label>
     </owl:Class>
     
 
@@ -4057,7 +4140,7 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#developedBy"/>
-                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Party"/>
+                <owl:allValuesFrom rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000205"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4197,62 +4280,6 @@ https://docs.google.com/document/d/1QMhs9J-P_q3o_rDh-IX4ZEnz0PnXrzLRVkI3vvz8NEQ/
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
         <obo:IAO_0000232>Old http://omv.ontoware.org/2005/05/ontology#OntologyType</obo:IAO_0000232>
         <rdfs:label>OntologyType</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://omv.ontoware.org/2005/05/ontology#Organisation -->
-
-    <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#Organisation">
-        <rdfs:subClassOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#Party"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasContactPerson"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/Person"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#acronym"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#acronym"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#name"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000118>Organization</obo:IAO_0000118>
-        <rdfs:comment>An organisation of some kind. Represents social institutions such as universities, companies, societies etc.</rdfs:comment>
-        <rdfs:label>Organisation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://omv.ontoware.org/2005/05/ontology#Party -->
-
-    <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#Party">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#hasAffiliatedParty"/>
-                <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Party"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000118>Party</obo:IAO_0000118>
-        <rdfs:comment>A party is a person or an organisation.</rdfs:comment>
     </owl:Class>
     
 
@@ -4680,7 +4707,7 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
     <!-- http://purl.obolibrary.org/obo/OBINCBI_0000010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000010">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000231"/>
         <rdfs:label xml:lang="en">SNOMED concept ID</rdfs:label>
     </owl:Class>
     
@@ -4746,7 +4773,7 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
     <!-- http://purl.obolibrary.org/obo/OBINCBI_0000020 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBINCBI_0000020">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/reponto.owl#identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000231"/>
         <dc:description>The NCIt OBO Edition project aims to increase integration of the NCIt with OBO Library ontologies. NCIt is a reference terminology that includes broad coverage of the cancer domain, including cancer related diseases, findings and abnormalities.</dc:description>
         <rdfs:label xml:lang="en">MeDRA code</rdfs:label>
     </owl:Class>
@@ -4756,7 +4783,7 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
     <!-- http://purl.obolibrary.org/obo/Person -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/Person">
-        <rdfs:subClassOf rdf:resource="http://omv.ontoware.org/2005/05/ontology#Party"/>
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000205"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://omv.ontoware.org/2005/05/ontology#eMail"/>
@@ -4805,20 +4832,9 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000232>http://purl.obolibrary.org/obo/Person</obo:IAO_0000232>
         <rdfs:comment>A named individual. Represents an individual responsible for the creation, or contribution to an ontology</rdfs:comment>
         <rdfs:label>Person</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.geneontology.org/GO -->
-
-    <owl:Class rdf:about="http://www.geneontology.org/GO">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000200"/>
-        <obo:IAO_0000115>Gene Ontology (GO) is an ontology that represents functionality of genes, namely the role of specific genes when involved in cellular components, biological processes, or molecular functions.</obo:IAO_0000115>
-        <obo:IAO_0000118>Gene Ontology</obo:IAO_0000118>
-        <obo:IAO_0000232>Old http://www.geneontology.org/GO</obo:IAO_0000232>
-        <oboInOwl:created_by>Anthony Huffman</oboInOwl:created_by>
     </owl:Class>
     
 
@@ -4836,14 +4852,6 @@ Note: everybody agreed that identifier is probably a too general term. We howeve
     <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBINCBI_0000000"/>
         <obo:IAO_0000232>Old http://www.w3.org/2000/01/rdf-schema#Resource</obo:IAO_0000232>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
-
-    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000054"/>
     </owl:Class>
     
 
@@ -5239,7 +5247,7 @@ binary, and takes no temporal argument.
     <!-- http://www.purl.obolibrary.org/obo/OBINCBI_0000060 -->
 
     <owl:NamedIndividual rdf:about="http://www.purl.obolibrary.org/obo/OBINCBI_0000060">
-        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/OBINCBI_0000207"/>
         <obo1:OBINCBI_0000063>&apos;has version date&apos; some xsd:string</obo1:OBINCBI_0000063>
         <rdfs:label xml:lang="en">GO Consortium</rdfs:label>
     </owl:NamedIndividual>
@@ -5270,15 +5278,16 @@ binary, and takes no temporal argument.
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000303">
+        <obo:IAO_0000115>An annotation property that describes an individual identifier for some information content entity which specifies version number.</obo:IAO_0000115>
+        <obo:IAO_0000232>Old http://www.w3.org/2002/07/owl#versionInfo</obo:IAO_0000232>
+        <rdfs:label>versionInfo</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl">
         <obo:IAO_0000232>Old http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl</obo:IAO_0000232>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031">
         <rdfs:label>genericly dependent continuant</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
-        <obo:IAO_0000115>An annotation property that describes an individual identifier for some information content entity which specifies version number.</obo:IAO_0000115>
-        <rdfs:label>versionInfo</rdfs:label>
     </rdf:Description>
     
 
