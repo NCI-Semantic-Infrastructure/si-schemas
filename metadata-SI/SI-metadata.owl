@@ -2010,7 +2010,7 @@ prefix srro: &lt;http://ncicb.nci.nih.gov/srro.owl#&gt;
 select distinct ?entity ?property ?property_name ?value ?value_label
 from &lt;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.rdf&gt;
 where {
-  values ?identifier { &quot;C113525&quot;  &quot;C113525&quot;^^xsd:string }
+  values ?identifier { &quot;C113525&quot; }
   ?entity ?identifier_property ?identifier ;
           ?property ?value .
   ?property a owl:ObjectProperty .
@@ -2051,14 +2051,14 @@ where {
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#test-queries"/>
         <rdfs:comment>prefix ncit: &lt;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#&gt;
 prefix srro: &lt;http://ncicb.nci.nih.gov/srro.owl#&gt;
-select distinct ?subclass ?subLabel ?subId
+select distinct ?subClass ?subClassLabel ?subClassId
 from &lt;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.rdf&gt;
 where {
   values ?identifier { &quot;C20027&quot; }
   ?entity ?identifier_property ?identifier .
-  ?subclass rdfs:subClassOf+ ?entity ;
-       ?identifier_property ?subId ;
-       ?preferred_term_property ?subLabel .
+  ?subClass rdfs:subClassOf+ ?entity ;
+       ?identifier_property ?subClassId ;
+       ?preferred_term_property ?subClassLabel .
   {
     select ?identifier_property ?preferred_term_property
     from &lt;http://ncicb.nci.nih.gov/srro&gt;
@@ -2350,7 +2350,7 @@ where {
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Q6-common-props-of-resource">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#test-queries"/>
-        <rdfs:comment>list the common properties of a resource</rdfs:comment>
+        <rdfs:comment>list the common properties of resources</rdfs:comment>
         <rdfs:comment>prefix srro: &lt;http://ncicb.nci.nih.gov/srro.owl#&gt;
 select distinct ?common_property ?resource_property
 from &lt;http://ncicb.nci.nih.gov/srro&gt;
@@ -2387,17 +2387,17 @@ where {
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Q8-get-concept-by-identifier-return-common">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#test-queries"/>
-        <rdfs:comment>get a vocabulary concept by its source identifier and return its common properties.  exclude terms as you get a cross - product, unless aggregated (e.g. group_concat)</rdfs:comment>
+        <rdfs:comment>get a vocabulary concept by its source identifier and return its common properties.  aggregate optional terms and definitions (&quot;only&quot;) quantifier.</rdfs:comment>
         <rdfs:comment>prefix srro: &lt;http://ncicb.nci.nih.gov/srro.owl#&gt;
-select distinct  ?entity ?identifier ?preferred_term ?term ?definition
+select distinct  ?entity ?identifier ?preferred_term (group_concat( distinct str(?term); separator=&quot;\n&quot;) as ?terms)  (group_concat( distinct str(?def); separator=&quot;\n&quot;) as ?definitions) 
 from &lt;http://purl.obolibrary.org/obo/go.owl&gt;
 # for testing GO:0000070, GO:0001783, C113522, C569, C565, C113525
 where {
-  values ?identifier { &quot;GO:0000070&quot;  &quot;GO:0000070&quot;^^xsd:string }
+  values ?identifier { &quot;GO:0000070&quot;  }
   ?entity ?identifier_property ?identifier .
-  optional { ?entity ?preferred_term_property ?preferred_term }
-  # optional { ?entity ?term_property ?term }
-  optional { ?entity ?definition_property ?definition }
+  ?entity ?preferred_term_property ?preferred_term .
+  optional { ?entity ?term_property ?term }
+  optional { ?entity ?definition_property ?def }
    {
     select ?identifier_property  ?preferred_term_property ?term_property ?definition_property
     from &lt;http://ncicb.nci.nih.gov/srro&gt;
@@ -2410,7 +2410,6 @@ where {
       }
     }
 }</rdfs:comment>
-        <rdfs:comment>see Q9 to include all terms in the output</rdfs:comment>
     </owl:Class>
     
 
@@ -2424,33 +2423,25 @@ where {
 
 Query returns all properties in the last column, including those that are output in a separate identified column (e.g. def column).</rdfs:comment>
         <rdfs:comment>prefix srro: &lt;http://ncicb.nci.nih.gov/srro.owl#&gt;
-select distinct ?entity (str(?preferred_term) as ?PT) (str(?definition) as ?def) (group_concat( distinct str(?term); separator=&quot;\n&quot;) as ?terms)  (group_concat( distinct str(?name_value); separator=&quot;\n&quot;) as ?all_props) 
+select distinct ?entity (group_concat( distinct str(?name_value); separator=&quot;\n&quot;) as ?all_props) 
 from &lt;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.rdf&gt;
 where {
-  values ?identifier { &quot;C113525&quot;  &quot;C113525&quot;^^xsd:string }
+  values ?identifier { &quot;C113525&quot;  }
   ?entity ?identifier_property ?identifier ;
-             ?preferred_term_property ?preferred_term ;
-             ?definition_property ?definition ;
-             ?term_property ?ter ;
              ?property ?value .
    ?property  ?preferred_term_property ?property_name .
-   ?term_property ?preferred_term_property ?term_prop_name .
-  { ?property a owl:AnnotationProperty } union { ?property a owl:ObjectProperty } union { ?property a rdf:Property }
-  bind (concat(str(?term_prop_name), &quot;: &quot;, str(?ter)) as ?term)
-  bind (concat(str(?property_name), &quot;: &quot;, str(?value)) as ?name_value)
+   bind (concat(str(?property_name), &quot;: &quot;, str(?value)) as ?name_value)
 
   {
-    select ?identifier_property ?preferred_term_property ?term_property ?definition_property
+    select ?identifier_property ?preferred_term_property
     from &lt;http://ncicb.nci.nih.gov/srro&gt;
     where {
       values ?resource {  srro:NCIt }
       ?resource srro:hasIdentifier ?identifier_property .
       ?resource srro:hasPreferredTerm ?preferred_term_property .
-      ?resource srro:hasTerm ?term_property .
-      ?resource srro:hasDefinition ?definition_property .
     }
   }
-} group by ?entity ?preferred_term ?definition order by ?entity</rdfs:comment>
+} order by ?entity</rdfs:comment>
     </owl:Class>
     
 
@@ -2640,6 +2631,41 @@ where {
                 <owl:allValuesFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Definition"/>
             </owl:Restriction>
         </owl:annotatedTarget>
+        <rdfs:comment>Get a listing of entities with &gt; 1 definition
+
+# caDSR
+select distinct ?entity (count(distinct ?def) as ?count_def)
+from &lt;http://cbiit.nci.nih.gov/caDSR&gt;
+where {
+	?entity a rdfs:Class .
+  	optional { ?entity skos:definition ?def . }
+}
+order by desc(?count_def) limit 100
+or 
+order by asc(?count_def) limit 10
+
+# NCIT
+prefix ncit: &lt;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#&gt;
+select distinct  ?entity (count(?def) as ?count_def)
+from &lt;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl&gt;
+where {
+	?entity a owl:Class .
+  optional { ?entity ncit:P97 ?def . }
+} 
+order by asc(?count_def) limit 10
+or 
+order by desc(?count_def) limit 10
+
+# GO
+select distinct ?entity (count(distinct ?def) as ?count_def)
+from &lt;http://purl.obolibrary.org/obo/go.owl&gt;
+where {
+	?entity a owl:Class .
+  optional { ?entity &lt;http://purl.obolibrary.org/obo/IAO_0000115&gt; ?def . }
+}
+order by desc(?count_def) limit 10
+or 
+order by asc(?count_def) limit 10</rdfs:comment>
         <rdfs:comment>only:  in SPARQL this is an optional on the resource (not on srro)</rdfs:comment>
     </owl:Axiom>
     <owl:Axiom>
@@ -3451,7 +3477,7 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
         <hasIntent rdf:resource="http://ncicb.nci.nih.gov/srro.owl#terminology"/>
         <hasNamespace rdf:resource="http://purl.obolibrary.org/obo/"/>
         <hasPreferredTerm rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <hasSourceAuthority rdf:resource="http://www.purl.obolibrary.org/obo/OBINCBI_0000060"/>
+        <hasSourceAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#go-consortium"/>
         <hasTerm rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
         <omv:hasDomain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#biological-domain"/>
@@ -3568,6 +3594,19 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
         <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyDomain"/>
         <rdfs:comment>OBINCBI_0000151</rdfs:comment>
         <rdfs:label>clinical domain</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl#go-consortium -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#go-consortium">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
+        <omv:description>The mission of the GO Consortium is to develop a comprehensive, computational model of biological systems, ranging from the molecular to the organism level, across the multiplicity of species in the tree of life.</omv:description>
+        <omv:eMail xml:lang="geneontology.org">help</omv:eMail>
+        <omv:name>GO Consortium</omv:name>
+        <rdfs:comment>OBINCBI_0000060</rdfs:comment>
+        <rdfs:label>GO Consortium</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3763,19 +3802,6 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
     
 
 
-    <!-- http://www.purl.obolibrary.org/obo/OBINCBI_0000060 -->
-
-    <owl:NamedIndividual rdf:about="http://www.purl.obolibrary.org/obo/OBINCBI_0000060">
-        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
-        <omv:description>The mission of the GO Consortium is to develop a comprehensive, computational model of biological systems, ranging from the molecular to the organism level, across the multiplicity of species in the tree of life.</omv:description>
-        <omv:eMail>help@geneontology.org</omv:eMail>
-        <omv:name>GO Consortium</omv:name>
-        <rdfs:comment>OBINCBI_0000060</rdfs:comment>
-        <rdfs:label>GO Consortium</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
@@ -3855,8 +3881,8 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
         <rdfs:comment>Date may be used to express temporal information at any level of granularity. Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [ISO 8601-1] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [W3CDTF] or the Extended Date/Time Format Specification [EDTF]. If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character. Either the start or end date may be missing.</rdfs:comment>
-        <rdfs:isDefinedBy>http://purl.org/dc/elements/1.1/</rdfs:isDefinedBy>
         <rdfs:label>dc:date</rdfs:label>
+        <rdfs:isDefinedBy>http://purl.org/dc/elements/1.1/</rdfs:isDefinedBy>
         <skos:definition>A point or period of time associated with an event in the lifecycle of the resource.</skos:definition>
         <skos:altLabel>Date</skos:altLabel>
     </rdf:Description>
@@ -3876,8 +3902,8 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
         <rdfs:label>owl:versionInfo</rdfs:label>
         <rdfs:comment>An annotation property that describes an individual identifier for some information content entity which specifies version number.</rdfs:comment>
-        <skos:altLabel></skos:altLabel>
         <rdfs:label>versionInfo</rdfs:label>
+        <skos:altLabel></skos:altLabel>
         <obo1:IAO_0000232>Old http://www.w3.org/2002/07/owl#versionInfo</obo1:IAO_0000232>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
