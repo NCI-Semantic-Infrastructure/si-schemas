@@ -1300,7 +1300,6 @@ Some currently missing phenomena that should be considered &quot;about&quot; are
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000045 -->
 
     <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000045">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:label xml:lang="en">prototype data property</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -3603,7 +3602,7 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#go-consortium">
         <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <omv:description>The mission of the GO Consortium is to develop a comprehensive, computational model of biological systems, ranging from the molecular to the organism level, across the multiplicity of species in the tree of life.</omv:description>
-        <omv:eMail xml:lang="geneontology.org">help</omv:eMail>
+        <omv:eMail>help@geneontology.org</omv:eMail>
         <omv:name>GO Consortium</omv:name>
         <rdfs:comment>OBINCBI_0000060</rdfs:comment>
         <rdfs:label>GO Consortium</rdfs:label>
@@ -3881,8 +3880,8 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
         <rdfs:comment>Date may be used to express temporal information at any level of granularity. Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [ISO 8601-1] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [W3CDTF] or the Extended Date/Time Format Specification [EDTF]. If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character. Either the start or end date may be missing.</rdfs:comment>
-        <rdfs:label>dc:date</rdfs:label>
         <rdfs:isDefinedBy>http://purl.org/dc/elements/1.1/</rdfs:isDefinedBy>
+        <rdfs:label>dc:date</rdfs:label>
         <skos:definition>A point or period of time associated with an event in the lifecycle of the resource.</skos:definition>
         <skos:altLabel>Date</skos:altLabel>
     </rdf:Description>
@@ -3902,8 +3901,8 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
         <rdfs:label>owl:versionInfo</rdfs:label>
         <rdfs:comment>An annotation property that describes an individual identifier for some information content entity which specifies version number.</rdfs:comment>
-        <rdfs:label>versionInfo</rdfs:label>
         <skos:altLabel></skos:altLabel>
+        <rdfs:label>versionInfo</rdfs:label>
         <obo1:IAO_0000232>Old http://www.w3.org/2002/07/owl#versionInfo</obo1:IAO_0000232>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
