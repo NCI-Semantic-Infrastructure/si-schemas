@@ -2142,30 +2142,23 @@ where {
         <rdfs:comment>Q15 - get a data element by its identifier and return all properties</rdfs:comment>
         <rdfs:comment>exactly like Q9, except source and identifiers differ</rdfs:comment>
         <rdfs:comment>prefix srro: &lt;http://ncicb.nci.nih.gov/srro.owl#&gt;
-select distinct ?entity (str(?preferred_term) as ?PT) (str(?definition) as ?def) ?term (group_concat( distinct str(?name_value); separator=&quot;\n&quot;) as ?all_props) 
+select distinct ?entity (group_concat( distinct str(?name_value); separator=&quot;\n&quot;) as ?all_props) 
 from &lt;http://cbiit.nci.nih.gov/caDSR&gt;
 where {
   values ?identifier { &quot;2936520&quot; }
   ?entity ?identifier_property ?identifier ;
-             ?preferred_term_property ?preferred_term ;
-             ?definition_property ?definition ;
-            ?term_property ?term ;
              ?property ?value .
-  { ?property a owl:AnnotationProperty } union { ?property a owl:ObjectProperty } union { ?property a rdf:Property }
   bind (concat(replace(str(?property), &quot;http://.+[#/]&quot;, &quot;&quot;), &quot;: &quot;, str(?value)) as ?name_value)
 
   {
-    select ?identifier_property ?preferred_term_property ?term_property ?definition_property
+    select ?identifier_property 
     from &lt;http://ncicb.nci.nih.gov/srro&gt;
     where {
       values ?resource {  srro:caDSR }
       ?resource srro:hasIdentifier ?identifier_property .
-      ?resource srro:hasPreferredTerm ?preferred_term_property .
-      ?resource srro:hasTerm ?term_property .
-      ?resource srro:hasDefinition ?definition_property .
     }
   }
-} group by ?entity ?preferred_term ?term ?definition order by ?entity</rdfs:comment>
+} order by ?entity</rdfs:comment>
     </owl:Class>
     
 
@@ -2182,29 +2175,26 @@ return IRIs of the main and minor concepts, include identifier, label, optionall
 prefix isomdr: &lt;http://www.iso.org/11179/MDR#&gt;
 prefix cmdr: &lt;http://cbiit.nci.nih.gov/caDSR#&gt;
 
-select distinct ?entity ?preferred_term ?definition
+select distinct ?entity ?identifier ?preferred_term ?concept ?order
 from &lt;http://cbiit.nci.nih.gov/caDSR&gt;
 where {
-  values ?identifier { &quot;2936520&quot; }
+  values ?identifier { &quot;3101150&quot; }
   ?entity ?identifier_property ?identifier ;
              ?preferred_term_property ?preferred_term ;
-             ?definition_property ?definition ;
              isomdr:Object_Class ?an .
-    ?an cmdr:main_concept ?concept ;
+    ?an cmdr:main_concept|cmdr:minor_concept ?concept ;
            cmdr:display_order ?order .
 
   {
-    select ?identifier_property ?preferred_term_property ?term_property ?definition_property
+    select ?identifier_property ?preferred_term_property 
     from &lt;http://ncicb.nci.nih.gov/srro&gt;
     where {
       values ?resource {  srro:caDSR }
       ?resource srro:hasIdentifier ?identifier_property .
       ?resource srro:hasPreferredTerm ?preferred_term_property .
-      ?resource srro:hasTerm ?term_property .
-      ?resource srro:hasDefinition ?definition_property .
     }
   }
-}</rdfs:comment>
+} order by ?order</rdfs:comment>
     </owl:Class>
     
 
@@ -2216,6 +2206,29 @@ where {
         <rdfs:comment>Q17 - get the permissible values of a data element
 
     returns values and labels of the PVs</rdfs:comment>
+        <rdfs:comment>prefix srro: &lt;http://ncicb.nci.nih.gov/srro.owl#&gt;
+prefix isomdr: &lt;http://www.iso.org/11179/MDR#&gt;
+prefix cmdr: &lt;http://cbiit.nci.nih.gov/caDSR#&gt;
+prefix ncit: &lt;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#&gt;
+
+select distinct ?entity ?identifier ?preferred_term ?pv_value ?pv_text ?concept ?order
+from &lt;http://cbiit.nci.nih.gov/caDSR&gt;
+where {
+  values ?identifier { &quot;3103479&quot; }
+  ?entity ?identifier_property ?identifier ;
+             ?preferred_term_property ?preferred_term ;
+             isomdr:permitted_value [ isomdr:value ?pv_value ; rdfs:label ?pv_text ; cmdr:has_concept [ cmdr:main_concept|cmdr:minor_concept ?concept ; cmdr:display_order ?order ] ]
+
+  {
+    select ?identifier_property ?preferred_term_property 
+    from &lt;http://ncicb.nci.nih.gov/srro&gt;
+    where {
+      values ?resource {  srro:caDSR }
+      ?resource srro:hasIdentifier ?identifier_property .
+      ?resource srro:hasPreferredTerm ?preferred_term_property .
+    }
+  }
+} order by ?order</rdfs:comment>
     </owl:Class>
     
 
@@ -2227,6 +2240,29 @@ where {
         <rdfs:comment>Q18 - list all data elements that have a specific object class (in caDSR it would be the main concept of the OC)
 
     returns identifier, label, IRI</rdfs:comment>
+        <rdfs:comment>prefix srro: &lt;http://ncicb.nci.nih.gov/srro.owl#&gt;
+prefix isomdr: &lt;http://www.iso.org/11179/MDR#&gt;
+prefix cmdr: &lt;http://cbiit.nci.nih.gov/caDSR#&gt;
+prefix ncit: &lt;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#&gt;
+
+select distinct ?entity ?identifier ?preferred_term
+from &lt;http://cbiit.nci.nih.gov/caDSR&gt;
+where {
+  values ?concept { ncit:C25190 }
+  ?entity ?identifier_property ?identifier ;
+             ?preferred_term_property ?preferred_term ;
+             isomdr:Object_Class [ cmdr:main_concept ?concept ]
+
+  {
+    select ?identifier_property ?preferred_term_property 
+    from &lt;http://ncicb.nci.nih.gov/srro&gt;
+    where {
+      values ?resource {  srro:caDSR }
+      ?resource srro:hasIdentifier ?identifier_property .
+      ?resource srro:hasPreferredTerm ?preferred_term_property .
+    }
+  }
+} limit 1000</rdfs:comment>
     </owl:Class>
     
 
@@ -2236,6 +2272,28 @@ where {
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Q19-list-data-elements-with-specific-DEC">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#test-queries"/>
         <rdfs:comment>Q19 - list all data elements with the same data element concept ID (the DEC)</rdfs:comment>
+        <rdfs:comment>prefix srro: &lt;http://ncicb.nci.nih.gov/srro.owl#&gt;
+prefix isomdr: &lt;http://www.iso.org/11179/MDR#&gt;
+prefix cmdr: &lt;http://cbiit.nci.nih.gov/caDSR#&gt;
+prefix ncit: &lt;http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#&gt;
+
+select distinct ?entity ?identifier ?preferred_term 
+from &lt;http://cbiit.nci.nih.gov/caDSR&gt;
+where {
+  values ?dec { &quot;7574294&quot; }
+  ?entity ?identifier_property ?identifier ;
+             ?preferred_term_property ?preferred_term ;
+             isomdr:DEC_publicId ?dec .
+  {
+    select ?identifier_property ?preferred_term_property 
+    from &lt;http://ncicb.nci.nih.gov/srro&gt;
+    where {
+      values ?resource {  srro:caDSR }
+      ?resource srro:hasIdentifier ?identifier_property .
+      ?resource srro:hasPreferredTerm ?preferred_term_property .
+    }
+  }
+} order by desc(?count_dec) limit 100</rdfs:comment>
     </owl:Class>
     
 
@@ -3880,8 +3938,8 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
         <rdfs:comment>Date may be used to express temporal information at any level of granularity. Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [ISO 8601-1] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [W3CDTF] or the Extended Date/Time Format Specification [EDTF]. If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character. Either the start or end date may be missing.</rdfs:comment>
-        <rdfs:isDefinedBy>http://purl.org/dc/elements/1.1/</rdfs:isDefinedBy>
         <rdfs:label>dc:date</rdfs:label>
+        <rdfs:isDefinedBy>http://purl.org/dc/elements/1.1/</rdfs:isDefinedBy>
         <skos:definition>A point or period of time associated with an event in the lifecycle of the resource.</skos:definition>
         <skos:altLabel>Date</skos:altLabel>
     </rdf:Description>
@@ -3901,8 +3959,8 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
         <rdfs:label>owl:versionInfo</rdfs:label>
         <rdfs:comment>An annotation property that describes an individual identifier for some information content entity which specifies version number.</rdfs:comment>
-        <skos:altLabel></skos:altLabel>
         <rdfs:label>versionInfo</rdfs:label>
+        <skos:altLabel></skos:altLabel>
         <obo1:IAO_0000232>Old http://www.w3.org/2002/07/owl#versionInfo</obo1:IAO_0000232>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
