@@ -54,10 +54,11 @@ dkms.conf
 # protege catalog
 catalog-*.xml
 
-# archives, backups and locks
+# archives, locals, backups and locks
 .~lock.*
 *.bak
 *.backup
+local*
 archive/
 
 
