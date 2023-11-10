@@ -1,0 +1,211 @@
+@prefix : <http://cbiit.nci.nih.gov/caDSR/cde#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix go: <http://purl.org/obo/owl/GO#> .
+@prefix mo: <http://mged.org/MGEDOntology#> .
+@prefix UNK: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix lnc: <https://loinc.org/code#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rid: <http://radlex.org/RID/> .
+@prefix sno: <http://snomed.info/id#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cmdr: <http://cbiit.nci.nih.gov/caDSR#> .
+@prefix medr: <https://identifiers.org/meddra#> .
+@prefix ncim: <http://ncim.nci.nih.gov/NCIMetathesaurus#> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cabig: <http://ncicb.nci.nih.gov/cabig#> .
+@prefix ctcae: <http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae5.owl#> .
+@prefix ndfrt: <http://evs.nci.nih.gov/ftp1/NDF-RT/NDF-RT.owl#> .
+@prefix snoct: <http://snomed.info/id#> .
+@prefix isomdr: <http://www.iso.org/11179/MDR#> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@base <http://cbiit.nci.nih.gov/caDSR/cde> .
+
+<http://cbiit.nci.nih.gov/caDSR/cde> rdf:type owl:Ontology ;
+                                      dc:date "2019-01-16" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#alternate_name_type
+:alternate_name_type rdf:type owl:AnnotationProperty .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#answer_text
+:answer_text rdf:type owl:AnnotationProperty .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#has_classification
+:has_classification rdf:type owl:AnnotationProperty .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#short_name
+:short_name rdf:type owl:AnnotationProperty .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#value_domain_datatype
+:value_domain_datatype rdf:type owl:AnnotationProperty .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#value_domain_type
+:value_domain_type rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+###  http://www.iso.org/11179/MDR#DEC_Long_Name
+isomdr:DEC_Long_Name rdf:type owl:AnnotationProperty .
+
+
+###  http://www.iso.org/11179/MDR#DEC_publicId
+isomdr:DEC_publicId rdf:type owl:AnnotationProperty .
+
+
+###  http://www.iso.org/11179/MDR#VD_publicId
+isomdr:VD_publicId rdf:type owl:AnnotationProperty .
+
+
+###  http://www.iso.org/11179/MDR#VD_version
+isomdr:VD_version rdf:type owl:AnnotationProperty .
+
+
+###  http://www.loc.gov/mads/rdf/v1#hasSource
+madsrdf:hasSource rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#element
+:element rdf:type owl:ObjectProperty ;
+         rdfs:range rdfs:Class .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#main_concept
+:main_concept rdf:type owl:ObjectProperty ;
+              rdfs:range rdfs:Class .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#minor_concept
+:minor_concept rdf:type owl:ObjectProperty ;
+               rdfs:range rdfs:Class .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#used_by
+:used_by rdf:type owl:ObjectProperty ;
+         rdfs:range rdfs:Class .
+
+
+###  http://www.iso.org/11179/MDR#Object_Class
+isomdr:Object_Class rdf:type owl:ObjectProperty ;
+                    rdfs:range rdfs:Class .
+
+
+###  http://www.iso.org/11179/MDR#Property
+isomdr:Property rdf:type owl:ObjectProperty ;
+                rdfs:range rdfs:Class .
+
+
+###  http://www.iso.org/11179/MDR#has_concept
+isomdr:has_concept rdf:type owl:ObjectProperty ;
+                   rdfs:range rdfs:Class .
+
+
+###  http://www.iso.org/11179/MDR#permitted_value
+isomdr:permitted_value rdf:type owl:ObjectProperty ;
+                       rdfs:range rdfs:Class .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#CONTEXTNAME
+:CONTEXTNAME rdf:type owl:DatatypeProperty ;
+             rdfs:domain :DataElement .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#CONTEXTVERSION
+:CONTEXTVERSION rdf:type owl:DatatypeProperty ;
+                rdfs:domain :DataElement .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#LONGNAME
+:LONGNAME rdf:type owl:DatatypeProperty ;
+          rdfs:domain :DataElement ;
+          rdfs:comment "User readable name" ,
+                       "using rdfs:label in RDF" .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#ORIGIN
+:ORIGIN rdf:type owl:DatatypeProperty ;
+        rdfs:domain :DataElement .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#PREFERREDDEFINITION
+:PREFERREDDEFINITION rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :DataElement .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#PREFERREDNAME
+:PREFERREDNAME rdf:type owl:DatatypeProperty ;
+               rdfs:domain :DataElement .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#VERSION
+:VERSION rdf:type owl:DatatypeProperty ;
+         rdfs:domain :DataElement .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#WORKFLOWSTATUS
+:WORKFLOWSTATUS rdf:type owl:DatatypeProperty ;
+                rdfs:domain :DataElement .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#publicId
+:publicId rdf:type owl:DatatypeProperty ;
+          rdfs:domain :DataElement .
+
+
+###  http://www.iso.org/11179/MDR#registration_status
+isomdr:registration_status rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :DataElement ;
+                           rdfs:comment "This is the REGISTRATIONSTATUS in the XML." .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#DataElement
+:DataElement rdf:type owl:Class .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#DataElementConcept
+:DataElementConcept rdf:type owl:Class .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#ObjectClass
+:ObjectClass rdf:type owl:Class .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#Property
+:Property rdf:type owl:Class .
+
+
+###  http://cbiit.nci.nih.gov/caDSR/cde#ValueDomain
+:ValueDomain rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Class
+rdfs:Class rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
