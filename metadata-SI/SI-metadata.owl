@@ -352,17 +352,6 @@ bro</rdfs:comment>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasGraphName -->
-
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasGraphName">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
-        <rdfs:comment>A property that relates a Service RDF Resource to the Named Graph that identifies it in the SPARQL service.</rdfs:comment>
-        <rdfs:label xml:lang="en">has graph name</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://ncicb.nci.nih.gov/srro.owl#hasIdentifier -->
 
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasIdentifier">
@@ -440,6 +429,17 @@ bro</rdfs:comment>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Version"/>
         <obo1:IAO_0000115>A property that relates a Service RDF Resource to the property that the resource uses to refer to its release version.</obo1:IAO_0000115>
         <rdfs:label xml:lang="en">has version</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl#inNamedGraph -->
+
+    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#inNamedGraph">
+        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
+        <rdfs:comment>A property that relates a Service RDF Resource to the Named Graph that identifies it in the SPARQL service.</rdfs:comment>
+        <rdfs:label xml:lang="en">in named graph</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1330,13 +1330,6 @@ where {
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasGraphName"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasIdentifier"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
@@ -1354,6 +1347,13 @@ where {
                 <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasSourceAuthority"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#inNamedGraph"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1496,18 +1496,6 @@ order by asc(?count_def) limit 10</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
         <owl:annotatedTarget>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasGraphName"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
-        <rdfs:comment>exactly 1: in sparql this is required and returns one value (required on the resource, doesn&apos;t apply to srro)</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasIdentifier"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
@@ -1537,6 +1525,18 @@ However, resources such as schemas from the w3c don&apos;t tend to have identifi
                 <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasSourceAuthority"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>exactly 1: in sparql this is required and returns one value (required on the resource, doesn&apos;t apply to srro)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#inNamedGraph"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
             </owl:Restriction>
         </owl:annotatedTarget>
         <rdfs:comment>exactly 1: in sparql this is required and returns one value (required on the resource, doesn&apos;t apply to srro)</rdfs:comment>
@@ -1897,7 +1897,6 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
         <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <hasConversionAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-si"/>
         <hasDefinition rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <hasGraphName rdf:resource="http://ncicb.nci.nih.gov/srro.owl#go_graph"/>
         <hasIdentifier rdf:resource="http://www.geneontology.org/formats/oboInOwl#id"/>
         <hasIntent rdf:resource="http://ncicb.nci.nih.gov/srro.owl#terminology"/>
         <hasNamespace rdf:resource="http://purl.obolibrary.org/obo/"/>
@@ -1905,6 +1904,7 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
         <hasSourceAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#go-consortium"/>
         <hasTerm rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+        <inNamedGraph rdf:resource="http://ncicb.nci.nih.gov/srro.owl#go_graph"/>
         <omv:hasDomain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#biological-domain"/>
         <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/CCBY4.0"/>
         <dc:description>The Gene Ontology (GO) provides a framework and set of concepts for describing the functions of gene products from all organisms.</dc:description>
@@ -1922,7 +1922,6 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
         <hasConversionAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-si"/>
         <hasDate rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <hasDefinition rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
-        <hasGraphName rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ncit_graph"/>
         <hasIdentifier rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0"/>
         <hasIntent rdf:resource="http://ncicb.nci.nih.gov/srro.owl#terminology"/>
         <hasNamespace rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#"/>
@@ -1930,6 +1929,7 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
         <hasSourceAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-evs"/>
         <hasTerm rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
         <hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+        <inNamedGraph rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ncit_graph"/>
         <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/CCBY4.0"/>
         <dc:description>NCI Thesaurus, a controlled vocabulary in support of NCI administrative and scientific activities. Produced by the Enterprise Vocabulary System (EVS), a project by the NCI Center for Biomedical Informatics and Information Technology. National Cancer Institute, National Institutes of Health, Bethesda, MD 20892, U.S.A.</dc:description>
         <rdfs:label>NCIt</rdfs:label>
@@ -1985,13 +1985,13 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
         <hasConversionAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-si"/>
         <hasDate rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <hasDefinition rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <hasGraphName rdf:resource="http://ncicb.nci.nih.gov/srro.owl#cadsr_graph"/>
         <hasIdentifier rdf:resource="http://cbiit.nci.nih.gov/caDSR#publicId"/>
         <hasIntent rdf:resource="http://ncicb.nci.nih.gov/srro.owl#metadata"/>
         <hasNamespace rdf:resource="http://cbiit.nci.nih.gov/caDSR#"/>
         <hasPreferredTerm rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <hasSourceAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-cadsr"/>
         <hasTerm rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <inNamedGraph rdf:resource="http://ncicb.nci.nih.gov/srro.owl#cadsr_graph"/>
         <omv:hasDomain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#biomedical-domain"/>
         <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/CCBY4.0"/>
         <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/unknown-license"/>
@@ -2326,8 +2326,8 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
         <rdfs:comment>Date may be used to express temporal information at any level of granularity. Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [ISO 8601-1] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [W3CDTF] or the Extended Date/Time Format Specification [EDTF]. If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character. Either the start or end date may be missing.</rdfs:comment>
-        <rdfs:isDefinedBy>http://purl.org/dc/elements/1.1/</rdfs:isDefinedBy>
         <rdfs:label>dc:date</rdfs:label>
+        <rdfs:isDefinedBy>http://purl.org/dc/elements/1.1/</rdfs:isDefinedBy>
         <skos:definition>A point or period of time associated with an event in the lifecycle of the resource.</skos:definition>
         <skos:altLabel>Date</skos:altLabel>
     </rdf:Description>
@@ -2347,8 +2347,8 @@ also note:  in production the OWL vocabs will be flattened out, there won&apos;t
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
         <rdfs:label>owl:versionInfo</rdfs:label>
         <rdfs:comment>An annotation property that describes an individual identifier for some information content entity which specifies version number.</rdfs:comment>
-        <rdfs:label>versionInfo</rdfs:label>
         <skos:altLabel></skos:altLabel>
+        <rdfs:label>versionInfo</rdfs:label>
         <obo1:IAO_0000232>Old http://www.w3.org/2002/07/owl#versionInfo</obo1:IAO_0000232>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
