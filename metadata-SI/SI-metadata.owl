@@ -75,12 +75,6 @@ bro</rdfs:comment>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#Identifier -->
-
-    <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
-    
-
-
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0 -->
 
     <owl:AnnotationProperty rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0"/>
@@ -189,26 +183,21 @@ bro</rdfs:comment>
     
 
 
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
+        <rdfs:comment>Declared as owl:ObjectProperty in the prov ontology.  Used here as an owl:AnnotationProperty to refer to external objects without having to import them or pun when the object of the triple is a property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov"/>
+        <skos:definition>A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.</skos:definition>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://www.w3.org/ns/prov#wasInfluencedBy -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#date -->
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy">
+        <rdfs:comment>Declared as ObjectProperty in the prov ontology.  Used here as an owl:AnnotationProperty to refer to external objects and remain in OWL without punning.</rdfs:comment>
+    </owl:AnnotationProperty>
     
 
 
@@ -223,13 +212,21 @@ bro</rdfs:comment>
     
 
 
+    <!-- http://ncicb.nci.nih.gov/srro.owl#downloadFrom -->
+
+    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#downloadFrom">
+        <rdfs:label>download from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/srro.owl#hasConversionAuthority -->
 
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasConversionAuthority">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the Organization that processes the original resource to a form that is then used in the current SPARQL service.</rdfs:comment>
-        <rdfs:label xml:lang="en">has conversion authority</rdfs:label>
+        <rdfs:label>has conversion authority</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -240,7 +237,7 @@ bro</rdfs:comment>
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#VersionDate"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses to refer to its version release date.</rdfs:comment>
-        <rdfs:label xml:lang="en">has date</rdfs:label>
+        <rdfs:label>has date</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -251,7 +248,7 @@ bro</rdfs:comment>
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Definition"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses for an entity&apos;s textual definition.</rdfs:comment>
-        <rdfs:label xml:lang="en">has definition</rdfs:label>
+        <rdfs:label>has definition</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -283,8 +280,8 @@ bro</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasNamespace">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
-        <rdfs:comment>A property that relates a Service RDF Resource to the namespace of the resource or the namespace of a reused resource.</rdfs:comment>
-        <rdfs:label xml:lang="en">has namespace</rdfs:label>
+        <rdfs:comment>A property that relates a Service RDF Resource to the namespace of the resource, or the namespace of a resource referenced by a Service RDF Resource.</rdfs:comment>
+        <rdfs:label>has namespace</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -294,8 +291,8 @@ bro</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasPreferredTerm">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#PreferredTerm"/>
-        <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses for an entity&apos;s preferred term.</rdfs:comment>
-        <rdfs:label xml:lang="en">has preferred term</rdfs:label>
+        <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses for its entity&apos;s preferred term.</rdfs:comment>
+        <rdfs:label>has preferred term</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -306,7 +303,7 @@ bro</rdfs:comment>
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the authoritative Organization that develops, maintains, and publishes the resource.</rdfs:comment>
-        <rdfs:label xml:lang="en">has source authority</rdfs:label>
+        <rdfs:label>has source authority</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -317,7 +314,7 @@ bro</rdfs:comment>
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Term"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses for an entity&apos;s terms.</rdfs:comment>
-        <rdfs:label xml:lang="en">has term</rdfs:label>
+        <rdfs:label>has term</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -328,7 +325,7 @@ bro</rdfs:comment>
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Version"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses to refer to its release version.</rdfs:comment>
-        <rdfs:label xml:lang="en">has version</rdfs:label>
+        <rdfs:label>has version</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -339,7 +336,7 @@ bro</rdfs:comment>
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the Named Graph that identifies it in the SPARQL service.</rdfs:comment>
-        <rdfs:label xml:lang="en">in named graph</rdfs:label>
+        <rdfs:label>in named graph</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -381,7 +378,9 @@ bro</rdfs:comment>
     <!-- http://ncicb.nci.nih.gov/srro.owl#hasNamespaceIRI -->
 
     <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasNamespaceIRI">
-        <rdfs:label>has Namespace IRI</rdfs:label>
+        <rdfs:comment>Modified to refer to IRIs instead of URIs.  Also, an RDF resource might reuse entities from multiple namespaces and there is a need to record them without a &quot;preferred&quot; adjective.</rdfs:comment>
+        <rdfs:label>has namespace IRI</rdfs:label>
+        <prov:wasDerivedFrom rdf:resource="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     </owl:DatatypeProperty>
     
 
@@ -390,8 +389,9 @@ bro</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasOntologyIRI">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+        <rdfs:comment>Modified to refer to IRIs rather than URIs.</rdfs:comment>
         <rdfs:label>has Ontology IRI</rdfs:label>
-        <prov:wasInfluencedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology#URI"/>
+        <prov:wasDerivedFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#URI"/>
     </owl:DatatypeProperty>
     
 
@@ -401,6 +401,7 @@ bro</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#acronym">
         <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
         <rdfs:label>omv:acronym</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -411,6 +412,7 @@ bro</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#description">
         <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
         <rdfs:label>omv:description</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -421,6 +423,7 @@ bro</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#eMail">
         <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
         <rdfs:label>omv:email</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -431,6 +434,7 @@ bro</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#name">
         <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
         <rdfs:label>omv:name</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -439,10 +443,11 @@ bro</rdfs:comment>
     <!-- http://www.w3.org/ns/dcat#accessURL -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#accessURL">
-        <rdfs:comment>A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred.</rdfs:comment>
-        <rdfs:comment>dcat:accessURL is an RDF property also typed as owl:ObjectProperty;  it is used here as a datatype property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
-        <rdfs:label>has Access URL</rdfs:label>
+        <rdfs:comment>dcat:accessURL is an RDF property also typed as owl:ObjectProperty.  It is used here as a datatype property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <rdfs:label>has access URL</rdfs:label>
+        <skos:altLabel>dcat:accessURL</skos:altLabel>
+        <skos:definition>A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -450,10 +455,11 @@ bro</rdfs:comment>
     <!-- http://www.w3.org/ns/dcat#downloadURL -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#downloadURL">
-        <rdfs:comment>The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution&apos;s dct:format and/or dcat:mediaType.</rdfs:comment>
-        <rdfs:comment>dcat:downloadURL is an RDF property also typed as owl:ObjectProperty;  it is used here as a datatype property.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
-        <rdfs:label>has Download URL</rdfs:label>
+        <rdfs:comment>dcat:downloadURL is an RDF property also typed as owl:ObjectProperty.  It is used here as a datatype property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <rdfs:label>has download URL</rdfs:label>
+        <skos:altLabel>dcat:downloadURL</skos:altLabel>
+        <skos:definition>The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution&apos;s dct:format and/or dcat:mediaType.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -463,6 +469,8 @@ bro</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sparql-service-description#name">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <rdfs:comment>Relates a named graph to the name by which it may be referenced in a FROM/FROM NAMED clause. The object of the sd:name property is an IRI.  sd:name is rdf:type rdf:Property.  Here it is used as an owl:DatatypeProperty</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sparql-service-description"/>
         <rdfs:label>sd:name</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -472,7 +480,7 @@ bro</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="https://vocab.org/vann/preferredNamespacePrefix">
         <rdfs:label>has Namespace Prefix</rdfs:label>
-        <rdfs:label>vann:preferredNamespacePrefix</rdfs:label>
+        <skos:altLabel>vann:preferredNamespacePrefix</skos:altLabel>
     </owl:DatatypeProperty>
     
 
@@ -488,6 +496,24 @@ bro</rdfs:comment>
     
 
 
+    <!-- http://ncicb.nci.nih.gov/srro.owl#AccessSite -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#AccessSite">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLocation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#accessURL"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>It is used here for a landing page, or FTP directory, that needs to be navigated to obtain the (changing) link to the downloadable distribution file.</rdfs:comment>
+        <rdfs:label>Access Site</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/dcat#accessURL"/>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/srro.owl#Definition -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Definition">
@@ -498,10 +524,41 @@ bro</rdfs:comment>
     
 
 
+    <!-- http://ncicb.nci.nih.gov/srro.owl#DownloadLink -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#DownloadLink">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLocation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>It is used here to obtain the URL that links directly to the downloadable distribution file.  The scheme of the URL can be http, ftp, or any other scheme supporting downloads.</rdfs:comment>
+        <rdfs:label>Download Link</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl#DownloadLocation -->
+
+    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#DownloadLocation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
+        <rdfs:comment>An FTP site&apos;s directory listing served by an http web server is considered a landing page.</rdfs:comment>
+        <rdfs:label>Download Location</rdfs:label>
+        <skos:definition>The class of web and internet locations from which a resource can be downloaded from.  This includes anonymous FTP sites, and http web sites, either via direct links or landing pages.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/srro.owl#Identifier -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Identifier">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceEntityDescription"/>
+        <rdfs:label>Identifier</rdfs:label>
+        <skos:definition>The class of properties that relate a resource&apos;s entities to their identifiers.  The specific property used by a resource for this purpose is an instance of this class.</skos:definition>
     </owl:Class>
     
 
@@ -509,6 +566,7 @@ bro</rdfs:comment>
     <!-- http://ncicb.nci.nih.gov/srro.owl#Namespace -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Namespace">
+        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceDescription"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasNamespaceIRI"/>
@@ -524,8 +582,8 @@ bro</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Each namespace is an instance of this class.</rdfs:comment>
-        <rdfs:label xml:lang="en">Namespace</rdfs:label>
-        <rdfs:seeAlso>https://www.w3.org/TR/rdf11-concepts/#vocabularies</rdfs:seeAlso>
+        <rdfs:label>Namespace</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/rdf11-concepts/#vocabularies"/>
         <skos:definition>The class of namespaces used by the resources in this service, each of which is the common substring beginning each IRI in the RDF or OWL resource.</skos:definition>
     </owl:Class>
     
@@ -546,7 +604,7 @@ bro</rdfs:comment>
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#ResourceDescription">
         <rdfs:label>Resource Description</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/owl2-syntax/#Ontology_Annotations"/>
-        <skos:definition>The class of entities that a resource commonly uses to describe a release, normally as annotations in an Ontology entity, such as a version property, date property.</skos:definition>
+        <skos:definition>The class of entities that relate an RDF resource to information about the resource as a whole, such as version and release date information, namespaces.</skos:definition>
     </owl:Class>
     
 
@@ -554,8 +612,8 @@ bro</rdfs:comment>
     <!-- http://ncicb.nci.nih.gov/srro.owl#ResourceEntityDescription -->
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#ResourceEntityDescription">
-        <rdfs:label xml:lang="en">Resource Entity Description</rdfs:label>
-        <skos:definition>The class of properties commonly used to describe a resource&apos;s entitities (e.g. classes, individuals), such as textual definitions and terms, among others.</skos:definition>
+        <rdfs:label>Resource Entity Description</rdfs:label>
+        <skos:definition>The class of properties used by RDF resources to describe the  entitities of the resource, such as textual definitions and terms, among others.</skos:definition>
     </owl:Class>
     
 
@@ -658,12 +716,19 @@ bro</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#downloadFrom"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasOntologyIRI"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Each individual resource is an instance of this class.  Its IRI is in the present namespace, with a recognizable name of the resource used for the short name of the IRI.  The resource&apos;s Ontology IRI is obtained from the &apos;has Ontology IRI&apos; property.</rdfs:comment>
+        <rdfs:comment>Each individual RDF resource is an instance of this class.  Each individual IRI is in the present namespace, with a recognizable name of the resource used for the short name of the IRI.  The resource&apos;s Ontology IRI is obtained from the &apos;has Ontology IRI&apos; property.</rdfs:comment>
         <rdfs:label>Service RDF Resource</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/sparql-service-description#Service"/>
         <skos:definition>The class of RDF Graph resources accessible in the SPARQL service.</skos:definition>
@@ -676,7 +741,7 @@ bro</rdfs:comment>
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Term">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceEntityDescription"/>
         <rdfs:label>Term</rdfs:label>
-        <skos:definition>The class of properties that relate a resource&apos;s entities to the terms used by its user community to denote that entity, such as synonyms, abbreviations, acronyms, among other term types.  The specific property used by a resource for this purpose is an instance of this class.</skos:definition>
+        <skos:definition>The class of properties that relate a resource&apos;s entities to the various terms used by its user community to denote that entity, such as synonyms, abbreviations, acronyms, among other term types.  The specific property used by a resource for this purpose is an instance of this class.</skos:definition>
     </owl:Class>
     
 
@@ -686,7 +751,7 @@ bro</rdfs:comment>
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Version">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceDescription"/>
         <rdfs:comment>If an RDF resource is versioned by its date, the version date property is likely non-existent.</rdfs:comment>
-        <rdfs:label xml:lang="en">Version</rdfs:label>
+        <rdfs:label>Version</rdfs:label>
         <skos:definition>The class of properties that relate a resource to its release or modification version.  The specific property used by a resource to indicate its version is an instance of this class.</skos:definition>
     </owl:Class>
     
@@ -696,7 +761,7 @@ bro</rdfs:comment>
 
     <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#VersionDate">
         <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceDescription"/>
-        <rdfs:label xml:lang="en">Version Date</rdfs:label>
+        <rdfs:label>Version Date</rdfs:label>
         <skos:definition>The class of properties that relate a resource to its release or modification date.  The specific property used by a resource for this purpose is an instance of this class.</skos:definition>
     </owl:Class>
     
@@ -706,7 +771,7 @@ bro</rdfs:comment>
 
     <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#LicenseModel">
         <rdfs:comment>A license model describing the usage conditions for an ontology</rdfs:comment>
-        <rdfs:isDefinedBy>http://omv.ontoware.org/2005/05/ontology</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
         <rdfs:label>LicenseModel</rdfs:label>
     </owl:Class>
     
@@ -715,20 +780,16 @@ bro</rdfs:comment>
     <!-- http://omv.ontoware.org/2005/05/ontology#OntologyDomain -->
 
     <owl:Class rdf:about="http://omv.ontoware.org/2005/05/ontology#OntologyDomain">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ncicb.nci.nih.gov/srro.owl#biological-domain"/>
-                    <rdf:Description rdf:about="http://ncicb.nci.nih.gov/srro.owl#biomedical-domain"/>
-                    <rdf:Description rdf:about="http://ncicb.nci.nih.gov/srro.owl#clinical-domain"/>
-                    <rdf:Description rdf:about="http://ncicb.nci.nih.gov/srro.owl#information-technology-domain"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:isDefinedBy rdf:resource="http:omv/ontoware.org/2005/05/ontology"/>
-        <rdfs:label xml:lang="en">Ontology Domain</rdfs:label>
+        <rdfs:comment>While the domain can refer to any topic ontology it is advised to use one of the established general purpose topic hierarchy like DMOZ or domain specific topic hierarchy like ACM for the computer science domain.</rdfs:comment>
+        <rdfs:label>Ontology Domain</rdfs:label>
         <skos:definition>The subject of knowledge that is covered by a service resource.</skos:definition>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyDomain"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>While the domain can refer to any topic ontology it is advised to use one of the established general purpose topic hierarchy like DMOZ or domain specific topic hierarchy like ACM for the computer science domain.</owl:annotatedTarget>
+        <rdfs:isDefinedBy rdf:resource="http:omv/ontoware.org/2005/05/ontology"/>
+    </owl:Axiom>
     
 
 
@@ -768,13 +829,24 @@ bro</rdfs:comment>
     
 
 
+    <!-- http://www.w3.org/ns/prov#Location -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Location">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o"/>
+        <rdfs:label>Location</rdfs:label>
+        <skos:definition>A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/ns/sparql-service-description#NamedGraph -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/sparql-service-description#NamedGraph">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sparql-service-description#name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>An instance of sd:NamedGraph represents a named graph having a name (via sd:name) and an optional graph description (via sd:graph).</rdfs:comment>
@@ -796,17 +868,6 @@ bro</rdfs:comment>
     
 
 
-    <!-- #cadsr_namespace -->
-
-    <owl:NamedIndividual rdf:about="#cadsr_namespace">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
-        <hasNamespaceIRI>http://cbiit.nci.nih.gov/caDSR#</hasNamespaceIRI>
-        <vann:preferredNamespacePrefix>cmdr</vann:preferredNamespacePrefix>
-        <rdfs:label>cadsr_namespace</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://cbiit.nci.nih.gov/caDSR#publicId -->
 
     <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/caDSR#publicId">
@@ -818,7 +879,7 @@ bro</rdfs:comment>
     <!-- http://ncicb.nci.nih.gov/OBINCBI_0000043 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000043">
-        <rdfs:label xml:lang="en">Anthony Huffman</rdfs:label>
+        <rdfs:label>Anthony Huffman</rdfs:label>
         <skos:altLabel>ORCID: 0000-0002-5735-7540 change to IAO_0000708</skos:altLabel>
     </owl:NamedIndividual>
     
@@ -828,6 +889,7 @@ bro</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#GO">
         <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+        <downloadFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#go_download_location"/>
         <hasConversionAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-si"/>
         <hasDefinition rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <hasIdentifier rdf:resource="http://www.geneontology.org/formats/oboInOwl#id"/>
@@ -840,6 +902,7 @@ bro</rdfs:comment>
         <inNamedGraph rdf:resource="http://ncicb.nci.nih.gov/srro.owl#go_graph"/>
         <omv:hasDomain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#biological-domain"/>
         <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/CCBY4.0"/>
+        <hasOntologyIRI>http://purl.obolibrary.org/obo/go.owl</hasOntologyIRI>
         <dcterms:description>The Gene Ontology (GO) provides a framework and set of concepts for describing the functions of gene products from all organisms.</dcterms:description>
         <rdfs:label>GO</rdfs:label>
         <skos:altLabel>Gene Ontology</skos:altLabel>
@@ -852,6 +915,7 @@ bro</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#NCIt">
         <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+        <downloadFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ncit_download_location"/>
         <hasConversionAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-si"/>
         <hasDate rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <hasDefinition rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
@@ -863,7 +927,9 @@ bro</rdfs:comment>
         <hasTerm rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
         <hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
         <inNamedGraph rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ncit_graph"/>
+        <omv:hasDomain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#biomedical-domain"/>
         <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/CCBY4.0"/>
+        <hasOntologyIRI>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl</hasOntologyIRI>
         <dcterms:description>NCI Thesaurus, a controlled vocabulary in support of NCI administrative and scientific activities. Produced by the Enterprise Vocabulary System (EVS), a project by the NCI Center for Biomedical Informatics and Information Technology. National Cancer Institute, National Institutes of Health, Bethesda, MD 20892, U.S.A.</dcterms:description>
         <rdfs:label>NCIt</rdfs:label>
         <skos:altLabel>NCI Thesaurus</skos:altLabel>
@@ -884,9 +950,8 @@ bro</rdfs:comment>
         <hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
         <omv:hasDomain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#information-technology-domain"/>
         <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/CCBY4.0"/>
-        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <hasOntologyIRI>http://ncicb.nci.nih.gov/srro.owl</hasOntologyIRI>
         <rdfs:comment>A minimal ontology that identifies RDF graphs loaded in the SPARQL service, and identifies various commonly used properties in these  resources to facilitate common SPARQL queries.</rdfs:comment>
-        <rdfs:comment>OBINCBI_0000144</rdfs:comment>
         <rdfs:label>SRRO</rdfs:label>
         <skos:altLabel>Service Resource Ontology</skos:altLabel>
     </owl:NamedIndividual>
@@ -915,22 +980,34 @@ bro</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#caDSR">
         <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+        <downloadFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#cadsr_download_location"/>
         <hasConversionAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-si"/>
         <hasDate rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <hasDefinition rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
         <hasIdentifier rdf:resource="http://cbiit.nci.nih.gov/caDSR#publicId"/>
         <hasIntent rdf:resource="http://ncicb.nci.nih.gov/srro.owl#metadata"/>
-        <hasNamespace rdf:resource="#cadsr_namespace"/>
+        <hasNamespace rdf:resource="http://ncicb.nci.nih.gov/srro.owl#cadsr_namespace"/>
         <hasPreferredTerm rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <hasSourceAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-cadsr"/>
         <hasTerm rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
         <inNamedGraph rdf:resource="http://ncicb.nci.nih.gov/srro.owl#cadsr_graph"/>
         <omv:hasDomain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#biomedical-domain"/>
-        <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/CCBY4.0"/>
         <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/unknown-license"/>
+        <hasOntologyIRI>http://cbiit.nci.nih.gov/caDSR</hasOntologyIRI>
         <rdfs:label>caDSR</rdfs:label>
         <skos:altLabel>Cancer Data Standards Registry and Repository</skos:altLabel>
         <skos:definition>The Cancer Data Standards Registry and Repository (caDSR) is a metadata repository based on the ISO/IEC 11179 Metadata Registry standard.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl#cadsr_download_location -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#cadsr_download_location">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#AccessSite"/>
+        <dcat:accessURL>https://cadsr.nci.nih.gov/ftp/caDSR_Downloads/CDE/XML/</dcat:accessURL>
+        <rdfs:comment>Download location of the caDSR is an FTP site fronted by a web server.  The user needs to read or parse the directory to select the correct file.</rdfs:comment>
+        <rdfs:label>cadsr_download_location</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -941,6 +1018,17 @@ bro</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
         <sd:name>http://cbiit.nci.nih.gov/caDSR</sd:name>
         <rdfs:label>cadsr_graph</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl#cadsr_namespace -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#cadsr_namespace">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
+        <hasNamespaceIRI>http://cbiit.nci.nih.gov/caDSR#</hasNamespaceIRI>
+        <vann:preferredNamespacePrefix>cmdr</vann:preferredNamespacePrefix>
+        <rdfs:label>cadsr_namespace</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -962,6 +1050,17 @@ bro</rdfs:comment>
         <omv:eMail>help@geneontology.org</omv:eMail>
         <omv:name>GO Consortium</omv:name>
         <rdfs:label>GO Consortium</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl#go_download_location -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#go_download_location">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLink"/>
+        <dcat:downloadURL>https://purl.obolibrary.org/obo/go.owl</dcat:downloadURL>
+        <rdfs:comment>Download location of GO is a URL, can be downloaded with a direct link to the file.</rdfs:comment>
+        <rdfs:label>go_download_location</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1014,10 +1113,9 @@ bro</rdfs:comment>
         <omv:description>The project in the National Cancer Institute&apos;s Center for Biomedical Informatics and Information Technology (CBIIT) responsible for developing standard data elements and case report forms, among other metadata, in support of the NCI mission.  It&apos;s main product is also named the Cancer Data Standards Repository, based on the ISO/IEC 11179 metadata registry standard.  The project is run by the Semantic Infrastructure (SI) group of CBIIT.</omv:description>
         <omv:eMail>caDSR.RA@mail.nih.gov</omv:eMail>
         <omv:name>NCI Cancer Data Standards Registry and Repository</omv:name>
-        <rdfs:comment>OBINCBI_0000061</rdfs:comment>
         <rdfs:label>NCI Cancer Data Standards Registry and Repository</rdfs:label>
-        <rdfs:seeAlso>https://datascience.cancer.gov/resources/metadata</rdfs:seeAlso>
-        <skos:altLabel xml:lang="en">caDSR</skos:altLabel>
+        <rdfs:seeAlso rdf:resource="https://datascience.cancer.gov/resources/metadata"/>
+        <skos:altLabel>caDSR</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -1032,7 +1130,7 @@ bro</rdfs:comment>
         <omv:name>NCI Enterprise Vocabulary Service</omv:name>
         <dcterms:description>EVS creates, compiles, and cross-maps biomedical terminology needed by NCI and its community. EVS publishes NCI Thesaurus (NCIt) as its core reference terminology and biomedical ontology. EVS also makes available standalone versions of other terminologies and ontologies of special interest, and provides access with extensive cross-mappings to more than 75 terminologies in the NCI Metathesaurus.</dcterms:description>
         <rdfs:label>NCI Enterprise Vocabulary Service</rdfs:label>
-        <rdfs:seeAlso>https://evs.nci.nih.gov/</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:resource="https://evs.nci.nih.gov/"/>
     </owl:NamedIndividual>
     
 
@@ -1047,6 +1145,17 @@ bro</rdfs:comment>
         <rdfs:comment>A program within the Clinical &amp; Translational Research Informatics Branch in the Informatics and Data Science Program of the Center for Biomedical Informatics &amp; Information Technology (CBIIT) of the National Cancer Institute. It runs the EVS and caDSR projects.</rdfs:comment>
         <rdfs:label>NCI Semantic Infrastructure</rdfs:label>
         <skos:altLabel>NCI SI</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl#ncit_download_location -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#ncit_download_location">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLink"/>
+        <dcat:downloadURL>ftp://ftp1.nci.nih.gov/pub/cacore/EVS/NCI_Thesaurus/Thesaurus.OWL.zip</dcat:downloadURL>
+        <rdfs:comment>Download location of NCIt is a URL, can be downloaded with a direct link to the file.</rdfs:comment>
+        <rdfs:label>ncit_download_location</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1076,7 +1185,6 @@ bro</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#schema">
         <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceIntent"/>
-        <rdfs:comment>OBINCBI_0000002</rdfs:comment>
         <rdfs:comment>The format that the resource is set up as. This format is done for both databases or studies.</rdfs:comment>
         <rdfs:label>schema</rdfs:label>
     </owl:NamedIndividual>
@@ -1088,7 +1196,6 @@ bro</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#terminology">
         <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceIntent"/>
         <rdfs:comment>A resource type that contains a set of terms and definitions, among other attributes, for the elements of a domain of knowledge, e.g. clinical care, biological molecules.</rdfs:comment>
-        <rdfs:comment>OBINCBI_0000202</rdfs:comment>
         <rdfs:comment>Terms from this type of resource can be used to annotate other artifacts, i.e. serve as metadata.  The distinction with the metadata type in the present resource is that a terminology doesn&apos;t include all the necessary information required by e.g. a standard data element in one defined data structure.</rdfs:comment>
         <rdfs:label>terminology</rdfs:label>
     </owl:NamedIndividual>
@@ -1224,69 +1331,65 @@ bro</rdfs:comment>
      -->
 
     <rdf:Description rdf:about="http://cbiit.nci.nih.gov/caDSR#publicId">
-        <rdfs:comment>The identifier property used in the caDSR for data elements.</rdfs:comment>
         <rdfs:label>cmdr:publicId</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://ncicb.nci.nih.gov/srro.owl#Identifier">
-        <skos:definition>The class of properties that relate a resource&apos;s entities to their identifiers.  The specific property used by a resource for this purpose is an instance of this class.</skos:definition>
-        <rdfs:label>Identifier</rdfs:label>
+        <rdfs:comment>A property used as an identifier in the caDSR for data elements.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0">
         <skos:altLabel>code</skos:altLabel>
+        <rdfs:comment>A property used as an identifier in the NCIt.</rdfs:comment>
         <rdfs:label>ncit:NHC0</rdfs:label>
-        <rdfs:comment>The identifier property used in the NCI Thesaurus, labelled &apos;code&apos;.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108">
         <rdfs:label>ncit:P108</rdfs:label>
         <skos:altLabel>Preferred Name</skos:altLabel>
-        <rdfs:comment>The preferred term property used in the NCI Thesaurus, labelled &apos;Preferred Name&apos;.</rdfs:comment>
+        <rdfs:comment>A property used for preferred terms in the NCI Thesaurus.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90">
         <rdfs:label>ncit:P90</rdfs:label>
-        <rdfs:comment>The annotation property in the NCI Thesaurus used to denote the various terms associated with a concept, synonyms, abbreviations, acronyms, and so on.  It is labelled FULL_SYN in the NCIt.</rdfs:comment>
+        <rdfs:comment>A property used to denote the various terms associated with a concept, synonyms, abbreviations, acronyms, among others, in the NCIt.</rdfs:comment>
         <skos:altLabel>FULL_SYN</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97">
+        <rdfs:comment>The property used for definitions in the NCIt.</rdfs:comment>
         <skos:altLabel>DEFINITION</skos:altLabel>
         <rdfs:label>ncit:P97</rdfs:label>
-        <rdfs:comment>The annotation property used for definitions in the NCI Thesaurus.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
-        <rdfs:comment>The annotation property used for definitions in GO and other OBO vocabularies.</rdfs:comment>
+        <rdfs:comment>A property used for definitions in GO and other OBO vocabularies.</rdfs:comment>
         <rdfs:label>iao:definition</rdfs:label>
         <skos:altLabel>definition</skos:altLabel>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
-        <rdfs:comment>Date may be used to express temporal information at any level of granularity. Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [ISO 8601-1] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [W3CDTF] or the Extended Date/Time Format Specification [EDTF]. If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character. Either the start or end date may be missing.</rdfs:comment>
         <rdfs:label>dc:date</rdfs:label>
-        <rdfs:isDefinedBy>http://purl.org/dc/elements/1.1/</rdfs:isDefinedBy>
-        <skos:definition>A point or period of time associated with an event in the lifecycle of the resource.</skos:definition>
+        <rdfs:comment>A property used to denote release dates in the caDSR, NCIt, and other RDF resources.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1"/>
         <skos:altLabel>Date</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
         <rdfs:label>oboInOwl:hasExactSynonym</rdfs:label>
         <skos:altLabel>has exact synonym</skos:altLabel>
-        <rdfs:comment>An alternative label for a class or property which has the exact same meaning than the preferred name/primary label.</rdfs:comment>
-        <rdfs:seeAlso>https://github.com/information-artifact-ontology/ontology-metadata/issues/20</rdfs:seeAlso>
+        <rdfs:comment>A property used for synonyms in GO and other OBO vocabularies.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.geneontology.org/formats/oboInOwl#id">
         <rdfs:label>oboInOwl:id</rdfs:label>
-        <rdfs:comment>The definition property used in the Gene Ontology.</rdfs:comment>
+        <rdfs:comment>A property used for identifiers in GO and other OBO vocabularies.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:comment>The rdfs:label is used for preferred terms in caDSR, GO and other vocabularies.</rdfs:comment>
         <rdfs:comment>rdfs:label</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
         <rdfs:label>owl:versionInfo</rdfs:label>
-        <rdfs:comment>An annotation property that describes an individual identifier for some information content entity which specifies version number.</rdfs:comment>
-        <rdfs:label>versionInfo</rdfs:label>
+        <rdfs:comment>An annotation property that provides version information for an ontology or another OWL construct.  Used by the NCIt and GO among other RDF resources.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:comment>A property used to denote various terms associated with a data element in the caDSR.</rdfs:comment>
         <rdfs:label>skos:altLabel</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#definition">
         <rdfs:label>skos:definition</rdfs:label>
+        <rdfs:comment>A property used for definitions of data element in the caDSR.</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
