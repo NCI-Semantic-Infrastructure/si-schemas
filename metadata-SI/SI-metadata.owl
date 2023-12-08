@@ -1223,6 +1223,69 @@ bro</rdfs:comment>
     
 
 
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000190 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000190">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#PreferredTerm"/>
+        <rdfs:label xml:lang="en">ChEBI Name</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000191 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000191">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
+        <rdfs:label xml:lang="en">ChEBI ID</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000192 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000192">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Definition"/>
+        <rdfs:label xml:lang="en">CheBI Definiton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000193 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000193">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Term"/>
+        <rdfs:label xml:lang="en">Secondary ChEBI IDs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000194 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000194">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
+        <rdfs:label xml:lang="en">chebi_namespace</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000195 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000195">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#AccessSite"/>
+        <rdfs:label xml:lang="en">chebi_graph</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000196 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000196">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
+        <rdfs:label xml:lang="en">chebi_download_location</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0">
@@ -1331,69 +1394,69 @@ bro</rdfs:comment>
      -->
 
     <rdf:Description rdf:about="http://cbiit.nci.nih.gov/caDSR#publicId">
-        <rdfs:label>cmdr:publicId</rdfs:label>
         <rdfs:comment>A property used as an identifier in the caDSR for data elements.</rdfs:comment>
+        <rdfs:label>cmdr:publicId</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0">
-        <skos:altLabel>code</skos:altLabel>
         <rdfs:comment>A property used as an identifier in the NCIt.</rdfs:comment>
         <rdfs:label>ncit:NHC0</rdfs:label>
+        <skos:altLabel>code</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108">
+        <rdfs:comment>A property used for preferred terms in the NCI Thesaurus.</rdfs:comment>
         <rdfs:label>ncit:P108</rdfs:label>
         <skos:altLabel>Preferred Name</skos:altLabel>
-        <rdfs:comment>A property used for preferred terms in the NCI Thesaurus.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90">
-        <rdfs:label>ncit:P90</rdfs:label>
         <rdfs:comment>A property used to denote the various terms associated with a concept, synonyms, abbreviations, acronyms, among others, in the NCIt.</rdfs:comment>
+        <rdfs:label>ncit:P90</rdfs:label>
         <skos:altLabel>FULL_SYN</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97">
         <rdfs:comment>The property used for definitions in the NCIt.</rdfs:comment>
-        <skos:altLabel>DEFINITION</skos:altLabel>
         <rdfs:label>ncit:P97</rdfs:label>
+        <skos:altLabel>DEFINITION</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
         <rdfs:comment>A property used for definitions in GO and other OBO vocabularies.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <rdfs:label>iao:definition</rdfs:label>
         <skos:altLabel>definition</skos:altLabel>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
-        <rdfs:label>dc:date</rdfs:label>
         <rdfs:comment>A property used to denote release dates in the caDSR, NCIt, and other RDF resources.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <rdfs:label>dc:date</rdfs:label>
         <skos:altLabel>Date</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
+        <rdfs:comment>A property used for synonyms in GO and other OBO vocabularies.</rdfs:comment>
         <rdfs:label>oboInOwl:hasExactSynonym</rdfs:label>
         <skos:altLabel>has exact synonym</skos:altLabel>
-        <rdfs:comment>A property used for synonyms in GO and other OBO vocabularies.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.geneontology.org/formats/oboInOwl#id">
-        <rdfs:label>oboInOwl:id</rdfs:label>
         <rdfs:comment>A property used for identifiers in GO and other OBO vocabularies.</rdfs:comment>
+        <rdfs:label>oboInOwl:id</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
         <rdfs:comment>The rdfs:label is used for preferred terms in caDSR, GO and other vocabularies.</rdfs:comment>
         <rdfs:comment>rdfs:label</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
-        <rdfs:label>owl:versionInfo</rdfs:label>
         <rdfs:comment>An annotation property that provides version information for an ontology or another OWL construct.  Used by the NCIt and GO among other RDF resources.</rdfs:comment>
+        <rdfs:label>owl:versionInfo</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
         <rdfs:comment>A property used to denote various terms associated with a data element in the caDSR.</rdfs:comment>
         <rdfs:label>skos:altLabel</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#definition">
-        <rdfs:label>skos:definition</rdfs:label>
         <rdfs:comment>A property used for definitions of data element in the caDSR.</rdfs:comment>
+        <rdfs:label>skos:definition</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
 

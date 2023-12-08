@@ -1,0 +1,10 @@
+New_ID,rdfs:label,Parent,Relationship,rdfs:definition,rdfs:comment,has Namespace Prefix,hasnamespace IRI,sd:name,'has access URL’
+,A alternative label SPLIT=|,ID,A rdfs:label,,C % SPLIT=|,A is allocated id range,,,
+SRRO_0000190,ChEBI Name,Preferred Term,Type,,,,,,
+SRRO_0000191,ChEBI ID,Identifier,Type,,,,,,
+SRRO_0000192,ChEBI Definition,Definition,Type,,,,,,
+SRRO_0000193,Secondary ChEBI IDs,Term,Type,,,,,,
+SRRO_0000194,chebi_namespace,Namespace,Type,,,ChEBI,https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.obo,,
+SRRO_0000195,chebi_graph,Access Site,Type,,,,,https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.obo,
+SRRO_0000196,chebi_download_location,Download Location,Type,,Download location of ChEBI is fronted by a webserver.,,,,https://www.ebi.ac.uk/chebi/downloadsForward.do
+SRRO_0000197,chemical role,Object Property,Is_a,,,,,,
