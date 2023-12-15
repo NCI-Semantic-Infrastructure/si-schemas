@@ -20,9 +20,8 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:Thesaurus="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#">
     <owl:Ontology rdf:about="http://ncicb.nci.nih.gov/srro.owl">
-        <dcterms:date>2023-10-31</dcterms:date>
+        <dcterms:date>2023-12-15</dcterms:date>
         <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <rdfs:comment>Current draft on He Lab, by Anthony Huffman is 1.3.1</rdfs:comment>
         <rdfs:comment>Refers to other RDF schemas or vocabularies:
 
 VANN: A vocabulary for annotating vocabulary descriptions
@@ -42,18 +41,10 @@ license:  unknown
 sd:  Service Description Vocabulary
 https://www.w3.org/TR/sparql11-service-description/#vocab
 https://www.w3.org/ns/sparql-service-description.rdf</rdfs:comment>
-        <rdfs:comment>nci metathesaurus
-    mged ontology
-    ndfrt
-    ctcae v5
-    loinc
-    snomed
-    radlex
-    medra
-    gene ontology
-bro</rdfs:comment>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:comment>Current draft by He Lab</rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://github.com/information-artifact-ontology/IAO"/>
-        <owl:versionInfo>1.3.2</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.4</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -215,6 +206,8 @@ bro</rdfs:comment>
     <!-- http://ncicb.nci.nih.gov/srro.owl#downloadFrom -->
 
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#downloadFrom">
+        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLocation"/>
+        <rdfs:comment>A property that links an entity to a download location where the entity can be downloaded from a specific location.</rdfs:comment>
         <rdfs:label>download from</rdfs:label>
     </owl:ObjectProperty>
     
@@ -236,7 +229,7 @@ bro</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasDate">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#VersionDate"/>
-        <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses to refer to its version release date.</rdfs:comment>
+        <obo1:IAO_0000115>A property that relates a Service RDF Resource to the property that the resource uses to refer to its version release date.</obo1:IAO_0000115>
         <rdfs:label>has date</rdfs:label>
     </owl:ObjectProperty>
     
@@ -247,7 +240,7 @@ bro</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasDefinition">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Definition"/>
-        <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses for an entity&apos;s textual definition.</rdfs:comment>
+        <obo1:IAO_0000115>A property that relates a Service RDF Resource to the property that the resource uses for an entity&apos;s textual definition.</obo1:IAO_0000115>
         <rdfs:label>has definition</rdfs:label>
     </owl:ObjectProperty>
     
@@ -269,7 +262,7 @@ bro</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasIntent">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceIntent"/>
-        <rdfs:comment>A property that relates a Service RDF Resource to the general intent or purpose of the resource.</rdfs:comment>
+        <obo1:IAO_0000115>A property that relates a Service RDF Resource to the general intent or purpose of the resource.</obo1:IAO_0000115>
         <rdfs:label>has intent</rdfs:label>
     </owl:ObjectProperty>
     
@@ -280,7 +273,7 @@ bro</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasNamespace">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
-        <rdfs:comment>A property that relates a Service RDF Resource to the namespace of the resource, or the namespace of a resource referenced by a Service RDF Resource.</rdfs:comment>
+        <obo1:IAO_0000115>A property that relates a Service RDF Resource to the namespace of the resource, or the namespace of a resource referenced by a Service RDF Resource.</obo1:IAO_0000115>
         <rdfs:label>has namespace</rdfs:label>
     </owl:ObjectProperty>
     
@@ -291,7 +284,7 @@ bro</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasPreferredTerm">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#PreferredTerm"/>
-        <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses for its entity&apos;s preferred term.</rdfs:comment>
+        <obo1:IAO_0000115>A property that relates a Service RDF Resource to the property that the resource uses for its entity&apos;s preferred term.</obo1:IAO_0000115>
         <rdfs:label>has preferred term</rdfs:label>
     </owl:ObjectProperty>
     
@@ -346,7 +339,7 @@ bro</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasDomain">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyDomain"/>
-        <rdfs:comment>A property that relates the Service RDF Resource to the Ontology Domain that it covers.</rdfs:comment>
+        <obo1:IAO_0000115>A property that relates the Service RDF Resource to the Ontology Domain that it covers.</obo1:IAO_0000115>
         <rdfs:label>has domain</rdfs:label>
     </owl:ObjectProperty>
     
@@ -357,7 +350,7 @@ bro</rdfs:comment>
     <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#specifiesLicense">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#LicenseModel"/>
-        <rdfs:comment>A property that is used to relate an RDF resource to a license such that the license governs the terms of use permitted for that resource.</rdfs:comment>
+        <obo1:IAO_0000115>A property that is used to relate an RDF resource to a license such that the license governs the terms of use permitted for that resource.</obo1:IAO_0000115>
         <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
         <rdfs:label>has license</rdfs:label>
     </owl:ObjectProperty>
@@ -390,7 +383,7 @@ bro</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasOntologyIRI">
         <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
         <rdfs:comment>Modified to refer to IRIs rather than URIs.</rdfs:comment>
-        <rdfs:label>has Ontology IRI</rdfs:label>
+        <rdfs:label>has ontology IRI</rdfs:label>
         <prov:wasDerivedFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#URI"/>
     </owl:DatatypeProperty>
     
@@ -401,6 +394,7 @@ bro</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#acronym">
         <rdfs:domain rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
+        <obo1:IAO_0000115>A data property that links to an organization to an acronym.</obo1:IAO_0000115>
         <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
         <rdfs:label>omv:acronym</rdfs:label>
     </owl:DatatypeProperty>
@@ -479,7 +473,7 @@ bro</rdfs:comment>
     <!-- https://vocab.org/vann/preferredNamespacePrefix -->
 
     <owl:DatatypeProperty rdf:about="https://vocab.org/vann/preferredNamespacePrefix">
-        <rdfs:label>has Namespace Prefix</rdfs:label>
+        <rdfs:label>has namespace prefix</rdfs:label>
         <skos:altLabel>vann:preferredNamespacePrefix</skos:altLabel>
     </owl:DatatypeProperty>
     
