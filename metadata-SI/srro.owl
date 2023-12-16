@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://cbiit.nci.nih.gov/srro/"
-     xml:base="http://cbiit.nci.nih.gov/srro/"
+<rdf:RDF xmlns="http://cbiit.nci.nih.gov/srro#"
+     xml:base="http://cbiit.nci.nih.gov/srro"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
      xmlns:omv="http://omv.ontoware.org/2005/05/ontology#"
@@ -13,14 +13,13 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:srro="http://cbiit.nci.nih.gov/srro/"
+     xmlns:srro="http://cbiit.nci.nih.gov/srro#"
      xmlns:vann="https://vocab.org/vann/"
      xmlns:caDSR="http://cbiit.nci.nih.gov/caDSR#"
-     xmlns:srro1="http://ncicb.nci.nih.gov/srro.owl#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:Thesaurus="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#">
-    <owl:Ontology rdf:about="http://ncicb.nci.nih.gov/srro.owl">
+    <owl:Ontology rdf:about="http://ncicb.nci.nih.gov/srro">
         <dcterms:alternative>srro</dcterms:alternative>
         <dcterms:date>2023-12-15</dcterms:date>
         <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
@@ -51,7 +50,7 @@ prov: PROV Ontology
 https://www.w3.org/TR/2013/NOTE-prov-overview-20130430/
 http://www.w3.org/ns/prov.ttl
 terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment>
-        <rdfs:comment>git tag of the release version of srro.owl 1.0 is 1.4.0</rdfs:comment>
+        <rdfs:comment>The git tag of the release version 1.0 of srro.owl is 1.4.0.</rdfs:comment>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
     </owl:Ontology>
     
@@ -223,20 +222,20 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#downloadFrom -->
+    <!-- http://cbiit.nci.nih.gov/srro#downloadFrom -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#downloadFrom">
-        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLocation"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#downloadFrom">
+        <rdfs:range rdf:resource="http://cbiit.nci.nih.gov/srro#DownloadLocation"/>
         <rdfs:comment>A property that links an entity to a download location where the entity can be downloaded from a specific location.</rdfs:comment>
         <rdfs:label>download from</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasConversionAuthority -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasConversionAuthority -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasConversionAuthority">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasConversionAuthority">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the Organization that processes the original resource to a form that is then used in the current SPARQL service.</rdfs:comment>
         <rdfs:label>has conversion authority</rdfs:label>
@@ -244,76 +243,76 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasDate -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasDate -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasDate">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#VersionDate"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasDate">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <rdfs:range rdf:resource="http://cbiit.nci.nih.gov/srro#VersionDate"/>
         <obo1:IAO_0000115>A property that relates a Service RDF Resource to the property that the resource uses to refer to its version release date.</obo1:IAO_0000115>
         <rdfs:label>has date</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasDefinition -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasDefinition -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasDefinition">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Definition"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasDefinition">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <rdfs:range rdf:resource="http://cbiit.nci.nih.gov/srro#Definition"/>
         <obo1:IAO_0000115>A property that relates a Service RDF Resource to the property that the resource uses for an entity&apos;s textual definition.</obo1:IAO_0000115>
         <rdfs:label>has definition</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasIdentifier -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasIdentifier -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasIdentifier">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasIdentifier">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <rdfs:range rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses for an entity&apos;s identifier.</rdfs:comment>
         <rdfs:label>has identifier</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasIntent -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasIntent -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasIntent">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceIntent"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasIntent">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <rdfs:range rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceIntent"/>
         <obo1:IAO_0000115>A property that relates a Service RDF Resource to the general intent or purpose of the resource.</obo1:IAO_0000115>
         <rdfs:label>has intent</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasNamespace -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasNamespace -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasNamespace">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasNamespace">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <rdfs:range rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
         <obo1:IAO_0000115>A property that relates a Service RDF Resource to the namespace of the resource, or the namespace of a resource referenced by a Service RDF Resource.</obo1:IAO_0000115>
         <rdfs:label>has namespace</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasPreferredTerm -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasPreferredTerm -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasPreferredTerm">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#PreferredTerm"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasPreferredTerm">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <rdfs:range rdf:resource="http://cbiit.nci.nih.gov/srro#PreferredTerm"/>
         <obo1:IAO_0000115>A property that relates a Service RDF Resource to the property that the resource uses for its entity&apos;s preferred term.</obo1:IAO_0000115>
         <rdfs:label>has preferred term</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasSourceAuthority -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasSourceAuthority -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasSourceAuthority">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasSourceAuthority">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the authoritative Organization that develops, maintains, and publishes the resource.</rdfs:comment>
         <rdfs:label>has source authority</rdfs:label>
@@ -321,32 +320,32 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasTerm -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasTerm -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasTerm">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Term"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasTerm">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <rdfs:range rdf:resource="http://cbiit.nci.nih.gov/srro#Term"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses for an entity&apos;s terms.</rdfs:comment>
         <rdfs:label>has term</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasVersion -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasVersion -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasVersion">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <rdfs:range rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Version"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasVersion">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <rdfs:range rdf:resource="http://cbiit.nci.nih.gov/srro#Version"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the property that the resource uses to refer to its release version.</rdfs:comment>
         <rdfs:label>has version</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#inNamedGraph -->
+    <!-- http://cbiit.nci.nih.gov/srro#inNamedGraph -->
 
-    <owl:ObjectProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#inNamedGraph">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+    <owl:ObjectProperty rdf:about="http://cbiit.nci.nih.gov/srro#inNamedGraph">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
         <rdfs:comment>A property that relates a Service RDF Resource to the Named Graph that identifies it in the SPARQL service.</rdfs:comment>
         <rdfs:label>in named graph</rdfs:label>
@@ -357,7 +356,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://omv.ontoware.org/2005/05/ontology#hasDomain -->
 
     <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#hasDomain">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyDomain"/>
         <obo1:IAO_0000115>A property that relates the Service RDF Resource to the Ontology Domain that it covers.</obo1:IAO_0000115>
         <rdfs:label>has domain</rdfs:label>
@@ -368,7 +367,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://omv.ontoware.org/2005/05/ontology#specifiesLicense -->
 
     <owl:ObjectProperty rdf:about="http://omv.ontoware.org/2005/05/ontology#specifiesLicense">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
         <rdfs:range rdf:resource="http://omv.ontoware.org/2005/05/ontology#LicenseModel"/>
         <obo1:IAO_0000115>A property that is used to relate an RDF resource to a license such that the license governs the terms of use permitted for that resource.</obo1:IAO_0000115>
         <rdfs:isDefinedBy rdf:resource="http://omv.ontoware.org/2005/05/ontology"/>
@@ -388,9 +387,9 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasNamespaceIRI -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasNamespaceIRI -->
 
-    <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasNamespaceIRI">
+    <owl:DatatypeProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasNamespaceIRI">
         <rdfs:comment>Modified to refer to IRIs instead of URIs.  Also, an RDF resource might reuse entities from multiple namespaces and there is a need to record them without a &quot;preferred&quot; adjective.</rdfs:comment>
         <rdfs:label>has namespace IRI</rdfs:label>
         <prov:wasDerivedFrom rdf:resource="http://purl.org/vocab/vann/preferredNamespaceUri"/>
@@ -398,10 +397,10 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#hasOntologyIRI -->
+    <!-- http://cbiit.nci.nih.gov/srro#hasOntologyIRI -->
 
-    <owl:DatatypeProperty rdf:about="http://ncicb.nci.nih.gov/srro.owl#hasOntologyIRI">
-        <rdfs:domain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
+    <owl:DatatypeProperty rdf:about="http://cbiit.nci.nih.gov/srro#hasOntologyIRI">
+        <rdfs:domain rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
         <rdfs:comment>Modified to refer to IRIs rather than URIs.</rdfs:comment>
         <rdfs:label>has ontology IRI</rdfs:label>
         <prov:wasDerivedFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#URI"/>
@@ -510,10 +509,10 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#AccessSite -->
+    <!-- http://cbiit.nci.nih.gov/srro#AccessSite -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#AccessSite">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLocation"/>
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#AccessSite">
+        <rdfs:subClassOf rdf:resource="http://cbiit.nci.nih.gov/srro#DownloadLocation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#accessURL"/>
@@ -521,27 +520,27 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>It is used here for a landing page, or FTP directory, that needs to be navigated to obtain the (changing) link to the downloadable distribution file.</rdfs:comment>
+        <rdfs:comment>It is used here for a landing page, or FTP directory, that needs to be navigated to obtain the (mutable) link to the downloadable distribution file.</rdfs:comment>
         <rdfs:label>Access Site</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/dcat#accessURL"/>
     </owl:Class>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#Definition -->
+    <!-- http://cbiit.nci.nih.gov/srro#Definition -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Definition">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceEntityDescription"/>
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#Definition">
+        <rdfs:subClassOf rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceEntityDescription"/>
         <rdfs:label>Definition</rdfs:label>
         <skos:definition>The class of properties that relate a resource&apos;s entities to their textual definition.  The specific property used by a resource for this purpose is an instance of this class.</skos:definition>
     </owl:Class>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#DownloadLink -->
+    <!-- http://cbiit.nci.nih.gov/srro#DownloadLink -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#DownloadLink">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLocation"/>
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#DownloadLink">
+        <rdfs:subClassOf rdf:resource="http://cbiit.nci.nih.gov/srro#DownloadLocation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>
@@ -556,9 +555,9 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#DownloadLocation -->
+    <!-- http://cbiit.nci.nih.gov/srro#DownloadLocation -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#DownloadLocation">
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#DownloadLocation">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Location"/>
         <rdfs:comment>An FTP site&apos;s directory listing served by an http web server is considered a landing page.</rdfs:comment>
         <rdfs:label>Download Location</rdfs:label>
@@ -567,23 +566,23 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#Identifier -->
+    <!-- http://cbiit.nci.nih.gov/srro#Identifier -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Identifier">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceEntityDescription"/>
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#Identifier">
+        <rdfs:subClassOf rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceEntityDescription"/>
         <rdfs:label>Identifier</rdfs:label>
         <skos:definition>The class of properties that relate a resource&apos;s entities to their identifiers.  The specific property used by a resource for this purpose is an instance of this class.</skos:definition>
     </owl:Class>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#Namespace -->
+    <!-- http://cbiit.nci.nih.gov/srro#Namespace -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Namespace">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceDescription"/>
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#Namespace">
+        <rdfs:subClassOf rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceDescription"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasNamespaceIRI"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasNamespaceIRI"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
@@ -603,19 +602,19 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#PreferredTerm -->
+    <!-- http://cbiit.nci.nih.gov/srro#PreferredTerm -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#PreferredTerm">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceEntityDescription"/>
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#PreferredTerm">
+        <rdfs:subClassOf rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceEntityDescription"/>
         <rdfs:label>Preferred Term</rdfs:label>
         <skos:definition>The class of properties that relate a resource&apos;s entities to the preferred term used by its user community to denote that entity.  The specific property used by a resource for this purpose is an instance of this class.</skos:definition>
     </owl:Class>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#ResourceDescription -->
+    <!-- http://cbiit.nci.nih.gov/srro#ResourceDescription -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#ResourceDescription">
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#ResourceDescription">
         <rdfs:label>Resource Description</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/owl2-syntax/#Ontology_Annotations"/>
         <skos:definition>The class of entities that relate an RDF resource to information about the resource as a whole, such as version and release date information, namespaces.</skos:definition>
@@ -623,18 +622,18 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#ResourceEntityDescription -->
+    <!-- http://cbiit.nci.nih.gov/srro#ResourceEntityDescription -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#ResourceEntityDescription">
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#ResourceEntityDescription">
         <rdfs:label>Resource Entity Description</rdfs:label>
         <skos:definition>The class of properties used by RDF resources to describe the  entitities of the resource, such as textual definitions and terms, among others.</skos:definition>
     </owl:Class>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#ResourceIntent -->
+    <!-- http://cbiit.nci.nih.gov/srro#ResourceIntent -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#ResourceIntent">
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#ResourceIntent">
         <rdfs:label>Resource Intent</rdfs:label>
         <skos:altLabel>Resource Intent Type</skos:altLabel>
         <skos:definition>The main purpose of the RDF Graph resource.  For example, to document the terminology of some domain.  Individuals of this class are types of intent.</skos:definition>
@@ -642,13 +641,13 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource -->
+    <!-- http://cbiit.nci.nih.gov/srro#ServiceRdfResource -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource">
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#ServiceRdfResource">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasIntent"/>
-                <owl:someValuesFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceIntent"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasIntent"/>
+                <owl:someValuesFrom rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceIntent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -659,32 +658,32 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasConversionAuthority"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasConversionAuthority"/>
                 <owl:allValuesFrom rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasDate"/>
-                <owl:allValuesFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#VersionDate"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasDate"/>
+                <owl:allValuesFrom rdf:resource="http://cbiit.nci.nih.gov/srro#VersionDate"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasDefinition"/>
-                <owl:allValuesFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Definition"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasDefinition"/>
+                <owl:allValuesFrom rdf:resource="http://cbiit.nci.nih.gov/srro#Definition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasTerm"/>
-                <owl:allValuesFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Term"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasTerm"/>
+                <owl:allValuesFrom rdf:resource="http://cbiit.nci.nih.gov/srro#Term"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasVersion"/>
-                <owl:allValuesFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Version"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasVersion"/>
+                <owl:allValuesFrom rdf:resource="http://cbiit.nci.nih.gov/srro#Version"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -695,49 +694,49 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasNamespace"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasNamespace"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
+                <owl:onClass rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasIdentifier"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasIdentifier"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
+                <owl:onClass rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasPreferredTerm"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasPreferredTerm"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://ncicb.nci.nih.gov/srro.owl#PreferredTerm"/>
+                <owl:onClass rdf:resource="http://cbiit.nci.nih.gov/srro#PreferredTerm"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasSourceAuthority"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasSourceAuthority"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#inNamedGraph"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#inNamedGraph"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#downloadFrom"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#downloadFrom"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLocation"/>
+                <owl:onClass rdf:resource="http://cbiit.nci.nih.gov/srro#DownloadLocation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ncicb.nci.nih.gov/srro.owl#hasOntologyIRI"/>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasOntologyIRI"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
@@ -750,20 +749,20 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#Term -->
+    <!-- http://cbiit.nci.nih.gov/srro#Term -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Term">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceEntityDescription"/>
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#Term">
+        <rdfs:subClassOf rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceEntityDescription"/>
         <rdfs:label>Term</rdfs:label>
         <skos:definition>The class of properties that relate a resource&apos;s entities to the various terms used by its user community to denote that entity, such as synonyms, abbreviations, acronyms, among other term types.  The specific property used by a resource for this purpose is an instance of this class.</skos:definition>
     </owl:Class>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#Version -->
+    <!-- http://cbiit.nci.nih.gov/srro#Version -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#Version">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceDescription"/>
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#Version">
+        <rdfs:subClassOf rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceDescription"/>
         <rdfs:comment>If an RDF resource is versioned by its date, the version date property is likely non-existent.</rdfs:comment>
         <rdfs:label>Version</rdfs:label>
         <skos:definition>The class of properties that relate a resource to its release or modification version.  The specific property used by a resource to indicate its version is an instance of this class.</skos:definition>
@@ -771,10 +770,10 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#VersionDate -->
+    <!-- http://cbiit.nci.nih.gov/srro#VersionDate -->
 
-    <owl:Class rdf:about="http://ncicb.nci.nih.gov/srro.owl#VersionDate">
-        <rdfs:subClassOf rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceDescription"/>
+    <owl:Class rdf:about="http://cbiit.nci.nih.gov/srro#VersionDate">
+        <rdfs:subClassOf rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceDescription"/>
         <rdfs:label>Version Date</rdfs:label>
         <skos:definition>The class of properties that relate a resource to its release or modification date.  The specific property used by a resource for this purpose is an instance of this class.</skos:definition>
     </owl:Class>
@@ -885,38 +884,29 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://cbiit.nci.nih.gov/caDSR#publicId -->
 
     <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/caDSR#publicId">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000043 -->
+    <!-- http://cbiit.nci.nih.gov/srro#GO -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000043">
-        <rdfs:label>Anthony Huffman</rdfs:label>
-        <skos:altLabel>ORCID: 0000-0002-5735-7540 change to IAO_0000708</skos:altLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://ncicb.nci.nih.gov/srro.owl#GO -->
-
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#GO">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <srro1:downloadFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#go_download_location"/>
-        <srro1:hasConversionAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-si"/>
-        <srro1:hasDefinition rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <srro1:hasIdentifier rdf:resource="http://www.geneontology.org/formats/oboInOwl#id"/>
-        <srro1:hasIntent rdf:resource="http://ncicb.nci.nih.gov/srro.owl#terminology"/>
-        <srro1:hasNamespace rdf:resource="http://ncicb.nci.nih.gov/srro.owl#go_namespace"/>
-        <srro1:hasPreferredTerm rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <srro1:hasSourceAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#go-consortium"/>
-        <srro1:hasTerm rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <srro1:hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
-        <srro1:inNamedGraph rdf:resource="http://ncicb.nci.nih.gov/srro.owl#go_graph"/>
-        <omv:hasDomain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#biological-domain"/>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#GO">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <downloadFrom rdf:resource="http://cbiit.nci.nih.gov/srro#go_download_location"/>
+        <hasConversionAuthority rdf:resource="http://cbiit.nci.nih.gov/srro#nci-si"/>
+        <hasDefinition rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <hasIdentifier rdf:resource="http://www.geneontology.org/formats/oboInOwl#id"/>
+        <hasIntent rdf:resource="http://cbiit.nci.nih.gov/srro#terminology"/>
+        <hasNamespace rdf:resource="http://cbiit.nci.nih.gov/srro#go_namespace"/>
+        <hasPreferredTerm rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <hasSourceAuthority rdf:resource="http://cbiit.nci.nih.gov/srro#go-consortium"/>
+        <hasTerm rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+        <inNamedGraph rdf:resource="http://cbiit.nci.nih.gov/srro#go_graph"/>
+        <omv:hasDomain rdf:resource="http://cbiit.nci.nih.gov/srro#biological-domain"/>
         <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/CCBY4.0"/>
-        <srro1:hasOntologyIRI>http://purl.obolibrary.org/obo/go.owl</srro1:hasOntologyIRI>
+        <hasOntologyIRI>http://purl.obolibrary.org/obo/go.owl</hasOntologyIRI>
         <dcterms:description>The Gene Ontology (GO) provides a framework and set of concepts for describing the functions of gene products from all organisms.</dcterms:description>
         <rdfs:label>GO</rdfs:label>
         <skos:altLabel>Gene Ontology</skos:altLabel>
@@ -925,25 +915,25 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#NCIt -->
+    <!-- http://cbiit.nci.nih.gov/srro#NCIt -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#NCIt">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <srro1:downloadFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ncit_download_location"/>
-        <srro1:hasConversionAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-si"/>
-        <srro1:hasDate rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <srro1:hasDefinition rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
-        <srro1:hasIdentifier rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0"/>
-        <srro1:hasIntent rdf:resource="http://ncicb.nci.nih.gov/srro.owl#terminology"/>
-        <srro1:hasNamespace rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ncit_namespace"/>
-        <srro1:hasPreferredTerm rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108"/>
-        <srro1:hasSourceAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-evs"/>
-        <srro1:hasTerm rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
-        <srro1:hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
-        <srro1:inNamedGraph rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ncit_graph"/>
-        <omv:hasDomain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#biomedical-domain"/>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIt">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <downloadFrom rdf:resource="http://cbiit.nci.nih.gov/srro#ncit_download_location"/>
+        <hasConversionAuthority rdf:resource="http://cbiit.nci.nih.gov/srro#nci-si"/>
+        <hasDate rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <hasDefinition rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <hasIdentifier rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0"/>
+        <hasIntent rdf:resource="http://cbiit.nci.nih.gov/srro#terminology"/>
+        <hasNamespace rdf:resource="http://cbiit.nci.nih.gov/srro#ncit_namespace"/>
+        <hasPreferredTerm rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108"/>
+        <hasSourceAuthority rdf:resource="http://cbiit.nci.nih.gov/srro#nci-evs"/>
+        <hasTerm rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+        <inNamedGraph rdf:resource="http://cbiit.nci.nih.gov/srro#ncit_graph"/>
+        <omv:hasDomain rdf:resource="http://cbiit.nci.nih.gov/srro#biomedical-domain"/>
         <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/CCBY4.0"/>
-        <srro1:hasOntologyIRI>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl</srro1:hasOntologyIRI>
+        <hasOntologyIRI>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl</hasOntologyIRI>
         <dcterms:description>NCI Thesaurus, a controlled vocabulary in support of NCI administrative and scientific activities. Produced by the Enterprise Vocabulary System (EVS), a project by the NCI Center for Biomedical Informatics and Information Technology. National Cancer Institute, National Institutes of Health, Bethesda, MD 20892, U.S.A.</dcterms:description>
         <rdfs:label>NCIt</rdfs:label>
         <skos:altLabel>NCI Thesaurus</skos:altLabel>
@@ -951,20 +941,20 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#SRRO -->
+    <!-- http://cbiit.nci.nih.gov/srro#SRRO -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#SRRO">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <srro1:hasDate rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <srro1:hasDefinition rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <srro1:hasIntent rdf:resource="http://ncicb.nci.nih.gov/srro.owl#schema"/>
-        <srro1:hasPreferredTerm rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <srro1:hasSourceAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-si"/>
-        <srro1:hasTerm rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
-        <srro1:hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
-        <omv:hasDomain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#information-technology-domain"/>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#SRRO">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <hasDate rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <hasDefinition rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <hasIntent rdf:resource="http://cbiit.nci.nih.gov/srro#schema"/>
+        <hasPreferredTerm rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <hasSourceAuthority rdf:resource="http://cbiit.nci.nih.gov/srro#nci-si"/>
+        <hasTerm rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+        <omv:hasDomain rdf:resource="http://cbiit.nci.nih.gov/srro#information-technology-domain"/>
         <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/CCBY4.0"/>
-        <srro1:hasOntologyIRI>http://ncicb.nci.nih.gov/srro.owl</srro1:hasOntologyIRI>
+        <hasOntologyIRI>http://ncicb.nci.nih.gov/srro.owl</hasOntologyIRI>
         <rdfs:comment>A minimal ontology that identifies RDF graphs loaded in the SPARQL service, and identifies various commonly used properties in these  resources to facilitate common SPARQL queries.</rdfs:comment>
         <rdfs:label>SRRO</rdfs:label>
         <skos:altLabel>Service Resource Ontology</skos:altLabel>
@@ -972,42 +962,42 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#biological-domain -->
+    <!-- http://cbiit.nci.nih.gov/srro#biological-domain -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#biological-domain">
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#biological-domain">
         <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyDomain"/>
         <rdfs:label>biological domain</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#biomedical-domain -->
+    <!-- http://cbiit.nci.nih.gov/srro#biomedical-domain -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#biomedical-domain">
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#biomedical-domain">
         <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyDomain"/>
         <rdfs:label>biomedical domain</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#caDSR -->
+    <!-- http://cbiit.nci.nih.gov/srro#caDSR -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#caDSR">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ServiceRdfResource"/>
-        <srro1:downloadFrom rdf:resource="http://ncicb.nci.nih.gov/srro.owl#cadsr_download_location"/>
-        <srro1:hasConversionAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-si"/>
-        <srro1:hasDate rdf:resource="http://purl.org/dc/elements/1.1/date"/>
-        <srro1:hasDefinition rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
-        <srro1:hasIdentifier rdf:resource="http://cbiit.nci.nih.gov/caDSR#publicId"/>
-        <srro1:hasIntent rdf:resource="http://ncicb.nci.nih.gov/srro.owl#metadata"/>
-        <srro1:hasNamespace rdf:resource="http://ncicb.nci.nih.gov/srro.owl#cadsr_namespace"/>
-        <srro1:hasPreferredTerm rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <srro1:hasSourceAuthority rdf:resource="http://ncicb.nci.nih.gov/srro.owl#nci-cadsr"/>
-        <srro1:hasTerm rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
-        <srro1:inNamedGraph rdf:resource="http://ncicb.nci.nih.gov/srro.owl#cadsr_graph"/>
-        <omv:hasDomain rdf:resource="http://ncicb.nci.nih.gov/srro.owl#biomedical-domain"/>
-        <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro.owl/unknown-license"/>
-        <srro1:hasOntologyIRI>http://cbiit.nci.nih.gov/caDSR</srro1:hasOntologyIRI>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#caDSR">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <downloadFrom rdf:resource="http://cbiit.nci.nih.gov/srro#cadsr_download_location"/>
+        <hasConversionAuthority rdf:resource="http://cbiit.nci.nih.gov/srro#nci-si"/>
+        <hasDate rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <hasDefinition rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
+        <hasIdentifier rdf:resource="http://cbiit.nci.nih.gov/caDSR#publicId"/>
+        <hasIntent rdf:resource="http://cbiit.nci.nih.gov/srro#metadata"/>
+        <hasNamespace rdf:resource="http://cbiit.nci.nih.gov/srro#cadsr_namespace"/>
+        <hasPreferredTerm rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <hasSourceAuthority rdf:resource="http://cbiit.nci.nih.gov/srro#nci-cadsr"/>
+        <hasTerm rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
+        <inNamedGraph rdf:resource="http://cbiit.nci.nih.gov/srro#cadsr_graph"/>
+        <omv:hasDomain rdf:resource="http://cbiit.nci.nih.gov/srro#biomedical-domain"/>
+        <omv:specifiesLicense rdf:resource="http://ncicb.nci.nih.gov/srro/no-license-freely-available"/>
+        <hasOntologyIRI>http://cbiit.nci.nih.gov/caDSR</hasOntologyIRI>
         <rdfs:label>caDSR</rdfs:label>
         <skos:altLabel>Cancer Data Standards Registry and Repository</skos:altLabel>
         <skos:definition>The Cancer Data Standards Registry and Repository (caDSR) is a metadata repository based on the ISO/IEC 11179 Metadata Registry standard.</skos:definition>
@@ -1015,10 +1005,10 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#cadsr_download_location -->
+    <!-- http://cbiit.nci.nih.gov/srro#cadsr_download_location -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#cadsr_download_location">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#AccessSite"/>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#cadsr_download_location">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#AccessSite"/>
         <dcat:accessURL>https://cadsr.nci.nih.gov/ftp/caDSR_Downloads/CDE/XML/</dcat:accessURL>
         <rdfs:comment>Download location of the caDSR is an FTP site fronted by a web server.  The user needs to read or parse the directory to select the correct file.</rdfs:comment>
         <rdfs:label>cadsr_download_location</rdfs:label>
@@ -1026,9 +1016,9 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#cadsr_graph -->
+    <!-- http://cbiit.nci.nih.gov/srro#cadsr_graph -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#cadsr_graph">
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#cadsr_graph">
         <rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
         <sd:name>http://cbiit.nci.nih.gov/caDSR</sd:name>
         <rdfs:label>cadsr_graph</rdfs:label>
@@ -1036,29 +1026,29 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#cadsr_namespace -->
+    <!-- http://cbiit.nci.nih.gov/srro#cadsr_namespace -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#cadsr_namespace">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
-        <srro1:hasNamespaceIRI>http://cbiit.nci.nih.gov/caDSR#</srro1:hasNamespaceIRI>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#cadsr_namespace">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
+        <hasNamespaceIRI>http://cbiit.nci.nih.gov/caDSR#</hasNamespaceIRI>
         <vann:preferredNamespacePrefix>cmdr</vann:preferredNamespacePrefix>
         <rdfs:label>cadsr_namespace</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#clinical-domain -->
+    <!-- http://cbiit.nci.nih.gov/srro#clinical-domain -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#clinical-domain">
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#clinical-domain">
         <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyDomain"/>
         <rdfs:label>clinical domain</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#go-consortium -->
+    <!-- http://cbiit.nci.nih.gov/srro#go-consortium -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#go-consortium">
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#go-consortium">
         <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <omv:description>The mission of the GO Consortium is to develop a comprehensive, computational model of biological systems, ranging from the molecular to the organism level, across the multiplicity of species in the tree of life.</omv:description>
         <omv:eMail>help@geneontology.org</omv:eMail>
@@ -1068,10 +1058,10 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#go_download_location -->
+    <!-- http://cbiit.nci.nih.gov/srro#go_download_location -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#go_download_location">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLink"/>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#go_download_location">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#DownloadLink"/>
         <dcat:downloadURL>https://purl.obolibrary.org/obo/go.owl</dcat:downloadURL>
         <rdfs:comment>Download location of GO is a URL, can be downloaded with a direct link to the file.</rdfs:comment>
         <rdfs:label>go_download_location</rdfs:label>
@@ -1079,9 +1069,9 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#go_graph -->
+    <!-- http://cbiit.nci.nih.gov/srro#go_graph -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#go_graph">
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#go_graph">
         <rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
         <sd:name>https://www.geneontology.org/GO</sd:name>
         <rdfs:label>go_graph</rdfs:label>
@@ -1089,39 +1079,39 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#go_namespace -->
+    <!-- http://cbiit.nci.nih.gov/srro#go_namespace -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#go_namespace">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
-        <srro1:hasNamespaceIRI>http://purl.obolibrary.org/obo/</srro1:hasNamespaceIRI>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#go_namespace">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
+        <hasNamespaceIRI>http://purl.obolibrary.org/obo/</hasNamespaceIRI>
         <vann:preferredNamespacePrefix>obo1</vann:preferredNamespacePrefix>
         <rdfs:label>go_namespace</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#information-technology-domain -->
+    <!-- http://cbiit.nci.nih.gov/srro#information-technology-domain -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#information-technology-domain">
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#information-technology-domain">
         <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#OntologyDomain"/>
         <rdfs:label>information technology domain</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#metadata -->
+    <!-- http://cbiit.nci.nih.gov/srro#metadata -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#metadata">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceIntent"/>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#metadata">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceIntent"/>
         <rdfs:label>metadata</rdfs:label>
         <skos:definition>A resource type that contains information that describes the information found within a resource.</skos:definition>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#nci-cadsr -->
+    <!-- http://cbiit.nci.nih.gov/srro#nci-cadsr -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#nci-cadsr">
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#nci-cadsr">
         <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <omv:acronym>caDSR</omv:acronym>
         <omv:description>The project in the National Cancer Institute&apos;s Center for Biomedical Informatics and Information Technology (CBIIT) responsible for developing standard data elements and case report forms, among other metadata, in support of the NCI mission.  It&apos;s main product is also named the Cancer Data Standards Repository, based on the ISO/IEC 11179 metadata registry standard.  The project is run by the Semantic Infrastructure (SI) group of CBIIT.</omv:description>
@@ -1134,9 +1124,9 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#nci-evs -->
+    <!-- http://cbiit.nci.nih.gov/srro#nci-evs -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#nci-evs">
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#nci-evs">
         <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <omv:acronym>EVS</omv:acronym>
         <omv:description>The project in the National Cancer Institute&apos;s Center for Biomedical Informatics and Information Technology (CBIIT) responsible for developing vocabulary products and services in support of the NCI mission.  It&apos;s main products are the NCI Thesaurus and the NCI Metathesaurus, a cancer-centric UMLS derivative.  The project is run by the Semantic Infrastructure (SI) group of CBIIT.</omv:description>
@@ -1149,9 +1139,9 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#nci-si -->
+    <!-- http://cbiit.nci.nih.gov/srro#nci-si -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#nci-si">
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#nci-si">
         <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#Organisation"/>
         <omv:acronym>SI</omv:acronym>
         <omv:description>A program within the Clinical &amp; Translational Research Informatics Branch in the Informatics and Data Science Program of the Center for Biomedical Informatics &amp; Information Technology (CBIIT) of the NCI. It runs the EVS and caDSR projects.</omv:description>
@@ -1163,10 +1153,10 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#ncit_download_location -->
+    <!-- http://cbiit.nci.nih.gov/srro#ncit_download_location -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#ncit_download_location">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#DownloadLink"/>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#ncit_download_location">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#DownloadLink"/>
         <dcat:downloadURL>ftp://ftp1.nci.nih.gov/pub/cacore/EVS/NCI_Thesaurus/Thesaurus.OWL.zip</dcat:downloadURL>
         <rdfs:comment>Download location of NCIt is a URL, can be downloaded with a direct link to the file.</rdfs:comment>
         <rdfs:label>ncit_download_location</rdfs:label>
@@ -1174,9 +1164,9 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#ncit_graph -->
+    <!-- http://cbiit.nci.nih.gov/srro#ncit_graph -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#ncit_graph">
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#ncit_graph">
         <rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
         <sd:name>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl</sd:name>
         <rdfs:label>ncit_graph</rdfs:label>
@@ -1184,34 +1174,43 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#ncit_namespace -->
+    <!-- http://cbiit.nci.nih.gov/srro#ncit_namespace -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#ncit_namespace">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
-        <srro1:hasNamespaceIRI>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#</srro1:hasNamespaceIRI>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#ncit_namespace">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
+        <hasNamespaceIRI>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#</hasNamespaceIRI>
         <vann:preferredNamespacePrefix>ncit</vann:preferredNamespacePrefix>
         <rdfs:label>ncit_namespace</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#schema -->
+    <!-- http://cbiit.nci.nih.gov/srro#schema -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#schema">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceIntent"/>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#schema">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceIntent"/>
         <rdfs:comment>The format that the resource is set up as. This format is done for both databases or studies.</rdfs:comment>
         <rdfs:label>schema</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://ncicb.nci.nih.gov/srro.owl#terminology -->
+    <!-- http://cbiit.nci.nih.gov/srro#terminology -->
 
-    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl#terminology">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#ResourceIntent"/>
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#terminology">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ResourceIntent"/>
         <rdfs:comment>A resource type that contains a set of terms and definitions, among other attributes, for the elements of a domain of knowledge, e.g. clinical care, biological molecules.</rdfs:comment>
         <rdfs:comment>Terms from this type of resource can be used to annotate other artifacts, i.e. serve as metadata.  The distinction with the metadata type in the present resource is that a terminology doesn&apos;t include all the necessary information required by e.g. a standard data element in one defined data structure.</rdfs:comment>
         <rdfs:label>terminology</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/OBINCBI_0000043 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/OBINCBI_0000043">
+        <rdfs:label>Anthony Huffman</rdfs:label>
+        <skos:altLabel>ORCID: 0000-0002-5735-7540 change to IAO_0000708</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -1240,7 +1239,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000190 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000190">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#PreferredTerm"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#PreferredTerm"/>
         <rdfs:label xml:lang="en">ChEBI Name</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1249,7 +1248,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000191 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000191">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
         <rdfs:label xml:lang="en">ChEBI ID</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1258,7 +1257,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000192 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000192">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Definition"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Definition"/>
         <rdfs:label xml:lang="en">CheBI Definiton</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1267,7 +1266,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000193 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000193">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Term"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Term"/>
         <rdfs:label xml:lang="en">Secondary ChEBI IDs</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1276,7 +1275,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000194 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000194">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
         <rdfs:label xml:lang="en">chebi_namespace</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1285,7 +1284,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000195 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000195">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#AccessSite"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#AccessSite"/>
         <rdfs:label xml:lang="en">chebi_graph</rdfs:label>
     </owl:NamedIndividual>
     
@@ -1294,8 +1293,17 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000196 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000196">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
         <rdfs:label xml:lang="en">chebi_download_location</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro/no-license-freely-available -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro/no-license-freely-available">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#LicenseModel"/>
+        <rdfs:label>no license, freely available</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1303,7 +1311,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
     </owl:NamedIndividual>
     
 
@@ -1311,7 +1319,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#PreferredTerm"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#PreferredTerm"/>
     </owl:NamedIndividual>
     
 
@@ -1319,7 +1327,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Term"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Term"/>
     </owl:NamedIndividual>
     
 
@@ -1327,7 +1335,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Definition"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Definition"/>
     </owl:NamedIndividual>
     
 
@@ -1335,7 +1343,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Definition"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Definition"/>
     </owl:NamedIndividual>
     
 
@@ -1343,7 +1351,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://purl.org/dc/elements/1.1/date -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/elements/1.1/date">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#VersionDate"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#VersionDate"/>
     </owl:NamedIndividual>
     
 
@@ -1351,7 +1359,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
 
     <owl:NamedIndividual rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Term"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Term"/>
     </owl:NamedIndividual>
     
 
@@ -1359,7 +1367,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
     <owl:NamedIndividual rdf:about="http://www.geneontology.org/formats/oboInOwl#id">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
     </owl:NamedIndividual>
     
 
@@ -1367,7 +1375,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#PreferredTerm"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#PreferredTerm"/>
     </owl:NamedIndividual>
     
 
@@ -1375,7 +1383,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://www.w3.org/2002/07/owl#versionInfo -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Version"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Version"/>
     </owl:NamedIndividual>
     
 
@@ -1383,7 +1391,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Term"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Term"/>
     </owl:NamedIndividual>
     
 
@@ -1391,7 +1399,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#definition">
-        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Definition"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Definition"/>
     </owl:NamedIndividual>
     <rdf:Description>
         <rdfs:seeAlso rdf:resource="https://github.com/oborel/obo-relations/issues/259"/>
@@ -1423,8 +1431,8 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90">
         <rdfs:label>ncit:P90</rdfs:label>
-        <skos:altLabel>FULL_SYN</skos:altLabel>
         <rdfs:comment>A property used to denote the various terms associated with a concept, synonyms, abbreviations, acronyms, among others, in the NCIt.</rdfs:comment>
+        <skos:altLabel>FULL_SYN</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97">
         <rdfs:comment>The property used for definitions in the NCIt.</rdfs:comment>
