@@ -681,6 +681,12 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasTerm"/>
                 <owl:allValuesFrom rdf:resource="http://cbiit.nci.nih.gov/srro#Term"/>
             </owl:Restriction>
@@ -702,13 +708,6 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
                 <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasNamespace"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://cbiit.nci.nih.gov/srro#hasIdentifier"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -976,10 +975,12 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
         <hasDate rdf:resource="http://purl.org/dc/terms/date"/>
         <hasDefinition rdf:resource="http://www.w3.org/2004/02/skos/core#definition"/>
         <hasIntent rdf:resource="http://cbiit.nci.nih.gov/srro#schema"/>
+        <hasNamespace rdf:resource="http://cbiit.nci.nih.gov/srro#srro-namespace"/>
         <hasPreferredTerm rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <hasSourceAuthority rdf:resource="http://cbiit.nci.nih.gov/srro#nci-si"/>
         <hasTerm rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
         <hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+        <inNamedGraph rdf:resource="http://cbiit.nci.nih.gov/srro#srro-graph"/>
         <omv:hasDomain rdf:resource="http://cbiit.nci.nih.gov/srro#information-technology-domain"/>
         <omv:specifiesLicense rdf:resource="http://cbiit.nci.nih.gov/srro#CCBY4.0"/>
         <hasOntologyIRI>http://cbiit.nci.nih.gov/srro</hasOntologyIRI>
@@ -1417,8 +1418,8 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90">
         <rdfs:label>ncit:P90</rdfs:label>
-        <skos:altLabel>FULL_SYN</skos:altLabel>
         <rdfs:comment>A property used to denote the various terms associated with a concept, synonyms, abbreviations, acronyms, among others, in the NCIt.</rdfs:comment>
+        <skos:altLabel>FULL_SYN</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97">
         <rdfs:comment>The property used for definitions in the NCIt.</rdfs:comment>
