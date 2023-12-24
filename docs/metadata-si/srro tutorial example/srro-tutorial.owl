@@ -1101,7 +1101,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
 
     <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#go-graph">
         <rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
-        <sd:name>https://www.geneontology.org/GO</sd:name>
+        <sd:name>http://www.geneontology.org/GO</sd:name>
         <rdfs:label>go graph</rdfs:label>
     </owl:NamedIndividual>
     
