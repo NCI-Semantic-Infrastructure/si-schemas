@@ -11,3 +11,6 @@ The SRRO ontology documentation:
 
 Resources:
 - https://github.com/NCI-Semantic-Infrastructure/si-schemas/tree/main/resources 
+
+Examples:
+- https://github.com/NCI-Semantic-Infrastructure/si-schemas/tree/main/docs/metadata-si/srro%20tutorial%20example 
