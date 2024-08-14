@@ -967,6 +967,31 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
+    <!-- http://cbiit.nci.nih.gov/srro#NCItInferred -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCItInferred">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <hasConversionAuthority rdf:resource="http://cbiit.nci.nih.gov/srro#nci-si"/>
+        <hasDate rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <hasDefinition rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97"/>
+        <hasIdentifier rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0"/>
+        <hasIntent rdf:resource="http://cbiit.nci.nih.gov/srro#terminology"/>
+        <hasNamespace rdf:resource="http://cbiit.nci.nih.gov/srro#ncit-namespace"/>
+        <hasPreferredTerm rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P108"/>
+        <hasSourceAuthority rdf:resource="http://cbiit.nci.nih.gov/srro#nci-evs"/>
+        <hasTerm rdf:resource="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P90"/>
+        <hasVersion rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+        <inNamedGraph rdf:resource="http://cbiit.nci.nih.gov/srro#ncitInferred-graph"/>
+        <omv:hasDomain rdf:resource="http://cbiit.nci.nih.gov/srro#biomedical-domain"/>
+        <omv:specifiesLicense rdf:resource="http://cbiit.nci.nih.gov/srro#CCBY4.0"/>
+        <hasOntologyIRI>http://ncicb.nci.nih.gov/xml/owl/EVS/ThesaurusInferred.owl</hasOntologyIRI>
+        <dcterms:description>NCI Thesaurus inferred version, a controlled vocabulary in support of NCI administrative and scientific activities. Produced by the Enterprise Vocabulary System (EVS), a project by the NCI Center for Biomedical Informatics and Information Technology. National Cancer Institute, National Institutes of Health, Bethesda, MD 20892, U.S.A.</dcterms:description>
+        <rdfs:label>NCIt inferred</rdfs:label>
+        <skos:altLabel>NCI Thesaurus inferred version</skos:altLabel>
+    </owl:NamedIndividual>
+
+
+
     <!-- http://cbiit.nci.nih.gov/srro#SRRO -->
 
     <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#SRRO">
@@ -1212,6 +1237,16 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
+    <!-- http://cbiit.nci.nih.gov/srro#ncitInferred-graph -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#ncitInferred-graph">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
+        <sd:name>http://ncicb.nci.nih.gov/xml/owl/EVS/ThesaurusInferred.owl</sd:name>
+        <rdfs:label>ncit inferred graph</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://cbiit.nci.nih.gov/srro#ncit-graph -->
 
     <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#ncit-graph">
@@ -1229,8 +1264,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
         <hasNamespaceIRI>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#</hasNamespaceIRI>
         <vann:preferredNamespacePrefix>ncit</vann:preferredNamespacePrefix>
         <rdfs:label>ncit namespace</rdfs:label>
-    </owl:NamedIndividual>
-    
+    </owl:NamedIndividual>    
 
 
     <!-- http://cbiit.nci.nih.gov/srro#schema -->
