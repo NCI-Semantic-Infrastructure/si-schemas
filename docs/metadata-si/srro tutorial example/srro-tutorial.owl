@@ -24,9 +24,15 @@
         <dcterms:date>2023-12-15</dcterms:date>
         <dcterms:description>A minimal ontology that identifies RDF graphs loaded in the SPARQL service, and identifies various commonly used properties in these  resources to facilitate common SPARQL queries.</dcterms:description>
         <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+<<<<<<< Updated upstream:docs/metadata-si/srro tutorial example/srro-tutorial.owl
         <dcterms:title>Service RDF Resource Ontology</dcterms:title>
         <rdfs:comment>Developed by Anthony Huffman of the He Lab (U.Michigan) and the Semantic Infrastructure group of the NCI.</rdfs:comment>
         <rdfs:comment>The core SRRO reuses or derives elements from other RDF schemas or vocabularies:
+=======
+        <rdfs:comment></rdfs:comment>
+        <rdfs:comment>Current draft by He Lab</rdfs:comment>
+        <rdfs:comment>Refers to other RDF schemas or vocabularies:
+>>>>>>> Stashed changes:metadata-SI/SI-metadata.owl
 
 VANN: A vocabulary for annotating vocabulary descriptions
 http://purl.org/vocab/vann/
@@ -44,6 +50,7 @@ license:  unknown
 
 sd:  Service Description Vocabulary
 https://www.w3.org/TR/sparql11-service-description/#vocab
+<<<<<<< Updated upstream:docs/metadata-si/srro tutorial example/srro-tutorial.owl
 https://www.w3.org/ns/sparql-service-description.rdf
 terms of use: https://www.w3.org/copyright/software-license-2023/
 
@@ -53,6 +60,11 @@ http://www.w3.org/ns/prov.ttl
 terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment>
         <rdfs:comment>The git tag of the release version 1.0 of srro.owl is 1.4.0.</rdfs:comment>
         <owl:versionInfo>1.0</owl:versionInfo>
+=======
+https://www.w3.org/ns/sparql-service-description.rdf</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://github.com/information-artifact-ontology/IAO"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.4</owl:versionInfo>
+>>>>>>> Stashed changes:metadata-SI/SI-metadata.owl
     </owl:Ontology>
     
 
@@ -888,9 +900,23 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
 
     <!-- http://cbiit.nci.nih.gov/OBINCBI_0000043 -->
 
+<<<<<<< Updated upstream:docs/metadata-si/srro tutorial example/srro-tutorial.owl
     <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/OBINCBI_0000043">
         <rdfs:label>Anthony Huffman</rdfs:label>
         <skos:altLabel>ORCID: 0000-0002-5735-7540 change to IAO_0000708</skos:altLabel>
+=======
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/caDSR#publicId">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/chebi_namespace -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/chebi_namespace">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
+        <rdfs:label xml:lang="en">ChEBI_namespace</rdfs:label>
+>>>>>>> Stashed changes:metadata-SI/SI-metadata.owl
     </owl:NamedIndividual>
     
 
@@ -1316,6 +1342,84 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
+<<<<<<< Updated upstream:docs/metadata-si/srro tutorial example/srro-tutorial.owl
+=======
+    <!-- http://ncicb.nci.nih.gov/srro.owl/CCBY4.0 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl/CCBY4.0">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#LicenseModel"/>
+        <dcat:accessURL>https://creativecommons.org/licenses/by/4.0/</dcat:accessURL>
+        <rdfs:comment>CCBY 4.0</rdfs:comment>
+        <rdfs:comment>Creative Commons Attribution 4.0 International</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl/unknown-license -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl/unknown-license">
+        <rdf:type rdf:resource="http://omv.ontoware.org/2005/05/ontology#LicenseModel"/>
+        <rdfs:label>unknown license</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000190 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000190">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#PreferredTerm"/>
+        <rdfs:label xml:lang="en">ChEBI_Name</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000191 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000191">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Identifier"/>
+        <rdfs:label xml:lang="en">ChEBI ID</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000192 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000192">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Definition"/>
+        <rdfs:label xml:lang="en">CheBI Definiton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000193 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000193">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Term"/>
+        <rdfs:label xml:lang="en">Secondary ChEBI IDs</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000195 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000195">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#AccessSite"/>
+        <rdfs:label xml:lang="en">ChEBI graph</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ncicb.nci.nih.gov/srro.owl:srro_0000196 -->
+
+    <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/srro.owl:srro_0000196">
+        <rdf:type rdf:resource="http://ncicb.nci.nih.gov/srro.owl#Namespace"/>
+        <rdfs:label xml:lang="en">ChEBI download location</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+>>>>>>> Stashed changes:metadata-SI/SI-metadata.owl
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0">
