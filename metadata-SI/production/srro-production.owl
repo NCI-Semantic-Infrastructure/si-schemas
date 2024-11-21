@@ -952,6 +952,64 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
+    <!-- http://cbiit.nci.nih.gov/srro#NCIT_Metathesaurus -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIT_Metathesaurus">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro/Service_RDF_Resource_Supported"/>
+        <obo1:IAO_0000115>NCI Metathesaurus (NCIm) is a wide-ranging biomedical terminology database that covers most terminologies used by NCI for clinical care, translational and basic research, and public information and administrative activities.</obo1:IAO_0000115>
+        <rdfs:label>NCIm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cbiit.nci.nih.gov/srro#NCIm_Identifier -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_Identifier">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
+        <rdfs:label>NCIm Label</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cbiit.nci.nih.gov/srro#NCIm_atom -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_atom">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
+        <rdfs:label>NCIm Atom</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cbiit.nci.nih.gov/srro#NCIm_graph -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_graph">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
+        <rdfs:label>NCIm graph</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cbiit.nci.nih.gov/srro#NCIm_namespace -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_namespace">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
+        <vann:preferredNamespacePrefix>http://ncim.nci.nih.gov/NCIMetathesaurus#</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>mts</vann:preferredNamespacePrefix>
+        <rdfs:label>NCIm Namespace</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cbiit.nci.nih.gov/srro#NCIm_source -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_source">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Definition"/>
+        <rdfs:label>NCIm Description</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://cbiit.nci.nih.gov/srro#NCIt -->
 
     <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIt">
@@ -1332,62 +1390,6 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
         <rdfs:comment>A resource type that contains a set of terms and definitions, among other attributes, for the elements of a domain of knowledge, e.g. clinical care, biological molecules.</rdfs:comment>
         <rdfs:comment>Terms from this type of resource can be used to annotate other artifacts, i.e. serve as metadata.  The distinction with the metadata type in the present resource is that a terminology doesn&apos;t include all the necessary information required by e.g. a standard data element in one defined data structure.</rdfs:comment>
         <rdfs:label>terminology</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://cbiit.nci.nih.gov/srro/NCIT_Metathesaurus -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIT_Metathesaurus">
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro/Service_RDF_Resource_Supported"/>
-        <obo1:IAO_0000115>NCI Metathesaurus (NCIm) is a wide-ranging biomedical terminology database that covers most terminologies used by NCI for clinical care, translational and basic research, and public information and administrative activities.</obo1:IAO_0000115>
-        <rdfs:label>NCIm</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://cbiit.nci.nih.gov/srro/NCIm_Identifier -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_Identifier">
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
-        <rdfs:label>NCIm Label</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://cbiit.nci.nih.gov/srro/NCIm_atom -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_atom">
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
-        <rdfs:label>NCIm Atom</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://cbiit.nci.nih.gov/srro/NCIm_graph -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_graph">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
-        <rdfs:label>NCIm graph</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://cbiit.nci.nih.gov/srro/NCIm_namespace -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_namespace">
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
-        <rdfs:label>NCIm Namespace</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://cbiit.nci.nih.gov/srro/NCIm_source -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_source">
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Definition"/>
-        <rdfs:label>NCIm Description</rdfs:label>
     </owl:NamedIndividual>
     
 
