@@ -10,7 +10,7 @@ Resources:
 - https://github.com/NCI-Semantic-Infrastructure/si-schemas/tree/main/resources
 
 SRRO ontology documentation:
-- v1.2 (08-05-2024): https://github.com/NCI-Semantic-Infrastructure/si-schemas/blob/main/docs/NCI%20SRRO%20Documentation-newForm_v1.2.docx 
+- v2.0 (12-06-2024): https://github.com/NCI-Semantic-Infrastructure/si-schemas/tree/main/docs/NCI%Service%Metadata%Ontology%Documentation%and%Tutorial.docx 
 
 SRRO ontology Tutorial Examples:
 - https://github.com/NCI-Semantic-Infrastructure/si-schemas/tree/main/docs/metadata-si/srro%20tutorial%20example 
