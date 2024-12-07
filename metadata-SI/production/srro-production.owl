@@ -900,7 +900,7 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
 
     <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/OBINCBI_0000043">
         <rdfs:label>Anthony Huffman</rdfs:label>
-        <skos:altLabel>ORCID: 0000-0002-5735-7540 change to IAO_0000708</skos:altLabel>
+        <skos:altLabel>ORCID: 0000-0002-5735-7540</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -948,6 +948,68 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
         <dcterms:description>The Gene Ontology (GO) provides a framework and set of concepts for describing the functions of gene products from all organisms.</dcterms:description>
         <rdfs:label>GO</rdfs:label>
         <skos:altLabel>Gene Ontology</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cbiit.nci.nih.gov/srro#NCIT_Metathesaurus -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIT_Metathesaurus">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro/Service_RDF_Resource_Supported"/>
+        <hasIdentifier rdf:resource="http://cbiit.nci.nih.gov/srro#NCIm_Identifier"/>
+        <hasOntologyIRI>http://ncim.nci.nih.gov/NCIMetathesaurus.rdf</hasOntologyIRI>
+        <obo1:IAO_0000115>NCI Metathesaurus (NCIm) is a wide-ranging biomedical terminology database that covers most terminologies used by NCI for clinical care, translational and basic research, and public information and administrative activities.</obo1:IAO_0000115>
+        <rdfs:label>NCIm</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cbiit.nci.nih.gov/srro#NCIm_Identifier -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_Identifier">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
+        <rdfs:label>NCIm label</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cbiit.nci.nih.gov/srro#NCIm_atom -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_atom">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
+        <rdfs:comment>NCIm connects metadata entries as an atom; these are not clearly labeled so are not considered prefered terms.</rdfs:comment>
+        <rdfs:label>NCIm atom</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cbiit.nci.nih.gov/srro#NCIm_graph -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_graph">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
+        <sd:name>http://ncim.nci.nih.gov/NCIMetathesaurus.rdf</sd:name>
+        <rdfs:label>NCIm graph</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cbiit.nci.nih.gov/srro#NCIm_namespace -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_namespace">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
+        <hasNamespaceIRI>http://ncim.nci.nih.gov/NCIMetathesaurus</hasNamespaceIRI>
+        <vann:preferredNamespacePrefix>mts</vann:preferredNamespacePrefix>
+        <rdfs:label>NCIm namespace</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://cbiit.nci.nih.gov/srro#NCIm_source -->
+
+    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_source">
+        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Term"/>
+        <rdfs:label>NCIm description</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1336,62 +1398,6 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
     
 
 
-    <!-- http://cbiit.nci.nih.gov/srro/NCIT_Metathesaurus -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIT_Metathesaurus">
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#ServiceRdfResource"/>
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro/Service_RDF_Resource_Supported"/>
-        <obo1:IAO_0000115>NCI Metathesaurus (NCIm) is a wide-ranging biomedical terminology database that covers most terminologies used by NCI for clinical care, translational and basic research, and public information and administrative activities.</obo1:IAO_0000115>
-        <rdfs:label>NCIm</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://cbiit.nci.nih.gov/srro/NCIm_Identifier -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_Identifier">
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
-        <rdfs:label>NCIm Label</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://cbiit.nci.nih.gov/srro/NCIm_atom -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_atom">
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Identifier"/>
-        <rdfs:label>NCIm Atom</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://cbiit.nci.nih.gov/srro/NCIm_graph -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_graph">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sparql-service-description#NamedGraph"/>
-        <rdfs:label>NCIm graph</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://cbiit.nci.nih.gov/srro/NCIm_namespace -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_namespace">
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Namespace"/>
-        <rdfs:label>NCIm Namespace</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://cbiit.nci.nih.gov/srro/NCIm_source -->
-
-    <owl:NamedIndividual rdf:about="http://cbiit.nci.nih.gov/srro#NCIm_source">
-        <rdf:type rdf:resource="http://cbiit.nci.nih.gov/srro#Definition"/>
-        <rdfs:label>NCIm Description</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0 -->
 
     <owl:NamedIndividual rdf:about="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#NHC0">
@@ -1576,5 +1582,5 @@ terms of use:  https://www.w3.org/copyright/software-license-2023/</rdfs:comment
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
